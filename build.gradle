@@ -41,7 +41,7 @@ mainClassName = 'VerifyAllSamplesKt'
 asciidoctor {
     sourceDir file("docs-src/")
     sources {
-        include 'index.adoc'
+        include '*.adoc'
     }
 
     resources {
