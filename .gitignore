@@ -8,4 +8,4 @@
 /build
 /.idea
 .DS_Store
-
+/src/docsOut

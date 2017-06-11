@@ -64,3 +64,11 @@ githubPages {
 }
 
 
+task verifyAllSamples(type:JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'VerifyAllSamplesKt'
+}
+
+task runMarkCode(type:Exec) {
+    commandLine 'tools/mark-code/bin/mark-code', 'docs-src' ,'src/docsOut', '-o'
+}
