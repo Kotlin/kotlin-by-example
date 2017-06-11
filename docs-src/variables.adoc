@@ -18,10 +18,10 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 
 
 
-[source,kotlin-snippet]
+[source,kotlin]
 ----
 var e : Int <1>
-println(e) <2>
+// println(e) <2>
 ----
 <1> Declare a mutable variable, but don't initialise it.
-<2> Error: Variable 'e' must be initialized
+<2> Produces compiler error: Variable 'e' must be initialized
