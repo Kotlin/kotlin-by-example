@@ -1,0 +1,5 @@
+= Kotlin by Example
+:toc: left
+:source-highlighter: highlight.js
+
+include::hello-world.adoc[]
