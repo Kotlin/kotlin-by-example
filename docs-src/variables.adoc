@@ -19,8 +19,7 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 [source,kotlin-snippet]
 ----
 var e : Int <1>
-println(e) <2>
+>>> println(e) <2>
 ----
 <1> Declare a mutable variable, but don't initialise it.
-<2> Produces a compiler error since variable is not initialised before use.
-
+<2> Error: Variable 'e' must be initialized
