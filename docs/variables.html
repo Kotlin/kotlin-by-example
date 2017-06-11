@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>Variable</title>
+<title>Variables</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -422,18 +422,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_variable">Variable</h3>
+<h3 id="_variables">Variables</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">fun main(args: Array&lt;String&gt;) {
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">var a : String = "initial" <b class="conum">(1)</b>
+println(a)
 
-    var a : String = "initial" <b class="conum">(1)</b>
-    println(a)
+val b : Int = 1  <b class="conum">(2)</b>
 
-    val b : Int = 1  <b class="conum">(2)</b>
-
-    val c = 3 <b class="conum">(3)</b>
-}</code></pre>
+val c = 3 <b class="conum">(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -451,16 +448,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you&#8217;ll usually let the
-compiler do the work by inferring it.</p>
+compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended. In essence use <code>val</code> over <code>var</code>.</p>
 </div>
-<div class="paragraph">
-<p>Also, while Kotlin does not enforce immutability, it is recommended. In essence use <code>val</code> over <code>var</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">var e : Int <b class="conum">(1)</b>
+println(e) <b class="conum">(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Declare a mutable variable, but don&#8217;t initialise it.</p>
+</li>
+<li>
+<p>Produces a compiler error since variable is not initialised before use.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-11 20:20:03 +00:00
+Last updated 2017-06-11 20:26:08 +00:00
 </div>
 </div>
 </body>
