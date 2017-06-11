@@ -8,9 +8,19 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 Welcome to Kotlin by Example. The purpose of this site is to teach you Kotlin using simple annotated examples.
 It is inspired by other sites including https://gobyexample.com[Go by Example].
 
-The site welcomes community contributions. To learn how to contribute, check out our https://github.com/Kotlin/kotlinbyexample[GitHub repository]
-
 Have fun!
+
+'''
+<<<
+
+
+
+
+
 
 
 include::hello-world.adoc[]
+
+
+include::contributing.adoc[]
+include::copyright.adoc[]

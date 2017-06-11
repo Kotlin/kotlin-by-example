@@ -1,0 +1,3 @@
+== Contributing
+
+For more information on how to contribute, please see out [GitHub page](https://github.com/Kotlin/kotlinbyexample)
