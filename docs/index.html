@@ -426,9 +426,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_welcome">Welcome</a>
 <ul class="sectlevel2">
 <li><a href="#_hello_world">Hello World</a></li>
+<li><a href="#_variable">Variable</a></li>
 </ul>
 </li>
 <li><a href="#_contributing">Contributing</a></li>
+<li><a href="#_copyright">Copyright</a></li>
 </ul>
 </div>
 </div>
@@ -444,7 +446,6 @@ It is inspired by other sites including <a href="https://gobyexample.com">Go by 
 <p>Have fun!</p>
 </div>
 <hr>
-<div style="page-break-after: always;"></div>
 <div class="sect2">
 <h3 id="_hello_world">Hello World</h3>
 <div class="listingblock">
@@ -473,15 +474,55 @@ fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
 <hr>
 <div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_variable">Variable</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">fun main(args: Array&lt;String&gt;) {
+
+    var a : String = "initial" <b class="conum">(1)</b>
+    println(a)
+
+    val b : Int = 1  <b class="conum">(2)</b>
+
+    val c = 3 <b class="conum">(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Declare a mutable variable and initialise it</p>
+</li>
+<li>
+<p>Declare an immutable variable and initialise it</p>
+</li>
+<li>
+<p>Declare an immutable variable and initialise it. The compiler infers the type.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you&#8217;ll usually let the
+compiler do the work by inferring it.</p>
+</div>
+<div class="paragraph">
+<p>Also, while Kotlin does not enforce immutability, it is recommended. In essence use <code>val</code> over <code>var</code>.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_contributing">Contributing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For more information on how to contribute, please see out [GitHub page](<a href="https://github.com/Kotlin/kotlinbyexample" class="bare">https://github.com/Kotlin/kotlinbyexample</a>)
-== Copyright</p>
+<p>For more information on how to contribute, please see out [GitHub page](<a href="https://github.com/Kotlin/kotlinbyexample" class="bare">https://github.com/Kotlin/kotlinbyexample</a>)</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_copyright">Copyright</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The entire contents of this site, along with the Kotlin by Example project is licensed under MIT.</p>
 </div>
@@ -493,7 +534,7 @@ fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-11 20:10:49 +00:00
+Last updated 2017-06-11 20:20:03 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="lib/highlight/styles/github.min.css">
