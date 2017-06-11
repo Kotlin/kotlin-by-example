@@ -1,7 +1,5 @@
 == Contributing
 
-==== Driven by Contributions
-
 The site welcomes and encourages community contributions. While the project originators will contribute examples as time permits, the main idea behind this project is for the community
 to contribute. To that end, we've tried to make contributions as simple as possible.
 
