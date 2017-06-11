@@ -1,0 +1,1 @@
+getFacebookName=fun getFacebookName(accountId: Int) = "fb:$accountId"
