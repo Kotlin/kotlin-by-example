@@ -69,6 +69,11 @@ task verifyAllSamples(type:JavaExec) {
     main = 'VerifyAllSamplesKt'
 }
 
+task prepareMarkCode(type:Exec) {
+    commandLine 'mkdir', 'src/docsOut'
+
+}
+
 task runMarkCode(type:Exec) {
     commandLine 'tools/mark-code/bin/mark-code', 'docs-src' ,'src/docsOut', '-o'
 }
