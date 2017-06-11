@@ -426,7 +426,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_welcome">Welcome</a>
 <ul class="sectlevel2">
 <li><a href="#_hello_world">Hello World</a></li>
-<li><a href="#_variable">Variable</a></li>
+<li><a href="#_variables">Variables</a></li>
 </ul>
 </li>
 <li><a href="#_contributing">Contributing</a></li>
@@ -475,18 +475,15 @@ fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="_variable">Variable</h3>
+<h3 id="_variables">Variables</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">fun main(args: Array&lt;String&gt;) {
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">var a : String = "initial" <b class="conum">(1)</b>
+println(a)
 
-    var a : String = "initial" <b class="conum">(1)</b>
-    println(a)
+val b : Int = 1  <b class="conum">(2)</b>
 
-    val b : Int = 1  <b class="conum">(2)</b>
-
-    val c = 3 <b class="conum">(3)</b>
-}</code></pre>
+val c = 3 <b class="conum">(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -504,10 +501,23 @@ fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
 </div>
 <div class="paragraph">
 <p>Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you&#8217;ll usually let the
-compiler do the work by inferring it.</p>
+compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended. In essence use <code>val</code> over <code>var</code>.</p>
 </div>
-<div class="paragraph">
-<p>Also, while Kotlin does not enforce immutability, it is recommended. In essence use <code>val</code> over <code>var</code>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">var e : Int <b class="conum">(1)</b>
+println(e) <b class="conum">(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Declare a mutable variable, but don&#8217;t initialise it.</p>
+</li>
+<li>
+<p>Produces a compiler error since variable is not initialised before use.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
