@@ -70,7 +70,7 @@ task verifyAllSamples(type:JavaExec) {
 }
 
 task prepareMarkCode(type:Exec) {
-    commandLine 'mkdir', 'src/docsOut'
+    commandLine 'mkdir', '-p', 'src/docsOut'
 
 }
 
