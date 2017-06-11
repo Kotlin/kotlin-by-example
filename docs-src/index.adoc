@@ -11,7 +11,7 @@ It is inspired by other sites including https://gobyexample.com[Go by Example].
 Have fun!
 
 '''
-<<<
+
 
 
 
@@ -21,6 +21,8 @@ Have fun!
 
 include::hello-world.adoc[]
 
+include::variables.adoc[]
 
 include::contributing.adoc[]
+
 include::copyright.adoc[]
