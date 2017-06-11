@@ -452,8 +452,8 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin-snippet" data-lang="kotlin-snippet">var e : Int <b class="conum">(1)</b>
-&gt;&gt;&gt; println(e) <b class="conum">(2)</b></code></pre>
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">var e : Int <b class="conum">(1)</b>
+// println(e) <b class="conum">(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -462,7 +462,7 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 <p>Declare a mutable variable, but don&#8217;t initialise it.</p>
 </li>
 <li>
-<p>Error: Variable 'e' must be initialized</p>
+<p>Produces compiler error: Variable 'e' must be initialized</p>
 </li>
 </ol>
 </div>
@@ -470,7 +470,7 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-11 20:38:57 +00:00
+Last updated 2017-06-11 20:44:00 +00:00
 </div>
 </div>
 </body>
