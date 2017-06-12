@@ -1,0 +1,20 @@
+=== String Templates
+
+[source,kotlin]
+----
+var greeting = "Kotliner"
+
+println("Hello $greeting") <1>
+//Prints 'Hello Kotliner'
+
+println("Hello ${insertMe.toUpperCase()}") <2>
+//Prints 'Hello KOTLINER'
+----
+
+<1> ``String``s in Kotlin can include references on variables, whose values are concatenated into the string.
+<2> Besides simple variable references, it is also possible to include more complex evaluations, which then need to be expressed in curly braces.
+
+Template expressions always start with a dollar sign ($).
+
+<<<
+
