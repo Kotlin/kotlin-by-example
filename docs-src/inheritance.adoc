@@ -1,0 +1,87 @@
+=== Inheritance
+
+==== Basic inheritance
+
+[source,kotlin]
+----
+open class Dog { <1>
+    open fun sayHello() { <2>
+        println("wow wow!")
+    }
+}
+
+class Yorkshire : Dog() { <3>
+    override fun sayHello() {
+        println("wif wif!")
+    }
+}
+
+fun main(args: Array<String>) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// Wif wif!
+----
+<1> Kotlin classes are _final_ by default. If you want to allow overriding a
+    class, it must be marked with the `open` modifier.
+<2> Kotlin methods are also _final_ by default. As with the classes, the `open`
+    modifier allows overriding them.
+<3> A class is overriding by following the subclass name with
+    `: SuperclassName()`. The empty parentheses `()` indicate an invocation to
+    the default constructor of the superclass.
+
+'''
+<<<
+
+==== Inheriting without default constructor
+
+[source,kotlin]
+----
+open class Dog(val origin: String) {
+    fun sayHello() {
+        println("A dog from $origin says: wow wow!")
+    }
+}
+
+class Yorkshire : Dog("England") <1>
+
+fun main(args: Array<String>) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// A dog from England says: wow wow!
+----
+<1> When the superclass does not provide a default constructor, arguments must be
+    provided when invoking the superclass from the subclass.
+'''
+<<<
+
+==== Overriding constructor arguments
+
+[source,kotlin]
+----
+open class Dog(val name: String, val origin: String) {
+    fun sayHello() {
+        println("$name, the dog from $origin says: wow wow!")
+    }
+}
+
+class Poodle(name: String) <1>
+    : Dog(name = name, origin = "France") <2>
+
+fun main(args: Array<String>) {
+    val dog: Dog = Poodle("Rufo")
+    dog.sayHello()
+}
+// Rufo, the dog from France says: wow wow!
+----
+<1> Observe that `name` is neither a `var` nor `val` because it is a
+    constructor argument for `Yorkshire`, whose value is passed to the `name`
+    attribute of `Dog` (it does not override it).
+<2> Named arguments allow clearer invocations and avoid runtime errors (e.g.
+    switching the correct order of the arguments and construct a dog named
+    _France_ whose origin is _Rufo_.
+
+'''
+<<<
+
