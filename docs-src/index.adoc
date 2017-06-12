@@ -3,7 +3,7 @@
 :source-highlighter: highlight.js
 ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
-== Welcome
+== Learn
 
 Welcome to Kotlin by Example. The purpose of this site is to teach you Kotlin using simple annotated examples.
 It is inspired by other sites including https://gobyexample.com[Go by Example].
