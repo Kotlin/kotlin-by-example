@@ -425,6 +425,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_learn">Learn</a>
 <ul class="sectlevel2">
+<li><a href="#_hello_world">Hello World</a></li>
 <li><a href="#_variables">Variables</a></li>
 </ul>
 </li>
@@ -452,8 +453,33 @@ It is inspired by other sites including <a href="https://gobyexample.com">Go by 
 <p>Have fun!</p>
 </div>
 <hr>
-<div class="paragraph">
-<p>Unresolved directive in index.adoc - include::hello-world.adoc[]</p>
+<div class="sect2">
+<h3 id="_hello_world">Hello World</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">package org.kotlin.byexample <b class="conum">(1)</b>
+
+fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
+    println("Hello, World!") <b class="conum">(3)</b>
+}
+// Hello, World!</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Kotlin code is usually defined in packages. If you don&#8217;t define one, the default package will be used</p>
+</li>
+<li>
+<p>The main entry point to a Kotlin application is a function called <strong>main</strong></p>
+</li>
+<li>
+<p><code>println</code> writes to standard output and is implicitly imported</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
 <h3 id="_variables">Variables</h3>
@@ -579,7 +605,7 @@ code snippets and what is supported. You can also look at the <a href="http://as
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-12 06:01:12 +00:00
+Last updated 2017-06-12 07:29:03 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="lib/highlight/styles/github.min.css">
