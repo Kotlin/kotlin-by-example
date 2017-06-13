@@ -28,6 +28,12 @@ include::variables.adoc[]
 include::stringTemplates.adoc[]
 '''
 >>>
+include::namedArguments.adoc[]
+'''
+>>>
+include::inheritance.adoc[]
+'''
+>>>
 include::contributing.adoc[]
 '''
 >>>

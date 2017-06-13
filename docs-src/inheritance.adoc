@@ -1,6 +1,4 @@
-=== Inheritance
-
-==== Basic inheritance
+=== Basic inheritance
 
 [source,kotlin]
 ----
@@ -11,7 +9,7 @@ open class Dog { <1>
 }
 
 class Yorkshire : Dog() { <3>
-    override fun sayHello() {
+    override fun sayHello() { <4>
         println("wif wif!")
     }
 }
@@ -29,11 +27,12 @@ fun main(args: Array<String>) {
 <3> A class is overriding by following the subclass name with
     `: SuperclassName()`. The empty parentheses `()` indicate an invocation to
     the default constructor of the superclass.
+<4> Overriding methods or attributes requires the `override` modifier.
 
 '''
 <<<
 
-==== Inheriting without default constructor
+=== Inheriting without default constructor
 
 [source,kotlin]
 ----
@@ -52,11 +51,12 @@ fun main(args: Array<String>) {
 // A dog from England says: wow wow!
 ----
 <1> When the superclass does not provide a default constructor, arguments must be
-    provided when invoking the superclass from the subclass.
+    provided when invoking the superclass constructor from the subclass.
+
 '''
 <<<
 
-==== Overriding constructor arguments
+=== Bypass constructor arguments
 
 [source,kotlin]
 ----
@@ -66,8 +66,7 @@ open class Dog(val name: String, val origin: String) {
     }
 }
 
-class Poodle(name: String) <1>
-    : Dog(name = name, origin = "France") <2>
+class Poodle(name: String) : Dog(name = name, origin = "France") <1>
 
 fun main(args: Array<String>) {
     val dog: Dog = Poodle("Rufo")
@@ -78,9 +77,6 @@ fun main(args: Array<String>) {
 <1> Observe that `name` is neither a `var` nor `val` because it is a
     constructor argument for `Yorkshire`, whose value is passed to the `name`
     attribute of `Dog` (it does not override it).
-<2> Named arguments allow clearer invocations and avoid runtime errors (e.g.
-    switching the correct order of the arguments and construct a dog named
-    _France_ whose origin is _Rufo_.
 
 '''
 <<<
