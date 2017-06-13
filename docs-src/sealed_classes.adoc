@@ -1,0 +1,26 @@
+=== Sealed Classes
+
+[source,kotlin]
+----
+sealed class Mammal(val name: String) <1>
+
+class Cat(val catName: String) : Mammal(catName)
+class Human(val humanName: String, val job: String) : Mammal(humanName)
+
+
+fun greetMammal(mammal: Mammal): String {
+    when (mammal) { <2>
+        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"
+        is Cat -> return "Hello ${mammal.name}"
+        // `else` clause not required, all the cases covered  <3>
+    }
+}
+
+----
+
+<1> A sealed class is defined with two subclasses which must be in the same file
+<2> The sealed class is used as an argument for a `when` expression 
+<3> The `else` clause is not necessary because all subclasses of the sealed class are covered. 
+This is contrary to ordinary super classes, where an `else` would always be needed.
+
+
