@@ -427,6 +427,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_hello_world">Hello World</a></li>
 <li><a href="#_variables">Variables</a></li>
+<li><a href="#_string_templates">String Templates</a></li>
 </ul>
 </li>
 <li><a href="#_contribute">Contribute</a>
@@ -527,6 +528,35 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_string_templates">String Templates</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
+
+println("Hello $greeting") <b class="conum">(1)</b>
+// prints 'Hello Kotliner'
+
+println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
+// prints 'Hello KOTLINER'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p><code>String</code>s in Kotlin can include references to variables that are interpolated</p>
+</li>
+<li>
+<p>In addition to simple variable references, they can also include any expression enclosed in curly braces.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Template expressions always start with a dollar sign ($).</p>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -555,6 +585,9 @@ contributors need to do is create a simple example. The rest is handled automati
 </div>
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Fork the <a href="https://github.com/Kotlin/kotlinbyexample.git">Kotlin by Example repository</a></p>
+</li>
 <li>
 <p>Create a new file with the example you want to contribute inside the <code>docs-src</code> folder. For example <code>data-classes.adoc</code></p>
 </li>
@@ -605,7 +638,7 @@ code snippets and what is supported. You can also look at the <a href="http://as
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-12 07:29:03 +00:00
+Last updated 2017-06-13 05:09:36 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="lib/highlight/styles/github.min.css">
