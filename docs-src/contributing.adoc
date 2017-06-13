@@ -16,10 +16,11 @@ contributors need to do is create a simple example. The rest is handled automati
 
 To contribute an example is very straight-forward:
 
-1. Create a new file with the example you want to contribute inside the `docs-src` folder. For example `data-classes.adoc`
-2. Write out your example. Make sure you annotated it properly.
-3. Optionally add check to verify the output of your example.
-4. Submit a pull request.
+1. Fork the https://github.com/Kotlin/kotlinbyexample.git[Kotlin by Example repository]
+2. Create a new file with the example you want to contribute inside the `docs-src` folder. For example `data-classes.adoc`
+3. Write out your example. Make sure you annotated it properly.
+4. Optionally add check to verify the output of your example.
+5. Submit a pull request.
 
 The site verifies the source code using https://github.com/hhariri/mark-code[`mark-code`]. Check out the https://github.com/hhariri/mark-code/blob/master/README.md[README] for instructions on how to insert
 code snippets and what is supported. You can also look at the http://asciidoctor.org/docs/[AsciiDoc reference] for more information about AsciiDoc syntax.
