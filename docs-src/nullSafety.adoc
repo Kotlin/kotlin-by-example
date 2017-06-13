@@ -1,0 +1,16 @@
+=== Null safety
+
+In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
+
+[source,kotlin]
+---
+var neverNull: String = "This can't be null"//<1>
+var nullable: String? = "You can keep a null here"//<2>
+nullable = null//<3>
+
+var inferredNonNull = "The compiler assumes non-null"//<4>
+---
+<1> Declare a non-null String variable
+<2> Declare a nullable String variable
+<3> Set the nullable variable to null
+<4> When infering types, the compiler assumes non-null for variables that are initialized with a value
