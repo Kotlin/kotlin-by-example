@@ -12,7 +12,7 @@ println("Hello ${greeting.toUpperCase()}") <2>
 
 ----
 <1> ``String``s in Kotlin can include references to variables that are interpolated
-<2> In addition to simple variable references, you can also include any expression enclosed in curly braces.
+<2> In addition to simple variable references, they can also include any expression enclosed in curly braces.
 
 Template expressions always start with a dollar sign ($).
 
