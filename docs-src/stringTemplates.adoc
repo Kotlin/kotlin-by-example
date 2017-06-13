@@ -16,5 +16,4 @@ println("Hello ${greeting.toUpperCase()}") <2>
 
 Template expressions always start with a dollar sign ($).
 
-'''
-<<<
+
