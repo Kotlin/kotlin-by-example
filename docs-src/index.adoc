@@ -23,6 +23,8 @@ include::helloWorld.adoc[]
 
 include::variables.adoc[]
 
+include::stringTemplates.adoc[]
+
 include::contributing.adoc[]
 
 include::copyright.adoc[]
