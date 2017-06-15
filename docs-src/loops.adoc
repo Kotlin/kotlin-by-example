@@ -46,12 +46,12 @@ var cakesEaten = 0
 var cakesBaked = 0
 
 while (cakesEaten < 10) {  <1>
-    eatCake()
+    eatACake()
     cakesEaten ++
 }
 
 do { <2>
-    bakeCake()
+    bakeACake()
     cakesBaked++
 } while (cakesBaked < cakesEaten)
 
