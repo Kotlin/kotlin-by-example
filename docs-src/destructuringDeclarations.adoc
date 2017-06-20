@@ -1,0 +1,54 @@
+=== Destructuring Declarations
+
+_Destructuring declaration_ syntax can be very handy and save you few lines of code.
+
+[source,kotlin]
+----
+val (x, y, z) = arrayOf(5, 10, 15) <1>
+----
+<1> x = 5, y = 10, z = 15
+
+
+[source,kotlin]
+----
+val map = mapOf("Alice" to 21, "Bob" to 25)
+for ( (name, age) in map) { <1>
+    println("$name is $age years old") <2>
+}
+----
+<1> it can be used to iterate through maps
+<2> _name_ and _age_ variables are mapped to key and value now
+
+
+[source,kotlin]
+----
+fun findMinAndMax(list: List<Int>): Pair<Int, Int> { <1>
+    // do the math
+    return Pair(min, max) <2>
+}
+
+val (min, max) = findMinAndMax(values)
+----
+<1> sometimes we need to return multiple values from functions
+<2> `Pair` and `Triple` are tuples from standard library
+
+
+[source,kotlin]
+----
+data class User(val username: String, val email: String) <1>
+
+val user = getUser()
+val (username, email) = user <2>
+username == user.component1() <3>
+// prints 'true'
+----
+<1> you can define your own class that will be destructured later 
+<2> values mapped to object fields
+<3> data class automatically defines `component1()`, `component2()` corresponding methods, which will be called during destructuring
+
+
+[source,kotlin]
+----
+val (_, b) = getResult() <1>
+----
+<1> just use _underscore_ if you don't need one of the values
