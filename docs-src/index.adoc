@@ -40,6 +40,9 @@ include::namedArguments.adoc[]
 include::inheritance.adoc[]
 '''
 >>>
+include::sealed_classes.adoc[]
+'''
+>>>
 include::contributing.adoc[]
 '''
 >>>
