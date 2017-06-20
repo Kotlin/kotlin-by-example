@@ -25,6 +25,9 @@ include::helloWorld.adoc[]
 include::variables.adoc[]
 '''
 >>>
+include::nullSafety.adoc[]
+'''
+>>>
 include::stringTemplates.adoc[]
 '''
 >>>
