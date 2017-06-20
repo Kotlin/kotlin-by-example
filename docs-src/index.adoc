@@ -28,6 +28,9 @@ include::variables.adoc[]
 include::stringTemplates.adoc[]
 '''
 >>>
+include::ranges.adoc[]
+'''
+>>>
 include::namedArguments.adoc[]
 '''
 >>>
