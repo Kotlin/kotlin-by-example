@@ -426,19 +426,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_learn">Learn</a>
 <ul class="sectlevel2">
 <li><a href="#_hello_world">Hello World</a></li>
-<li><a href="#_variables">Variables</a></li>
-<li><a href="#_string_templates">String Templates</a></li>
+<li><a href="#_inheriting_without_default_constructor">Inheriting without default constructor</a></li>
+<li><a href="#_bypass_constructor_arguments">Bypass constructor arguments</a></li>
 </ul>
 </li>
-<li><a href="#_contribute">Contribute</a>
-<ul class="sectlevel3">
-<li><a href="#_how_it_works">How it works</a></li>
-<li><a href="#_how_to_contribute">How to Contribute</a></li>
-<li><a href="#_avoiding_merge_conflicts">Avoiding merge conflicts</a></li>
-<li><a href="#_getting_help">Getting Help</a></li>
-</ul>
-</li>
-<li><a href="#_copyright">Copyright</a></li>
 </ul>
 </div>
 </div>
@@ -480,10 +471,10 @@ fun main(args: Array&lt;String&gt;) { <b class="conum">(2)</b>
 </ol>
 </div>
 <hr>
-<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+=== Variables</p>
 </div>
-<div class="sect2">
-<h3 id="_variables">Variables</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">var a : String = "initial" <b class="conum">(1)</b>
@@ -523,13 +514,56 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 <p>Declare a mutable variable, but don&#8217;t initialise it.</p>
 </li>
 <li>
-<p>Produces compiler error: Variable 'e' must be initialized</p>
+<p>Produces compiler error: Variable 'e' must be initialized
+'''
+&gt;&gt;&gt;
+=== Null safety</p>
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>In an effort to rid the world of <code>NullPointerException</code>, variable types in Kotlin don&#8217;t allow the assigment of <code>null</code>.</p>
 </div>
-<div class="sect2">
-<h3 id="_string_templates">String Templates</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">---
+var neverNull: String = "This can't be null"<b class="conum">(1)</b>
+var nullable: String? = "You can keep a null here"<b class="conum">(2)</b>
+nullable = null<b class="conum">(3)</b></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>var inferredNonNull = "The compiler assumes non-null"//&lt;4&gt;
+---
+&lt;1&gt; Declare a non-null String variable
+&lt;2&gt; Declare a nullable String variable
+&lt;3&gt; Set the nullable variable to null
+&lt;4&gt; When infering types, the compiler assumes non-null for variables that are initialized with a value</p>
+</div>
+<div class="sect3">
+<h4 id="_working_with_nulls">Working with nulls</h4>
+<div class="paragraph">
+<p>Sometimes Kotlin programs need to work with null values, such as when interacting with external Java code or
+representing a truly absent state.  Kotlin provides null tracking to elegantly deal with such situations.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">---
+fun describeString(maybeString: String?): String {<b class="conum">(1)</b>
+    if (maybeString != null &amp;&amp; maybeString.length &gt; 0) {<b class="conum">(2)</b>
+        return "String of length ${maybeString.length}"
+    } else {
+        return "Empty or null string"
+    }
+}
+---
+&lt;1&gt; A function that takes in a nullable String and gives you a phrase describing it
+&lt;2&gt; If the given String is not null and not empty, tell the caller about it's length
+'''
+&gt;&gt;&gt;
+=== String Templates</code></pre>
+</div>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
@@ -555,13 +589,313 @@ println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
 <p>Template expressions always start with a dollar sign ($).</p>
 </div>
 <hr>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+=== Ranges</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">for(i in 0..3) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '0123'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Create range starting from 0 up to 3 (inclusive) and iterate over it</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">for(i in 2..8 step 2) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '2468'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>You can define increment step for consecutive elements</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">for (c in 'a'..'d') { <b class="conum">(1)</b>
+    print(c)
+}
+// prints 'abcd'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Char ranges can be created as well</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">for (c in 'a'..'g' step 2) { <b class="conum">(1)</b>
+    print(c)
+}
+// prints 'aceg'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Increment step for char ranges are also valid</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">for (i in 3 downTo 0) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '3210'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>To create a range in <em>reverse</em> order use <code>downTo()</code> function</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Ranges are also useful in <code><strong>if</strong></code> statements</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">val x = 2
+if (x in 1..10) { <b class="conum">(1)</b>
+    println(x)
+}
+//prints '2'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Check that <em>1 &#8656; x &#8656; 10</em></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">val x = 3
+if (x !in 1..4) { <b class="conum">(1)</b>
+    println(x)
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p><code><strong>!in</strong></code> is oposite of <code><strong>in</strong></code>. Statement is equal to <code><em>false</em></code>
+'''
+&gt;&gt;&gt;
+=== Named arguments</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">fun format(userName: String, domain: String) = "$userName@$domain"
+
+fun main(args: Array&lt;String&gt;) {
+    println(format("mario", "example.com")) <b class="conum">(1)</b>
+    println(format(userName = "foo", domain = "bar.com")) <b class="conum">(2)</b>
+    println(format(domain = "frog.com", userName = "pepe")) <b class="conum">(3)</b>
+}
+// mario@example.com
+// foo@bar.com
+// pepe@frog.com</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>As in Java, Kotlin supports passing arguments to methods and constructors
+according to their order of definition.</p>
+</li>
+<li>
+<p>Kotlin also supports named arguments to allow clearer invocations and avoid
+mistakes that otherwise would not be detected by the compiler (e.g.
+switching the correct order of the arguments and constructing an email in
+the form <em>gmail.com@username</em>).</p>
+</li>
+<li>
+<p>When invoking a method or constructor, named arguments do not have to
+respect the original order of definition.</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+<hr>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+=== Basic inheritance</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog { <b class="conum">(1)</b>
+    open fun sayHello() { <b class="conum">(2)</b>
+        println("wow wow!")
+    }
+}
+
+class Yorkshire : Dog() { <b class="conum">(3)</b>
+    override fun sayHello() { <b class="conum">(4)</b>
+        println("wif wif!")
+    }
+}
+
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// Wif wif!</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Kotlin classes are <em>final</em> by default. If you want to allow overriding a
+class, it must be marked with the <code>open</code> modifier.</p>
+</li>
+<li>
+<p>Kotlin methods are also <em>final</em> by default. As with the classes, the <code>open</code>
+modifier allows overriding them.</p>
+</li>
+<li>
+<p>A class is overriding by following the subclass name with
+<code>: SuperclassName()</code>. The empty parentheses <code>()</code> indicate an invocation to
+the default constructor of the superclass.</p>
+</li>
+<li>
+<p>Overriding methods or attributes requires the <code>override</code> modifier.</p>
+</li>
+</ol>
+</div>
+<hr>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_inheriting_without_default_constructor">Inheriting without default constructor</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog(val origin: String) {
+    fun sayHello() {
+        println("A dog from $origin says: wow wow!")
+    }
+}
+
+class Yorkshire : Dog("England") <b class="conum">(1)</b>
+
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// A dog from England says: wow wow!</code></pre>
 </div>
-<div class="sect1">
-<h2 id="_contribute">Contribute</h2>
-<div class="sectionbody">
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>When the superclass does not provide a default constructor, arguments must be
+provided when invoking the superclass constructor from the subclass.</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_bypass_constructor_arguments">Bypass constructor arguments</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog(val name: String, val origin: String) {
+    fun sayHello() {
+        println("$name, the dog from $origin says: wow wow!")
+    }
+}
+
+class Poodle(name: String) : Dog(name = name, origin = "France") <b class="conum">(1)</b>
+
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Poodle("Rufo")
+    dog.sayHello()
+}
+// Rufo, the dog from France says: wow wow!</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Observe that <code>name</code> is neither a <code>var</code> nor <code>val</code> because it is a
+constructor argument for <code>Yorkshire</code>, whose value is passed to the <code>name</code>
+attribute of <code>Dog</code> (it does not override it).</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+<hr>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+=== Sealed Classes</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin" data-lang="kotlin">sealed class Mammal(val name: String) <b class="conum">(1)</b>
+
+class Cat(val catName: String) : Mammal(catName)
+class Human(val humanName: String, val job: String) : Mammal(humanName)
+
+
+fun greetMammal(mammal: Mammal): String {
+    when (mammal) { <b class="conum">(2)</b>
+        is Human -&gt; return "Hello ${mammal.name}; You're working as a ${mammal.job}" <b class="conum">(3)</b>
+        is Cat -&gt; return "Hello ${mammal.name}" <b class="conum">(4)</b>
+        // `else` clause not required, all the cases covered  <b class="conum">(5)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>A sealed class is defined with two subclasses which must be in the same file</p>
+</li>
+<li>
+<p>The sealed class is used as an argument for a <code>when</code> expression</p>
+</li>
+<li>
+<p>A smartcast is performed, casting Mammal to Human</p>
+</li>
+<li>
+<p>A smartcast is performed, casting Mammal to Cat</p>
+</li>
+<li>
+<p>The <code>else</code> clause is not necessary because all subclasses of the sealed class are covered.
+This is contrary to ordinary super classes, where an <code>else</code> would always be needed.</p>
+</li>
+</ol>
+</div>
+<hr>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+== Contribute</p>
+</div>
 <div class="paragraph">
 <p>The site welcomes and encourages community contributions. While the project originators will contribute examples as time permits, the main idea behind this project is for the community
 to contribute. To that end, we&#8217;ve tried to make contributions as simple as possible.</p>
@@ -621,12 +955,11 @@ code snippets and what is supported. You can also look at the <a href="http://as
 <div class="paragraph">
 <p>If you get stuck, contact one of the <a href="https://twitter.com/hhariri">authors</a> or reach out to us on <a href="http://slack.kotlinlang.org">Kotlin Slack</a>, on the <strong>#kotlin-by-example</strong> channel.</p>
 </div>
+<hr>
+<div class="paragraph">
+<p>&gt;&gt;&gt;
+== Copyright</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_copyright">Copyright</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>The entire contents of this site, along with the Kotlin by Example project is licensed under MIT.</p>
 </div>
@@ -636,9 +969,11 @@ code snippets and what is supported. You can also look at the <a href="http://as
 </div>
 </div>
 </div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-06-13 05:17:50 +00:00
+Last updated 2017-06-21 05:14:40 +00:00
 </div>
 </div>
 <link rel="stylesheet" href="lib/highlight/styles/github.min.css">
