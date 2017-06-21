@@ -36,19 +36,19 @@ fun main(args: Array<String>) {
 
 [source,kotlin]
 ----
-open class Dog(val origin: String) {
+open class Tiger(val origin: String) {
     fun sayHello() {
-        println("A dog from $origin says: wow wow!")
+        println("A tiger from $origin says: grrhhh!")
     }
 }
 
-class Yorkshire : Dog("England") <1>
+class SiberianTiger : Tiger("Siberia") <1>
 
 fun main(args: Array<String>) {
-    val dog: Dog = Yorkshire()
+    val tiger: Tiger = SiberianTiger()
     dog.sayHello()
 }
-// A dog from England says: wow wow!
+// A tiger from Siberia says: grrhhh!
 ----
 <1> When the superclass does not provide a default constructor, arguments must be
     provided when invoking the superclass constructor from the subclass.
@@ -60,23 +60,23 @@ fun main(args: Array<String>) {
 
 [source,kotlin]
 ----
-open class Dog(val name: String, val origin: String) {
+open class Lion(val name: String, val origin: String) {
     fun sayHello() {
-        println("$name, the dog from $origin says: wow wow!")
+        println("$name, the lion from $origin says: graoh!")
     }
 }
 
-class Poodle(name: String) : Dog(name = name, origin = "France") <1>
+class Asiatic(name: String) : Lion(name = name, origin = "India") <1>
 
 fun main(args: Array<String>) {
-    val dog: Dog = Poodle("Rufo")
-    dog.sayHello()
+    val lion: Lion = Lion("Rufo")
+    lion.sayHello()
 }
-// Rufo, the dog from France says: wow wow!
+// Rufo, the lion from India says: graoh!
 ----
 <1> Observe that `name` is neither a `var` nor `val` because it is a
-    constructor argument for `Yorkshire`, whose value is passed to the `name`
-    attribute of `Dog` (it does not override it).
+    constructor argument for `Asiatic`, whose value is passed to the `name`
+    attribute of `Lion` (it does not override it).
 
 '''
 <<<
