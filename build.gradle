@@ -49,7 +49,8 @@ asciidoctor {
         into 'lib'
     }
 
-    attributes version: project.version,
+    attributes toc: 'left',
+            version: project.version,
             highlightjsdir: "lib/highlight"
 }
 
