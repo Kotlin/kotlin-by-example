@@ -1,3 +1,0 @@
-DO NOT DELETE THIS FILE
-
-This is a dummy file that is placed in the docs folder. Why? It's a long story. 
