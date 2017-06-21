@@ -46,7 +46,7 @@ class SiberianTiger : Tiger("Siberia") <1>
 
 fun main(args: Array<String>) {
     val tiger: Tiger = SiberianTiger()
-    dog.sayHello()
+    tiger.sayHello()
 }
 // A tiger from Siberia says: grrhhh!
 ----
@@ -69,7 +69,7 @@ open class Lion(val name: String, val origin: String) {
 class Asiatic(name: String) : Lion(name = name, origin = "India") <1>
 
 fun main(args: Array<String>) {
-    val lion: Lion = Lion("Rufo")
+    val lion: Lion = Asiatic("Rufo")
     lion.sayHello()
 }
 // Rufo, the lion from India says: graoh!

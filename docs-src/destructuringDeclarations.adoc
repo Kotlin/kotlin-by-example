@@ -4,7 +4,9 @@ _Destructuring declaration_ syntax can be very handy and save you few lines of c
 
 [source,kotlin]
 ----
-val (x, y, z) = arrayOf(5, 10, 15) <1>
+fun main(args: Array<String>) {
+    val (x, y, z) = arrayOf(5, 10, 15)
+}
 ----
 <1> x = 5, y = 10, z = 15
 
@@ -12,7 +14,7 @@ val (x, y, z) = arrayOf(5, 10, 15) <1>
 [source,kotlin]
 ----
 val map = mapOf("Alice" to 21, "Bob" to 25)
-for ( (name, age) in map) { <1>
+for ((name, age) in map) { <1>
     println("$name is $age years old") <2>
 }
 ----
@@ -24,31 +26,42 @@ for ( (name, age) in map) { <1>
 ----
 fun findMinAndMax(list: List<Int>): Pair<Int, Int> { <1>
     // do the math
-    return Pair(min, max) <2>
+    return Pair(50, 100) <2>
 }
 
-val (min, max) = findMinAndMax(values)
+fun main(args: Array<String>) {
+    val (min, max) = findMinAndMax(listOf(100, 90, 50, 98, 76, 83))
+}
 ----
 <1> sometimes we need to return multiple values from functions
 <2> `Pair` and `Triple` are tuples from standard library
 
 
-[source,kotlin]
+[source,kotlin-snippet,User.kt]
 ----
 data class User(val username: String, val email: String) <1>
 
-val user = getUser()
-val (username, email) = user <2>
-username == user.component1() <3>
-// prints 'true'
+fun getUser() = User("Mary", "mary@somewhere.com")
 ----
-<1> you can define your own class that will be destructured later 
-<2> values mapped to object fields
-<3> data class automatically defines `component1()`, `component2()` corresponding methods, which will be called during destructuring
+<1> you can define your own class that will be destructured later
+
+[source,kotlin,prepend=User.kt]
+----
+fun main(args: Array<String>) {
+    val user = getUser()
+    val (username, email) = user <1>
+    username == user.component1() <2>
+    // prints 'true'
+}
+----
+<1> values mapped to object fields
+<2> data class automatically defines `component1()`, `component2()` corresponding methods, which will be called during destructuring
 
 
 [source,kotlin]
 ----
-val (_, b) = getResult() <1>
+fun main(args: Array<String>) {
+    val (_, email) = getUser() <1>
+}
 ----
 <1> just use _underscore_ if you don't need one of the values

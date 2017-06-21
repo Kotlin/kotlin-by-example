@@ -37,6 +37,12 @@ include::ranges.adoc[]
 include::namedArguments.adoc[]
 '''
 >>>
+include::destructuringDeclarations.adoc[]
+'''
+>>>
+include::letFunction.adoc[]
+'''
+>>>
 include::inheritance.adoc[]
 '''
 >>>

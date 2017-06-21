@@ -7,17 +7,5 @@
 File("input.txt").let {
     it.exists() <1>
 }
-<2>
 ----
-<1> file object is now accessable by reference `it`
-<2> there is no any reference to it now
-
-
-[source,kotlin]
-----
-getConfig()?.let { conf -> <1>
-    conf.getHost() <2>
-}
-----
-<1> this block will be executed only if value returned by `getConfig()` is not null
-<2> we can rename `it` variable to more suitable name
+<1> file object is now accessible by reference `it`
