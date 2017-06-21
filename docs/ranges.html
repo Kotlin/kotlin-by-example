@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>String Templates</title>
+<title>Ranges</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -422,36 +422,121 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
-<li><a href="#_string_templates">String Templates</a></li>
+<li><a href="#_ranges">Ranges</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_string_templates">String Templates</h3>
+<h3 id="_ranges">Ranges</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
-
-println("Hello $greeting") <b class="conum">(1)</b>
-// prints 'Hello Kotliner'
-
-println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
-// prints 'Hello KOTLINER'</code></pre>
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">for(i in 0..3) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '0123'</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <ol>
 <li>
-<p><code>String</code>s in Kotlin can include references to variables that are interpolated</p>
+<p>Create range starting from 0 up to 3 (inclusive) and iterate over it</p>
 </li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">for(i in 2..8 step 2) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '2468'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
 <li>
-<p>In addition to simple variable references, they can also include any expression enclosed in curly braces.</p>
+<p>You can define increment step for consecutive elements</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">for (c in 'a'..'d') { <b class="conum">(1)</b>
+    print(c)
+}
+// prints 'abcd'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Char ranges can be created as well</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">for (c in 'a'..'g' step 2) { <b class="conum">(1)</b>
+    print(c)
+}
+// prints 'aceg'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Increment step for char ranges are also valid</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">for (i in 3 downTo 0) { <b class="conum">(1)</b>
+    print(i)
+}
+// prints '3210'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>To create a range in <em>reverse</em> order use <code>downTo()</code> function</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Template expressions always start with a dollar sign ($).</p>
+<p>Ranges are also useful in <code><strong>if</strong></code> statements</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val x = 2
+if (x in 1..10) { <b class="conum">(1)</b>
+    println(x)
+}
+//prints '2'</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Check that <em>1 &#8656; x &#8656; 10</em></p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val x = 3
+if (x !in 1..4) { <b class="conum">(1)</b>
+    println(x)
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p><code><strong>!in</strong></code> is oposite of <code><strong>in</strong></code>. Statement is equal to <code><em>false</em></code></p>
+</li>
+</ol>
 </div>
 </div>
 </div>

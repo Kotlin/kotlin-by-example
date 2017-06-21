@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>String Templates</title>
+<title>Null safety</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -422,36 +422,53 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
-<li><a href="#_string_templates">String Templates</a></li>
+<li><a href="#_null_safety">Null safety</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_string_templates">String Templates</h3>
+<h3 id="_null_safety">Null safety</h3>
+<div class="paragraph">
+<p>In an effort to rid the world of <code>NullPointerException</code>, variable types in Kotlin don&#8217;t allow the assigment of <code>null</code>.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
-
-println("Hello $greeting") <b class="conum">(1)</b>
-// prints 'Hello Kotliner'
-
-println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
-// prints 'Hello KOTLINER'</code></pre>
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">---
+var neverNull: String = "This can't be null"<b class="conum">(1)</b>
+var nullable: String? = "You can keep a null here"<b class="conum">(2)</b>
+nullable = null<b class="conum">(3)</b></code></pre>
 </div>
-</div>
-<div class="colist arabic">
-<ol>
-<li>
-<p><code>String</code>s in Kotlin can include references to variables that are interpolated</p>
-</li>
-<li>
-<p>In addition to simple variable references, they can also include any expression enclosed in curly braces.</p>
-</li>
-</ol>
 </div>
 <div class="paragraph">
-<p>Template expressions always start with a dollar sign ($).</p>
+<p>var inferredNonNull = "The compiler assumes non-null"//&lt;4&gt;
+---
+&lt;1&gt; Declare a non-null String variable
+&lt;2&gt; Declare a nullable String variable
+&lt;3&gt; Set the nullable variable to null
+&lt;4&gt; When infering types, the compiler assumes non-null for variables that are initialized with a value</p>
+</div>
+<div class="sect3">
+<h4 id="_working_with_nulls">Working with nulls</h4>
+<div class="paragraph">
+<p>Sometimes Kotlin programs need to work with null values, such as when interacting with external Java code or
+representing a truly absent state.  Kotlin provides null tracking to elegantly deal with such situations.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">---
+fun describeString(maybeString: String?): String {<b class="conum">(1)</b>
+    if (maybeString != null &amp;&amp; maybeString.length &gt; 0) {<b class="conum">(2)</b>
+        return "String of length ${maybeString.length}"
+    } else {
+        return "Empty or null string"
+    }
+}
+---
+&lt;1&gt; A function that takes in a nullable String and gives you a phrase describing it
+&lt;2&gt; If the given String is not null and not empty, tell the caller about it's length</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>

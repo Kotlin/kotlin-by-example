@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>String Templates</title>
+<title>Basic inheritance</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -422,37 +422,119 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
-<li><a href="#_string_templates">String Templates</a></li>
+<li><a href="#_basic_inheritance">Basic inheritance</a></li>
+<li><a href="#_inheriting_without_default_constructor">Inheriting without default constructor</a></li>
+<li><a href="#_bypass_constructor_arguments">Bypass constructor arguments</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_string_templates">String Templates</h3>
+<h3 id="_basic_inheritance">Basic inheritance</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog { <b class="conum">(1)</b>
+    open fun sayHello() { <b class="conum">(2)</b>
+        println("wow wow!")
+    }
+}
 
-println("Hello $greeting") <b class="conum">(1)</b>
-// prints 'Hello Kotliner'
+class Yorkshire : Dog() { <b class="conum">(3)</b>
+    override fun sayHello() { <b class="conum">(4)</b>
+        println("wif wif!")
+    }
+}
 
-println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
-// prints 'Hello KOTLINER'</code></pre>
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// Wif wif!</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <ol>
 <li>
-<p><code>String</code>s in Kotlin can include references to variables that are interpolated</p>
+<p>Kotlin classes are <em>final</em> by default. If you want to allow overriding a
+class, it must be marked with the <code>open</code> modifier.</p>
 </li>
 <li>
-<p>In addition to simple variable references, they can also include any expression enclosed in curly braces.</p>
+<p>Kotlin methods are also <em>final</em> by default. As with the classes, the <code>open</code>
+modifier allows overriding them.</p>
+</li>
+<li>
+<p>A class is overriding by following the subclass name with
+<code>: SuperclassName()</code>. The empty parentheses <code>()</code> indicate an invocation to
+the default constructor of the superclass.</p>
+</li>
+<li>
+<p>Overriding methods or attributes requires the <code>override</code> modifier.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>Template expressions always start with a dollar sign ($).</p>
+<hr>
+<div style="page-break-after: always;"></div>
 </div>
+<div class="sect2">
+<h3 id="_inheriting_without_default_constructor">Inheriting without default constructor</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog(val origin: String) {
+    fun sayHello() {
+        println("A dog from $origin says: wow wow!")
+    }
+}
+
+class Yorkshire : Dog("England") <b class="conum">(1)</b>
+
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Yorkshire()
+    dog.sayHello()
+}
+// A dog from England says: wow wow!</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>When the superclass does not provide a default constructor, arguments must be
+provided when invoking the superclass constructor from the subclass.</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_bypass_constructor_arguments">Bypass constructor arguments</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">open class Dog(val name: String, val origin: String) {
+    fun sayHello() {
+        println("$name, the dog from $origin says: wow wow!")
+    }
+}
+
+class Poodle(name: String) : Dog(name = name, origin = "France") <b class="conum">(1)</b>
+
+fun main(args: Array&lt;String&gt;) {
+    val dog: Dog = Poodle("Rufo")
+    dog.sayHello()
+}
+// Rufo, the dog from France says: wow wow!</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Observe that <code>name</code> is neither a <code>var</code> nor <code>val</code> because it is a
+constructor argument for <code>Yorkshire</code>, whose value is passed to the <code>name</code>
+attribute of <code>Dog</code> (it does not override it).</p>
+</li>
+</ol>
+</div>
+<hr>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div id="footer">

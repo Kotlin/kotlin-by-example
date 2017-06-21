@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.3">
-<title>String Templates</title>
+<title>Sealed Classes</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -422,36 +422,49 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel2">
-<li><a href="#_string_templates">String Templates</a></li>
+<li><a href="#_sealed_classes">Sealed Classes</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect2">
-<h3 id="_string_templates">String Templates</h3>
+<h3 id="_sealed_classes">Sealed Classes</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">val greeting = "Kotliner"
+<pre class="highlight"><code class="language-kotlin" data-lang="kotlin">sealed class Mammal(val name: String) <b class="conum">(1)</b>
 
-println("Hello $greeting") <b class="conum">(1)</b>
-// prints 'Hello Kotliner'
+class Cat(val catName: String) : Mammal(catName)
+class Human(val humanName: String, val job: String) : Mammal(humanName)
 
-println("Hello ${greeting.toUpperCase()}") <b class="conum">(2)</b>
-// prints 'Hello KOTLINER'</code></pre>
+
+fun greetMammal(mammal: Mammal): String {
+    when (mammal) { <b class="conum">(2)</b>
+        is Human -&gt; return "Hello ${mammal.name}; You're working as a ${mammal.job}" <b class="conum">(3)</b>
+        is Cat -&gt; return "Hello ${mammal.name}" <b class="conum">(4)</b>
+        // `else` clause not required, all the cases covered  <b class="conum">(5)</b>
+    }
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <ol>
 <li>
-<p><code>String</code>s in Kotlin can include references to variables that are interpolated</p>
+<p>A sealed class is defined with two subclasses which must be in the same file</p>
 </li>
 <li>
-<p>In addition to simple variable references, they can also include any expression enclosed in curly braces.</p>
+<p>The sealed class is used as an argument for a <code>when</code> expression</p>
+</li>
+<li>
+<p>A smartcast is performed, casting Mammal to Human</p>
+</li>
+<li>
+<p>A smartcast is performed, casting Mammal to Cat</p>
+</li>
+<li>
+<p>The <code>else</code> clause is not necessary because all subclasses of the sealed class are covered.
+This is contrary to ordinary super classes, where an <code>else</code> would always be needed.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p>Template expressions always start with a dollar sign ($).</p>
 </div>
 </div>
 </div>
