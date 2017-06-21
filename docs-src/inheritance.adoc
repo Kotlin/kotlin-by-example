@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
 '''
 <<<
 
-=== Inheriting without default constructor
+==== Inheriting without default constructor
 
 [source,kotlin]
 ----
@@ -56,7 +56,7 @@ fun main(args: Array<String>) {
 '''
 <<<
 
-=== Bypass constructor arguments
+==== Bypass constructor arguments
 
 [source,kotlin]
 ----
