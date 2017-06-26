@@ -39,9 +39,7 @@ It is even possible to execute extensions on `null` references. In their impleme
 
 [source,kotlin]
 ----
-fun <T> T?.nullSafeToString(): String {
-    return this?.toString() ?: "NULL"
-}
+fun <T> T?.nullSafeToString() = this?.toString() ?: "NULL"
 
 println(null.nullSafeToString())
 println("Kotlin".nullSafeToString())
