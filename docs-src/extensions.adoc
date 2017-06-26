@@ -32,4 +32,19 @@ println("Items: ${order.commaDelimitedItemNames}")
 <4> Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extensions]. Signature
 is very much like standard function or property signature, with addition that we need to specify type we're attaching function or property to.
 
+== Calling extensions on `null` references
+
+It is even possible to execute extensions on `null` references. In their implementation we can check for 
+`null` reference and based on that we can do any arbitrary logic. Example:
+
+[source,kotlin]
+----
+fun <T> T?.nullSafeToString(): String {
+    return this?.toString() ?: "NULL"
+}
+
+println(null.nullSafeToString())
+println("Kotlin".nullSafeToString())
+----
+
 Having extensions support, we have unlimited power of extending functionality of any known types if we think they're missing some APIs.
