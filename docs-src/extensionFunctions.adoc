@@ -1,20 +1,32 @@
 === Extension functions
 
 Extension functions allow us to attach custom functions to any library or custom code we write. You can extend String, Collection or 
-any other known type with some custom behavior. Given example creates `isContainedBy` extension function that we can directly call on 
-any kind of `T` type, as though it was part of the standard library.
+any other known type with some custom behavior. 
+
+Given example creates `maxPricedItemValue`, `maxPricedItemName` extension functions as well as `commaDelimitedItemNames` `Order` type extension property.
 
 [source,kotlin]
 ----
-private fun <T> T.isContainedBy(collection: Collection<T>) = collection.contains(this)//<1>
+data class Item(val name: String, val price: Float)//<1>
 
-fun main(args: Array<String>) {
-    println("a in [a,b,c] : ${"a".isContainedBy(listOf("a", "b", "c"))}")//<2>
-    println("a in [d,e,f] : ${"a".isContainedBy(listOf("d", "e", "f"))}")//<2>
-}
+data class Order(val items: Collection<Item>)//<1>
+
+fun Order.maxPricedItemValue(): Float = this.items.maxBy { it.price }?.price ?: 0F//<2>
+fun Order.maxPricedItemName() = this.items.maxBy { it.price }?.name ?: "NO_PRODUCTS"//<2>
+
+val Order.commaDelimitedItemNames: String
+    get() = items.map { it.name }.joinToString()//<3>
+
+val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
+
+println("Max priced item name: ${order.maxPricedItemName()}")
+println("Max priced item value: ${order.maxPricedItemValue()}")
+println("Items: ${order.commaDelimitedItemNames}")
 ----
-<1> Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extension functions]. Signature
-is very much like standard function signature, with addition that we need to specify type (`T` in this case) we're attaching function to.
-<2> We call our extension function on `"a"` String variable.
+<1> We define simple model of `Order` that can contain arbitrary `Collection` of `Item` s
+<2> We define extension functions for `Order` type. Later we call these functions directly on the instance of that type. 
+<3> We can also define extension properties.
+<4> Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extension functions]. Signature
+is very much like standard function signature, with addition that we need to specify type we're attaching function or property to.
 
 Having extension functions support we have unlimited power of extending functionality of any known types if we think they're missing some APIs.
