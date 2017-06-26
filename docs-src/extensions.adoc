@@ -5,6 +5,9 @@ any other known type with some custom functionality.
 
 Given example creates `maxPricedItemValue`, `maxPricedItemName` extension functions as well as `commaDelimitedItemNames` `Order` type extension property.
 
+It is important to mention that in extension functions or property implementations keyword `this` can be used 
+and it points to the instance we called extension on.
+
 [source,kotlin]
 ----
 data class Item(val name: String, val price: Float)//<1>
