@@ -1,7 +1,7 @@
-=== Extension functions
+=== Extensions
 
-Extension functions allow us to attach custom functions to any library or custom code we write. You can extend String, Collection or 
-any other known type with some custom behavior. 
+Extensions allow us to attach custom functions or properties to any library or custom code we write. You can extend String, Collection or 
+any other known type with some custom functionality. 
 
 Given example creates `maxPricedItemValue`, `maxPricedItemName` extension functions as well as `commaDelimitedItemNames` `Order` type extension property.
 
@@ -23,10 +23,10 @@ println("Max priced item name: ${order.maxPricedItemName()}")
 println("Max priced item value: ${order.maxPricedItemValue()}")
 println("Items: ${order.commaDelimitedItemNames}")
 ----
-<1> We define simple model of `Order` that can contain arbitrary `Collection` of `Item` s
+<1> We define simple models of `Item` and `Order`. `Order` can contain arbitrary `Collection` of `Item` s
 <2> We define extension functions for `Order` type. Later we call these functions directly on the instance of that type. 
 <3> We can also define extension properties.
-<4> Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extension functions]. Signature
-is very much like standard function signature, with addition that we need to specify type we're attaching function or property to.
+<4> Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extensions]. Signature
+is very much like standard function or property signature, with addition that we need to specify type we're attaching function or property to.
 
-Having extension functions support we have unlimited power of extending functionality of any known types if we think they're missing some APIs.
+Having extensions support, we have unlimited power of extending functionality of any known types if we think they're missing some APIs.
