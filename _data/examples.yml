@@ -1,4 +1,21 @@
 - title: Hello World
   url: helloWorld
-- title: Functions
-  url: functions
+- title: Variables
+  url: variables
+- title: String Template
+  url: stringTemplates
+- title: Null Safety
+  url: nullSafety
+- title: Ranges
+  url: ranges
+- title: Named Arguments
+  url: namedArguments
+- title: Let Function
+  url: letFunction
+- title: Inheritance
+  url: inheritance
+- title: Destructuring
+  url: destructuring
+- title: Sealed Classes
+  url: sealedClasses
+

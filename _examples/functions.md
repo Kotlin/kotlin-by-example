@@ -1,6 +1,0 @@
----
-title: 'Functions'
----
-
-
-Something
