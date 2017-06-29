@@ -6,6 +6,8 @@
 *.iws
 /out
 /build
-/.idea
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/dictionaries
 .DS_Store
 /src/docsOut

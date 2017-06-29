@@ -1,6 +1,5 @@
 ---
 title: 'Functions'
-type: 'BASIC'
 ---
 
 

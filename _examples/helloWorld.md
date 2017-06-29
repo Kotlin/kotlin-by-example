@@ -1,6 +1,5 @@
 ---
 title: 'Hello World'
-type: 'BASIC'
 ---
 
 <div class="sample" markdown="1">

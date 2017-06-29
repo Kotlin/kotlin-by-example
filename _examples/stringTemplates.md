@@ -1,6 +1,5 @@
 ---
 title: 'String Templates'
-type: 'Basic'
 ---
 
 <div class="sample" markdown="1">

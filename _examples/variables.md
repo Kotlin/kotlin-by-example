@@ -1,6 +1,5 @@
 --- 
 title: 'Variables'
-type: 'Basic'
 ---
 Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you'll usually let the
 compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended. In essence use *val* over *var*.
