@@ -6,8 +6,12 @@
   url: stringTemplates
 - title: Null Safety
   url: nullSafety
+- title: Loops
+  url: loops
 - title: Ranges
   url: ranges
+- title: Extension Functions
+  url: extensionFunctions
 - title: Named Arguments
   url: namedArguments
 - title: Let Function
