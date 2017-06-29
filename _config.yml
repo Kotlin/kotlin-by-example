@@ -1,0 +1,6 @@
+---
+exclude: ['README.markdown']
+permalink: ':title'
+highligher: true
+safe: false
+title: 'Kotlin By Example'
