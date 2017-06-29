@@ -1,19 +1,1 @@
-=== String Templates
-
-[source,kotlin]
-----
-val greeting = "Kotliner"
-
-println("Hello $greeting") <1>
-// prints 'Hello Kotliner'
-
-println("Hello ${greeting.toUpperCase()}") <2>
-// prints 'Hello KOTLINER'
-
-----
-<1> ``String``s in Kotlin can include references to variables that are interpolated
-<2> In addition to simple variable references, they can also include any expression enclosed in curly braces.
-
-Template expressions always start with a dollar sign ($).
-
 

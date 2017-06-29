@@ -640,6 +640,7 @@ code {
 
 ol {
     padding-left:0;
+    padding-bottom: 20px;
     line-height: 30px;
     list-style-position:inside;
 }
