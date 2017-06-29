@@ -6,17 +6,17 @@ title: 'Sealed Classes'
 
 ```kotlin
 //sampleStart
-sealed class Mammal(val name: String) // 1
+sealed class Mammal(val name: String)                                                   // 1
 
 class Cat(val catName: String) : Mammal(catName)
 class Human(val humanName: String, val job: String) : Mammal(humanName)
 
 
 fun greetMammal(mammal: Mammal): String {
-    when (mammal) { //2
-        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}" //3
-        is Cat -> return "Hello ${mammal.name}" //4
-        //5
+    when (mammal) {                                                                     //2
+        is Human -> return "Hello ${mammal.name}; You're working as a ${mammal.job}"    //3
+        is Cat -> return "Hello ${mammal.name}"                                         //4
+                                                                                        //5
     }
 }
 //sampleEnd

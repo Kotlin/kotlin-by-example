@@ -6,10 +6,10 @@ title: 'Hello World'
 
 ```kotlin
 //sampleStart
-package org.kotlin.byexample // 1
+package org.kotlin.byexample        // 1
 
-fun main(args: Array<String>) { // 2
-    println("Hello, World!") // 3
+fun main(args: Array<String>) {     // 2
+    println("Hello, World!")        // 3
 }
 //sampleEnd
 ```
