@@ -1,5 +1,4 @@
 ---
-path: '/functions'
 title: 'Functions'
 type: 'BASIC'
 ---

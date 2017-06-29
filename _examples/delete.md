@@ -1,5 +1,4 @@
 ---
-path: '/delete-a-thing'
 title: 'Delete a thing'
 type: 'DELETE'
 ---

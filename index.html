@@ -7,16 +7,13 @@ layout: default
 </nav>
 
 <section id='content'>
-  {% for page in site.pages %}
-  {% if page.url != "/" %}
-
-  <article class="{{ page.type }}">
-    <a name='{{ page.url }}' href='#{{ page.url }}'><h2>{% if page.type %}<code><b>{{ page.type }}</b></code> {% endif %}{{ page.title }}</h2></a>
+  {% for example in site.examples %}
+  <article class="{{ example.type }}">
+    <a name='{{ example.url }}' href='#{{ example.url }}'><h2>{% if example.type %}<code><b>{{ example.type }}</b></code> {% endif %}{{ example.title }}</h2></a>
     <section class='body'>
-      {{ page.content }}
+      {{ example.content }}
     </section>
   </article>
-  {% endif %}
   {% endfor %}
 </section>
 

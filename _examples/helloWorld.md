@@ -1,5 +1,4 @@
 ---
-path: '/hello-world'
 title: 'Hello World'
 type: 'BASIC'
 ---
