@@ -1,19 +1,6 @@
 ---
 layout: default
+title: Welcome to Kotlin By Example
 ---
 
-<nav id='sidebar'>
-	{% include nav.html %}
-</nav>
-
-<section id='content'>
-  {% for example in site.examples %}
-  <article class="{{ example.type }}">
-    <a name='{{ example.url }}' href='#{{ example.url }}'><h2>{% if example.type %}<code><b>{{ example.type }}</b></code> {% endif %}{{ example.title }}</h2></a>
-    <section class='body'>
-      {{ example.content }}
-    </section>
-  </article>
-  {% endfor %}
-</section>
-
+Welcome to our <em>Kotlin By Example</em> website.

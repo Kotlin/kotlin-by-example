@@ -5,4 +5,12 @@ highligher: true
 safe: false
 title: 'Kotlin By Example'
 collections:
-  - examples
+  examples:
+     output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: examples
+    values:
+      layout: default

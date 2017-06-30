@@ -4,6 +4,7 @@ Override some of the Carte theme's CSS, here in kotlinbyexample.
 
  */
 
-#content > article {
-    display: none;
+#sidebar input.kbe-filter {
+    padding-left: 20px;
+    margin-bottom: 0;
 }
