@@ -10,7 +10,7 @@
   url: loops
 - title: Ranges
   url: ranges
-- title: Extension Functions
+- title: Extension Functions and Properties
   url: extensionFunctions
 - title: Named Arguments
   url: namedArguments

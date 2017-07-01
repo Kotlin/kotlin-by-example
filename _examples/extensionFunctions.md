@@ -1,5 +1,5 @@
 ---
-title: Extension Functions
+title: Extension Functions and Properties
 ---
 
 <div class="sample" markdown="1">
@@ -13,11 +13,12 @@ data class Order(val items: Collection<Item>)                                   
 fun Order.maxPricedItemValue(): Float = this.items.maxBy { it.price }?.price ?: 0F    // 3  
 fun Order.maxPricedItemName() = this.items.maxBy { it.price }?.name ?: "NO_PRODUCTS"  // 4
 
+val Order.commaDelimitedItemNames: String
+    get() = items.map { it.name }.joinToString()//<3>
+
 //sampleEnd
 fun main(args: Array<String>) {
 
-    val Order.commaDelimitedItemNames: String
-        get() = items.map { it.name }.joinToString()//<3>
     
     val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
     
