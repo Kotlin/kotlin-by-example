@@ -40,7 +40,7 @@ code {
 
 /* SIDEBAR */
 #sidebar {
-  background: #191919;
+  background: #235479;
   color: #fff;
   float: left;  
   height: 100%;
@@ -51,7 +51,7 @@ code {
 }
 
 #sidebar h1 {
-  background: #111;
+  background: #235479;
   font-size: 14px;
   margin: 0;
   padding: 20px;
@@ -89,7 +89,7 @@ code {
 }
 
 #sidebar input {
-  background: #111;
+  background: #235479;
   border: 0;
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -138,7 +138,7 @@ code {
   padding: 15px;
 }
 #content article > a:hover {
-  background: #222;
+  background: #235479;
   text-decoration: none;
 }
 
