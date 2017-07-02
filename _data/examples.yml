@@ -10,6 +10,8 @@
   url: classes
 - title: Loops
   url: loops
+- title: Functions
+  url: functions
 - title: Ranges
   url: ranges
 - title: Extension Functions and Properties
