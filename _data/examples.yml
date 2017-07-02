@@ -8,10 +8,10 @@
   url: nullSafety
 - title: Classes
   url: classes
-- title: Loops
-  url: loops
 - title: Functions
   url: functions
+- title: Loops
+  url: loops
 - title: Ranges
   url: ranges
 - title: Extension Functions and Properties
