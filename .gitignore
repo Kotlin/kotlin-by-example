@@ -11,3 +11,4 @@
 .idea/dictionaries
 .DS_Store
 /src/docsOut
+.jekyll-metadata
