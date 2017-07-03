@@ -9,10 +9,10 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 ```kotlin
 fun main(args: Array<String>) {
 //sampleStart
-    var a : String = "initial" // 1
+    var a: String = "initial" // 1
     println(a)
 
-    val b : Int = 1 //2
+    val b: Int = 1 //2
 
     val c = 3 //3
 //sampleEnd
@@ -30,7 +30,7 @@ fun main(args: Array<String>) {
 ```kotlin
 fun main(args: Array<String>) {
 //sampleStart
-var e : Int //1
+var e: Int //1
 println(e) //2
 //sampleEnd
 }
