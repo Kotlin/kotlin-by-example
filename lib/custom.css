@@ -33,7 +33,7 @@ body {
 .sidebar {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 200px) {
   .sidebar {
     position: fixed;
     top: 51px;
@@ -107,3 +107,6 @@ body {
 .content {
   margin-left: 20px;
 }
+
+
+
