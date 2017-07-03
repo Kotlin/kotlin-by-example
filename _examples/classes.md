@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
 </div>
 
 1. Declare a class named `Customer` with parameterless constructor 
-2. Declare a class with a mutable property id, an immutable property email and constructor with two parameters id and name
+2. Declare a class with a immutable property id, an mutable property email and constructor with two parameters id and name
 3. Create an instance of the class `Customer`
 4. Create an instance of the class `Contact` using the constructor with two arguments
 5. Access the property `id`
