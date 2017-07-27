@@ -31,6 +31,6 @@ fun main(args: Array<String>) {
 3. Create an instance of the class `Customer`
 4. Create an instance of the class `Contact` using the constructor with two arguments
 5. Access the property `id`
-6. Write to the property `name`
+6. Write to the property `email`
     
     
