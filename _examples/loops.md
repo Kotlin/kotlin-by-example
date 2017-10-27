@@ -42,7 +42,7 @@ fun main(args: Array<String>) {
     val zoo = Zoo(listOf(Animal("zebra"), Animal("lion")))
 
     for (animal in zoo) {                                   // 3
-        println("Watch out, it's a $animal")
+        println("Watch out, it's a ${animal.name}")
     }
 
 }
