@@ -49,9 +49,9 @@
     <div id="working-area" class="row row-offcanvas row-offcanvas-left">
         <div class="col-sm-3 col-md-2 sidebar sidebar-offcanvas">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="{{ site.baseurl }}/index.html">Overview <span class="sr-only">(current)</span></a></li>
+                <li id="overview"><a href="{{ site.baseurl }}/">Overview</a></li>
                 {% for example in site.data.examples %}
-                    <li><a href="{{ site.baseurl }}/examples/{{ example.url }}">{{ example.title }}</a></li>
+                <li><a href="{{ site.baseurl }}/examples/{{ example.url }}">{{ example.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
