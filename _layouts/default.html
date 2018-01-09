@@ -12,10 +12,10 @@
     <title>Kotlin by Example</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ site.baseurl }}/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="{{ site.baseurl }}/lib/bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ site.baseurl }}/lib/custom.css" rel="stylesheet">
@@ -26,7 +26,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="https://unpkg.com/kotlin-runcode/dist/runcode.min.js" data-selector=".language-kotlin"></script>
+    <script src="https://unpkg.com/kotlin-runcode@1.0.18/dist/runcode.min.js" data-selector=".language-kotlin"></script>
 </head>
 
 <body>
@@ -49,9 +49,9 @@
     <div id="working-area" class="row row-offcanvas row-offcanvas-left">
         <div class="col-sm-3 col-md-2 sidebar sidebar-offcanvas">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="{{ site.baseurl }}/index.html">Overview <span class="sr-only">(current)</span></a></li>
+                <li id="overview"><a href="{{ site.baseurl }}/">Overview</a></li>
                 {% for example in site.data.examples %}
-                    <li><a href="{{ site.baseurl }}/examples/{{ example.url }}">{{ example.title }}</a></li>
+                <li><a href="{{ site.baseurl }}/examples/{{ example.url }}">{{ example.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -75,10 +75,9 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<script src="{{ site.baseurl }}/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
 <script src="{{ site.baseurl }}/lib/custom.js"></script>
 </body>
 </html>
