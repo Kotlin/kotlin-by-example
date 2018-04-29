@@ -19,7 +19,6 @@ val Order.commaDelimitedItemNames: String
 //sampleEnd
 fun main(args: Array<String>) {
 
-    
     val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
     
     println("Max priced item name: ${order.maxPricedItemName()}")
@@ -37,7 +36,10 @@ fun main(args: Array<String>) {
 4. Read more about signature of https://kotlinlang.org/docs/reference/extensions.html[extensions]. Signature
 is very much like standard function or property signature, with addition that we need to specify type we're attaching function or property to.
 
+</div>
 
+It is even possible to execute extensions on `null` references. In their implementation we can check for `null` reference and based on that we can do any arbitrary logic. Example:
+   
 <div class="sample" markdown="1">
 
 ```kotlin
@@ -49,8 +51,3 @@ fun main(args: Array<String>) {
     println("Kotlin".nullSafeToString())
 }
 ```
-
-</div>
-
-1. It is even possible to execute extensions on `null` references. In their implementation we can check for 
-   `null` reference and based on that we can do any arbitrary logic. Example:
