@@ -46,7 +46,7 @@ fun main(args: Array<String>) {
     val (username, email) = user                            // 2
     println(username == user.component1())                  // 3
 
-    val (_, email) = getUser()                              // 4
+    val (_, emailAddress) = getUser()                              // 4
     
 }
 //sampleEnd
