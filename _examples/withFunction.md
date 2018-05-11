@@ -8,18 +8,17 @@ prefix each member with the instance name.
 <div class="sample" markdown="1">
 
 ```kotlin
-import java.io.File
-
 class Configuration(var host: String = "", var port: Int = 0, var isSSL: Boolean = false) 
 
 fun main(args: Array<String>) {
-    
-    val configuration = with(Configuration()) {
+
+    val configuration = Configuration() 
+    with(configuration) {
         host = "127.0.0.1"
         port = 9000            
         isSSL = true
     }
-    
+
     println(configuration.host)
 }
 
