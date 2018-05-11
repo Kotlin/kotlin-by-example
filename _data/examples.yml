@@ -20,10 +20,13 @@
   url: namedArguments
 - title: Let Function
   url: letFunction
+- title: with function
+  url: withFunction
 - title: Inheritance
   url: inheritance
 - title: Destructuring
   url: destructuring
 - title: Sealed Classes
   url: sealedClasses
+
 
