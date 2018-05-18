@@ -42,7 +42,8 @@ fun operation(): (Int) -> Int {                                     // 1
 fun square(x: Int) = x * x                                          // 2
 
 
-1. Declare a higher-order function that returns a function.
-2. Return a function matching the signature.
 ```
 </div>
+
+1. Declare a higher-order function that returns a function.
+2. Return a function matching the signature.
