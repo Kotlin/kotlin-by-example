@@ -20,6 +20,13 @@ fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit 
     print("Total price: $$total")                                                  //4
 
 }
+
+
+fun main(args: Array<String>){
+
+    rentPrice(10, 2, 1)
+
+}
 //sampleEnd
 ```
 
