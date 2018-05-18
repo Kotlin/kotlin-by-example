@@ -34,5 +34,7 @@
   url: destructuring
 - title: Sealed Classes
   url: sealedClasses
+- title: Delegation Pattern
+  url: delegationPattern
 
 
