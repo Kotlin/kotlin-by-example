@@ -25,7 +25,7 @@ fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit 
 
 </div>
 
-1. Create a rentPrice function, w/ parameters (regular days, special days, extra days)
+1. Create a rentPrice function, w/ parameters (regular days, festivity days, special days)
 2. Create rates object, where you set vars values
 3. Access object's vars
 4. Print total

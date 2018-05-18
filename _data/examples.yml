@@ -8,6 +8,8 @@
   url: nullSafety
 - title: Classes
   url: classes
+- title: object (simple usage)
+  url: Objects
 - title: Functions
   url: functions
 - title: Loops
