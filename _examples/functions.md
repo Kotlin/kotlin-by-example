@@ -79,3 +79,33 @@ data class Person(val name: String) {
 2. The infix function `to` from the standard library lets you easily create `Pair`s
 3. Here's your own implementation of `to` creatively called `onto`
 4. Extensions also work on members functions (methods). Here, the containing class becomes the first parameter.
+
+Note that the example uses _local functions_ (functions nested into another function).
+
+### Operator functions
+
+Certain functions can be "upgraded" to operators, allowing to use them with the corresponding operator symbol.
+
+<div class="sample" markdown="1">
+
+```kotlin
+fun main(args: Array<String>) {
+
+  operator fun Int.times(str: String) = str.repeat(this)       // 1
+  println(2 * "Bye ")                                          // 2
+
+  operator fun String.get(range: IntRange) = substring(range)  // 3
+  val str = "Always forgive your enemies; nothing annoys them so much."
+  println(str[0..14])                                          // 4
+}
+```
+
+</div>
+
+1. This takes the infix function from above one step further using the `operator` modifier.
+2. The operator symbol for `times()` is `*` so that you can call the function using `2 * "Bye"`
+3. An operator function allowing easy range access on strings
+4. The `get()` operator enables bracket-access syntax
+
+
+
