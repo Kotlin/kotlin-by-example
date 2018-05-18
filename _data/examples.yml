@@ -16,6 +16,8 @@
   url: ranges
 - title: Extension Functions and Properties
   url: extensionFunctions
+- title: Higher-Order functions
+  url: HigherOrderFunctions
 - title: Named Arguments
   url: namedArguments
 - title: Let Function
