@@ -6,6 +6,8 @@
   url: stringTemplates
 - title: Null Safety
   url: nullSafety
+- title: Smart Casts
+  url: smartCasts
 - title: Equality Checks
   url: equalityChecks
 - title: Classes
