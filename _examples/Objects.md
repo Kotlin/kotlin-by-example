@@ -1,23 +1,23 @@
 ---
-title: Objects (basic usage)
+title: object (basic usage)
 ---
     
 <div class="sample" markdown="1">
 
-A basic example of objects. They're useful when you just need to define a object/attributes structure w/o defining (inner) anonymous class: 
+A basic example of object's usage. It's useful when you just need to define a simple object/attributes structure w/o defining (inner) anonymous classes: 
 ```kotlin
 //sampleStart
-fun rentPrice(standard_days: Int, special_days: Int, extra_days: Int): Unit {  //1 
+fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit {  //1
 
-    val rates = object {                                                       //2 
-        var working: Int = 30 * standard_days                                  
-        var holiday: Int = 50 * special_days
-        var special: Int = 100 * extra_days
+    val day_rates = object {                                                       //2
+        var standard: Int = 30 * standard_days
+        var festivity: Int = 50 * festivity_days
+        var special: Int = 100 * special_days
     }
-    
-    val total = rates.working + rates.holiday + rates.special                  //3 
 
-    print("Total price: $$total")                                              //4 
+    val total = day_rates.standard + day_rates.festivity + day_rates.special       //3
+
+    print("Total price: $$total")                                                  //4
 
 }
 //sampleEnd
