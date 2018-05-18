@@ -13,7 +13,7 @@ fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
     return operation(x, y)                                          // 2
 }
 
-fun sum(x, y) = x + y                                               // 3
+fun sum(x: Int, y: Int) = x + y                                     // 3
 
 fun main(args: Array<String>) {
     val result = calculate(4, 5, ::sum)                             // 4
