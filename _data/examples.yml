@@ -26,9 +26,9 @@
   url: lambdas
 - title: Named Arguments
   url: namedArguments
-- title: Let Function
+- title: let Function
   url: letFunction
-- title: with function
+- title: with Function
   url: withFunction
 - title: Inheritance
   url: inheritance
