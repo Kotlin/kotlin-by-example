@@ -36,5 +36,5 @@
   url: destructuring
 - title: Sealed Classes
   url: sealedClasses
-
-
+- title: Data Classes
+  url: dataClasses
