@@ -27,11 +27,11 @@ fun main(args: Array<String>) {
     val upperCase6: (String) -> String = String::toUpperCase           // 6
 
 
-    println(upperCase2)
-    println(upperCase1)
-    println(upperCase3)
-    println(upperCase5)
-    println(upperCase6)
+    println(upperCase2("hello"))
+    println(upperCase1("hello"))
+    println(upperCase3("hello"))
+    println(upperCase5("hello"))
+    println(upperCase6("hello"))
 
 }
 
