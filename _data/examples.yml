@@ -22,6 +22,8 @@
   url: extensionFunctions
 - title: Higher-Order functions
   url: HigherOrderFunctions
+- title: Lambdas
+  url: lambdas
 - title: Named Arguments
   url: namedArguments
 - title: Let Function
