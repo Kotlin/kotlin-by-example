@@ -8,7 +8,7 @@
   url: nullSafety
 - title: Classes
   url: classes
-- title: object (simple usage)
+- title: object (expressions and declarations)
   url: Objects
 - title: Functions
   url: functions
