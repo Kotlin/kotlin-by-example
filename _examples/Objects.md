@@ -17,7 +17,7 @@ class LuckDispatcher{                     //1
 }
 
 fun main(args: Array<String>){
-    val d1 = LuckDispatcher()            //
+    val d1 = LuckDispatcher()            //3
     val d2 = LuckDispatcher()
     
     d1.get_number()
