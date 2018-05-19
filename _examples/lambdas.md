@@ -9,23 +9,34 @@ Lambda functions ("lambdas") are a simple way to create functions ad-hoc. Lambda
 ```kotlin
 fun main(args: Array<String>) {
 
-  // All examples create a function object that performs upper-casing.
-  // So it's a function from String to String
+    // All examples create a function object that performs upper-casing.
+    // So it's a function from String to String
 
-  val upperCase1: (String) -> String = {                             // 1
+    val upperCase1: (String) -> String = {                             // 1
     str: String -> str.toUpperCase()
-  }
+    }
 
-  val upperCase2: (String) -> String = { str -> str.toUpperCase() }  // 2
+    val upperCase2: (String) -> String = { str -> str.toUpperCase() }  // 2
 
-  val upperCase3 = { str: String -> str.toUpperCase() }              // 3
+    val upperCase3 = { str: String -> str.toUpperCase() }              // 3
 
-//  val upperCase4 = { str -> str.toUpperCase() }                    // 4
+    //  val upperCase4 = { str -> str.toUpperCase() }                    // 4
 
-  val upperCase5: (String) -> String = { it.toUpperCase() }          // 5
+    val upperCase5: (String) -> String = { it.toUpperCase() }          // 5
 
-  val upperCase6: (String) -> String = String::toUpperCase           // 6
+    val upperCase6: (String) -> String = String::toUpperCase           // 6
+
+
+    println(upperCase2)
+    println(upperCase1)
+    println(upperCase3)
+    println(upperCase5)
+    println(upperCase6)
+
 }
+
+
+
 ```
 </div>
 
