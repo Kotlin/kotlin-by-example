@@ -1,5 +1,5 @@
 ---
-title: let()
+title: let function
 ---
     
 *let()* is a useful function defined in Kotlin standard library. It can be used for scoping and null-checks. 
