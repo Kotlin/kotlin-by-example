@@ -9,6 +9,10 @@ The Kotlin compiler is smart enough to perform type casts automatically in most 
 <div class="sample" markdown="1">
 
 ```kotlin
+import java.time.LocalDate
+import java.time.chrono.ChronoLocalDate
+
+//sampleStart
 fun main(args: Array<String>) {
 
   val date: ChronoLocalDate? = LocalDate.now()  // 1
@@ -30,6 +34,7 @@ fun main(args: Array<String>) {
     println(month)
   }
 }
+//sampleEnd
 ```
 
 </div>
