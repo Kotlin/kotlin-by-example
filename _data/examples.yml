@@ -36,6 +36,8 @@
   url: generics
 - title: Destructuring
   url: destructuring
+- title: Enum Classes
+  url: enums
 - title: Sealed Classes
   url: sealedClasses
 
