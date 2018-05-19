@@ -13,7 +13,7 @@ To achieve that in Kotlin, you only need to declare an object: no class, no cons
 Why lazy? because it will be created one time, if object is used, otherwise, no.
 
 In this example, you see a typical basic usage: a simple object/properties structure.
-No need of class declaration: create an single object, declare properties and access it. 
+No need of class declaration: create a single object, declare properties and access it. 
  
 ```kotlin
 //sampleStart
