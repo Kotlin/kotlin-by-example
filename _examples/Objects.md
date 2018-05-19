@@ -1,10 +1,20 @@
 ---
-title: object (basic usage)
+title: object (basic example)
 ---
     
 <div class="sample" markdown="1">
 
-A basic example of object's usage. It's useful when you just need to define a simple object/attributes structure w/o defining (inner) anonymous classes: 
+What is an object, in Kotlin? is a data type with a single implementation.
+
+If you are a Java user and want to understand what "single" means, you can think to Singleton pattern:
+it allows you to check that one (and only one) instance of that class will be created, even if 2 threads access it.
+
+To achieve that in Kotlin, you only need to declare an object: no class, no constructor, only a lazy instance.
+Why lazy? because it will be created one time, otherwise, no.
+
+In this example, you see a typical basic usage: a simple object/properties structure.
+No need of class declaration: create an single object, declare properties and access it. 
+ 
 ```kotlin
 //sampleStart
 fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit {  //1
@@ -24,7 +34,7 @@ fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit 
 
 fun main(args: Array<String>){
 
-    rentPrice(10, 2, 1)
+    rentPrice(10, 2, 1)                                                            //5
 
 }
 //sampleEnd
@@ -36,4 +46,4 @@ fun main(args: Array<String>){
 2. Create rates object, where you set vars values
 3. Access object's vars
 4. Print total
-
+5. Access the instance
