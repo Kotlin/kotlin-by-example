@@ -61,9 +61,7 @@ fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  
 
 
 fun main(args: Array<String>){
-
     rentPrice(10, 2, 1)                                                         //5
-
 }
 //sampleEnd
 ```
@@ -102,7 +100,7 @@ fun main(args: Array<String>){
 
 An object declaration, inside a class, defines another useful case: the **companion object**. 
 Syntactically similar to the static methods in Java, you call object's members using the *class* as qualifier.
-In Kotlin, before writing a companion, think before if it could be better a simpler *package-level* function.  
+In Kotlin, before defining a companion object, decide whether it is better to write a simple *package-level* function.  
 
 
 ```kotlin
@@ -115,6 +113,7 @@ class BigBen {                                  //1
         }
     }
 }
+
 
 fun main(args: Array<String>){
         BigBen.getBongs(12)                     //4
