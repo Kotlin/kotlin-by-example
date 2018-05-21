@@ -1,32 +1,33 @@
 ---
-title: object (expressions and declarations)
+title: object keyword
 ---
     
 <div class="sample" markdown="1">
-First of all, let's start with some basic concepts: a class is a blueprint, and an object is an instance of a class.
-As you know, you can create multiple instances of a class:
+First of all, let's start with some basic OOP concepts: a class is a blueprint, and an object is an instance of a class.
+You define a class, and you can create multiple instances of that class:
 
 ```kotlin
 import java.util.Random
 
 class LuckDispatcher{                     //1 
-    fun get_number() {                    //2 
-        var obj_random = Random()
-        println(obj_random.nextInt(90))
+    fun getNumber() {                     //2 
+        var objRandom = Random()
+        println(objRandom.nextInt(90))
     }
 }
 
 fun main(args: Array<String>){
-    val d1 = LuckDispatcher()            //3
+    val d1 = LuckDispatcher()             //3
     val d2 = LuckDispatcher()
     
-    d1.get_number()
-    d2.get_number()
+    d1.getNumber()                        //4 
+    d2.getNumber()
 }
 ``` 
 1. blueprint definition
 2. method definition
-3. instance creation 
+3. instance creation
+4. method calls 
 
 Easy: we create two objects, each one instance of LuckDispatcher.
 
@@ -44,24 +45,24 @@ It's often used like anonymous class in Java.
  
 ```kotlin
 //sampleStart
-fun rentPrice(standard_days: Int, festivity_days: Int, special_days: Int): Unit {  //1
+fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
 
-    val day_rates = object {                                                       //2
-        var standard: Int = 30 * standard_days
-        var festivity: Int = 50 * festivity_days
-        var special: Int = 100 * special_days
+    val dayRates = object {                                                     //2
+        var standard: Int = 30 * standardDays
+        var festivity: Int = 50 * festivityDays
+        var special: Int = 100 * specialDays
     }
 
-    val total = day_rates.standard + day_rates.festivity + day_rates.special       //3
+    val total = dayRates.standard + dayRates.festivity + dayRates.special       //3
 
-    print("Total price: $$total")                                                  //4
+    print("Total price: $$total")                                               //4
 
 }
 
 
 fun main(args: Array<String>){
 
-    rentPrice(10, 2, 1)                                                            //5
+    rentPrice(10, 2, 1)                                                         //5
 
 }
 //sampleEnd
@@ -79,19 +80,19 @@ fun main(args: Array<String>){
 You can have also object declaration: is not an expression, and cannot be used in a variable assignment, must be used directly:
 
 ```kotlin
-object doAuth {                                                 //1 
-    fun take_params(username: String, password: String){        //2 
+object DoAuth {                                                 //1 
+    fun takeParams(username: String, password: String){         //2 
         println("input Auth parameters = $username:$password")
     }
 }
 
 
 fun main(args: Array<String>){
-    doAuth.take_params("foo", "qwerty")                         //3
+    DoAuth.takeParams("foo", "qwerty")                          //3
 }
 
 ```
 
 1. create object declaration
 2. define method
-3. use object
+3. use the object, calling method
