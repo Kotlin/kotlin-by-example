@@ -4,7 +4,7 @@ title: object keyword
     
 <div class="sample" markdown="1">
 First of all, let's start with some basic OOP concepts: a class is a blueprint, and an object is an instance of a class.
-You define a class, and you can create multiple instances of that class:
+You define a class, then create multiple instances of that class:
 
 ```kotlin
 import java.util.Random
@@ -29,9 +29,9 @@ fun main(args: Array<String>){
 3. instance creation
 4. method calls 
 
-Easy: we create two objects, each one instance of LuckDispatcher.
+Easy: we create two objects, both instances of LuckDispatcher class.
 
-But in Kotlin you have also a "object" keyword. What is? is a data type with a single implementation.
+In Kotlin you have also an "object" keyword. What is? is a data type with a single implementation.
 
 If you are a Java user and want to understand what "single" means, you can think to Singleton pattern:
 it allows you to check that one (and only one) instance of that class will be created, even if 2 threads access it.
@@ -41,7 +41,7 @@ Why lazy? because it will be created one time, if object is used, otherwise, no.
 
 In this example, you see a typical basic usage of an object expression: a simple object/properties structure.
 No need of class declaration: create a single object, declare members and access it. 
-It's often used like anonymous class in Java.
+Object like that, is often used like anonymous class in Java.
  
 ```kotlin
 //sampleStart
@@ -74,7 +74,7 @@ fun main(args: Array<String>){
 2. Create rates object, where you set vars values
 3. Access object's vars
 4. Print total
-5. Access the instance
+5. Access the instance, calling fun
 
 
 You can have also object declaration: is not an expression, and cannot be used in a variable assignment, must be used directly:
