@@ -74,7 +74,7 @@ fun main(args: Array<String>){
 2. Create rates object, where you set vars values
 3. Access object's vars
 4. Print total
-5. Access the instance, calling fun
+5. Access the instance (initialization), calling fun
 
 
 You can have also **object declaration**: is not an expression, and cannot be used in a variable assignment, must be used directly:
@@ -95,4 +95,33 @@ fun main(args: Array<String>){
 
 1. create object declaration
 2. define method
-3. use the object, calling method
+3. use the object (initialization), calling method
+
+
+
+
+An object declaration, inside a class, defines another useful case: the **companion object**. 
+Syntactically similar to the static methods in Java, you call object's members using the *class* as qualifier.
+In Kotlin, before writing a companion, think before if it could be better a simpler *package-level* function.  
+
+
+```kotlin
+class BigBen {                                  //1 
+    companion object Bonger{                    //2
+        fun getBongs(nTimes: Int){              //3
+            for (i in 1 .. nTimes){
+                print("BONG ")
+            }
+        }
+    }
+}
+
+fun main(args: Array<String>){
+        BigBen.getBongs(12)                     //4
+}
+```
+
+1. class definition, companion initialization
+2. companion definition - name can be omitted
+3. method definition
+4. accessing companion object
