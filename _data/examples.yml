@@ -40,5 +40,7 @@
   url: sealedClasses
 - title: Delegation Pattern
   url: delegationPattern
+- title: this in extension functions
+  url: ThisExtensionFunc
 
 
