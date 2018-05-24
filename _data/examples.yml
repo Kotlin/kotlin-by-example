@@ -14,6 +14,8 @@
   url: classes
 - title: Functions
   url: functions
+- title: this class member
+  url: ThisClassMember
 - title: Loops
   url: loops
 - title: Ranges
@@ -38,5 +40,7 @@
   url: sealedClasses
 - title: Delegation Pattern
   url: delegationPattern
+- title: this in extension functions
+  url: ThisExtensionFunc
 
 
