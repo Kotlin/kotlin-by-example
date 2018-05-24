@@ -12,6 +12,8 @@
   url: equalityChecks
 - title: Classes
   url: classes
+- title: object keyword
+  url: ObjectKeyword
 - title: Functions
   url: functions
 - title: Loops
