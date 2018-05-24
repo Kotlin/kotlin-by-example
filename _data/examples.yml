@@ -14,6 +14,8 @@
   url: classes
 - title: Functions
   url: functions
+- title: this class member
+  url: ThisClassMember
 - title: Loops
   url: loops
 - title: Ranges
