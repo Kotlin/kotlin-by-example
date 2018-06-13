@@ -38,5 +38,5 @@
   url: sealedClasses
 - title: Delegation Pattern
   url: delegationPattern
-
-
+- title: this class member
+  url: ThisClassMember
