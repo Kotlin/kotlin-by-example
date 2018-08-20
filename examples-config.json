@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Basic",
+    "url": "/basic",
+    "files": [
+      {
+        "url": "/basic/classes",
+        "title": "Classes"
+      },
+      {
+        "url": "/basic/variables",
+        "title": "Variables"
+      }
+    ]
+  },
+  {
+    "title": "Functions",
+    "url": "/functions",
+    "files": [
+      {
+        "url": "/functions/lambdas",
+        "title": "Lambdas"
+      },
+      {
+        "url": "/functions/functions",
+        "title": "Functions"
+      }
+    ]
+  }
+]

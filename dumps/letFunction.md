@@ -1,10 +1,9 @@
----
-title: let Function
----
+# Let Function
+
     
 *let()* is a useful function defined in Kotlin standard library. It can be used for scoping and null-checks. 
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 import java.io.File

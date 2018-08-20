@@ -1,10 +1,8 @@
----
-title: Functions
----
+# Functions
 
 ### Default parameter values and named arguments
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 //sampleStart
@@ -47,7 +45,7 @@ fun main(args: Array<String>) {
 
 Member functions and extensions with a single parameter can be turned into infix functions.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -86,7 +84,7 @@ Note that the example uses _local functions_ (functions nested into another func
 
 Certain functions can be "upgraded" to operators, allowing to use them with the corresponding operator symbol.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -111,7 +109,7 @@ fun main(args: Array<String>) {
 
 Varargs allow passing any number of arguments by comma-separating them.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 fun main(args: Array<String>) {

@@ -1,9 +1,6 @@
----
-title: Loops
----
-
-    
-<div class="sample" markdown="1">
+# Loops
+  
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 //sampleStart
@@ -24,7 +21,7 @@ fun main(args: Array<String>) {
 
 ### Iterators
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 //sampleStart
@@ -62,7 +59,7 @@ fun main(args: Array<String>) {
 
 The iterator can be declared on the type or as an extension function.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 //sampleStart

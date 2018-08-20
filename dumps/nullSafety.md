@@ -1,11 +1,8 @@
----
-title: Null Safety
----
-
+#Null Safety
 
 In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -34,7 +31,7 @@ fun main(args: Array<String>) {
 Sometimes Kotlin programs need to work with null values, such as when interacting with external Java code or
 representing a truly absent state.  Kotlin provides null tracking to elegantly deal with such situations.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 //sampleStart

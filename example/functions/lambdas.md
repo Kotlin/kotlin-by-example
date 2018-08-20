@@ -1,10 +1,8 @@
----
-title: Lambda Functions
----
+# Lambda Functions
 
-Lambda functions ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
+Lambda functions `("lambdas")` are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
 
-<div class="sample" markdown="1">
+<div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -13,7 +11,7 @@ fun main(args: Array<String>) {
     // So it's a function from String to String
 
     val upperCase1: (String) -> String = {                             // 1
-    str: String -> str.toUpperCase()
+        str: String -> str.toUpperCase()
     }
 
     val upperCase2: (String) -> String = { str -> str.toUpperCase() }  // 2
@@ -26,7 +24,6 @@ fun main(args: Array<String>) {
 
     val upperCase6: (String) -> String = String::toUpperCase           // 6
 
-
     println(upperCase2("hello"))
     println(upperCase1("hello"))
     println(upperCase3("hello"))
@@ -34,9 +31,6 @@ fun main(args: Array<String>) {
     println(upperCase6("hello"))
 
 }
-
-
-
 ```
 </div>
 
