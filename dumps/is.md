@@ -6,7 +6,7 @@ to cast it explicitly to the is-checked type.
 
 
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {

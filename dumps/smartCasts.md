@@ -6,7 +6,7 @@ The Kotlin compiler is smart enough to perform type casts automatically in most 
 1. Casts from nullable types to their non-nullable counterparts
 2. Casts from a supertype to a subtype
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 import java.time.LocalDate

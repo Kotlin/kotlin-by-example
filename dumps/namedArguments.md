@@ -2,7 +2,7 @@
 title: Named Arguments
 ---
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 //sampleStart

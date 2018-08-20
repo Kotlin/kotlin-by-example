@@ -2,7 +2,7 @@
 title: 'Sealed Classes'
 ---
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 //sampleStart

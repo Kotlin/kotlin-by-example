@@ -3,7 +3,7 @@
     
 *let()* is a useful function defined in Kotlin standard library. It can be used for scoping and null-checks. 
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 import java.io.File

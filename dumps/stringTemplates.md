@@ -2,7 +2,7 @@
 title: 'String Templates'
 ---
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 fun main(args: Array<String>) {

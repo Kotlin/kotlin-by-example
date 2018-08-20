@@ -4,7 +4,7 @@ title: Destructuring
 
 _Destructuring declaration_ syntax can be very handy and save you few lines of code.
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 fun findMinMax(list: List<Int>): Pair<Int, Int> { 
@@ -33,7 +33,7 @@ fun main(args: Array<String>) {
 2. it can be used to iterate through maps. _name_ and _age_ variables are mapped to key and value now
 3. You can destructure built-in Pairs and Triples, even as return values from functions
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 //sampleStart

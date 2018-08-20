@@ -2,7 +2,7 @@
 title: Delegation Pattern
 ---
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 interface SoundBehaviour {                                                          // 1

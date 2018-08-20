@@ -6,7 +6,7 @@ title: Higher-Order Functions
 
 ### Taking a function as parameter
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
@@ -32,7 +32,7 @@ that itself takes two parameters of type integer and returns an integer.
 ### Returning a function as parameter
 
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 fun operation(): (Int) -> Int {                                     // 1

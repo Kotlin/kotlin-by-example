@@ -2,7 +2,7 @@
 title: Extension Functions and Properties
 ---
 
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 //sampleStart
@@ -40,7 +40,7 @@ is very much like standard function or property signature, with addition that we
 
 It is even possible to execute extensions on `null` references. In their implementation we can check for `null` reference and based on that we can do any arbitrary logic. Example:
    
-<div class="sample" markdown="1">
+<div class="sample">
 
 ```kotlin
 //sampleStart

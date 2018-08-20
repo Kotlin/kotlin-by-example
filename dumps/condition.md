@@ -5,7 +5,7 @@ Therefore there is no ternary operator (condition ? then : else),
 because ordinary `if` works fine in this role.
 
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {
