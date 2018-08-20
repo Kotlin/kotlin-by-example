@@ -1,8 +1,8 @@
-#Kotlin by Example
+# Kotlin by Example
 
 This is sources of Kotlin Examples.
 
-###How to make example
+### How to make example
 
 Create markdown file in `examples` folder.
 
