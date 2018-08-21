@@ -27,8 +27,8 @@ fun main(args: Array<String>) {
 ```kotlin
 fun main(args: Array<String>) {
 //sampleStart
-var e: Int //1
-println(e) //2
+    var e: Int //1
+    println(e) //2
 //sampleEnd
 }
 ```

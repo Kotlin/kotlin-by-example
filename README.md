@@ -46,7 +46,10 @@ How to use different attributes on runnable examples see [Kotlin Playground docu
 
 1. Fork & clone our repository.
 2. Create new chapter with examples or add new example to existing chapter.
-3. Add path to `examples-config.json`
+    1. Create `chapter` folder in `examples` folder.
+    2. Create `description.md` file in your chapter.
+    3. Create examples files.
+3. Add paths to `examples-config.json`
 
 ```json
 [

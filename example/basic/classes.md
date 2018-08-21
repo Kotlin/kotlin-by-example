@@ -7,7 +7,6 @@ Both the header and the body are optional; if the class has no body, curly brace
 <div class="language-kotlin" theme="idea" markdown="1">
 
 ```kotlin
-//sampleStart
 class Customer                                  // 1
 
 class Contact(val id: Int, var email: String)   // 2
@@ -23,7 +22,6 @@ fun main(args: Array<String>) {
     println(contact.id)                         // 5
     contact.email = "jane@gmail.com"            // 6
 }
-//sampleEnd
 ```
 
 </div>  

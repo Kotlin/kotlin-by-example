@@ -2,6 +2,7 @@
   {
     "title": "Basic",
     "url": "/basic",
+    "description": "description",
     "files": [
       {
         "url": "/basic/classes",
@@ -16,6 +17,7 @@
   {
     "title": "Functions",
     "url": "/functions",
+    "description": "description",
     "files": [
       {
         "url": "/functions/lambdas",
