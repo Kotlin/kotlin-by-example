@@ -2,7 +2,7 @@
 
 Lambda functions `("lambdas")` are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {

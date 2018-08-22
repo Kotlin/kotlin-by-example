@@ -3,7 +3,7 @@
 Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you'll usually let the
 compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended. In essence use *val* over *var*.
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 2. Declare an immutable variable and initialise it
 3. Declare an immutable variable and initialise it. The compiler infers the type.
 
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {

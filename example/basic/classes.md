@@ -4,7 +4,7 @@ The class declaration consists of the class name, the class header (specifying i
 the primary constructor etc.) and the class body, surrounded by curly braces. 
 Both the header and the body are optional; if the class has no body, curly braces can be omitted.
     
-<div class="language-kotlin" theme="idea" markdown="1">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 class Customer                                  // 1
