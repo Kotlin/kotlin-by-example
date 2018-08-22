@@ -42,6 +42,12 @@ Render as:
 
 How to use different attributes on runnable examples see [Kotlin Playground documentation](https://github.com/JetBrains/kotlin-playground/blob/master/README.md).
 
+### Guidelines
+
+1. Try and keep text to a minimum. Remember, this site is not trying to replace documentation nor necessarily describe all edge cases or dive into details. Rule of thumb should be a single paragraph introducing the example. Rest should be line annotations.
+2. Use 4 spaces for tabs.
+3. Make sure examples compile and also have some output when they run.
+
 ### How to contribute
 
 1. Fork & clone our repository.
