@@ -2,7 +2,7 @@
 
 Lorem ipsum dolor sit `amet`, consectetur adipisicing elit. Aspernatur, molestias, velit?
 
-<div class="language-kotlin" theme="idea" markdown="1" theme="idea">
+<div class="language-kotlin" theme="idea" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {
