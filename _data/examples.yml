@@ -32,6 +32,8 @@
   url: withFunction
 - title: Inheritance
   url: inheritance
+- title: Generics
+  url: generics
 - title: Destructuring
   url: destructuring
 - title: Sealed Classes
