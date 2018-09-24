@@ -1,4 +1,4 @@
-#Null Safety
+# Null Safety
 
 In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
 
