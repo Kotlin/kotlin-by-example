@@ -1,4 +1,4 @@
-# Sealed Classes
+# Sealed classes
 
 <div class="language-kotlin" theme="idea">
 

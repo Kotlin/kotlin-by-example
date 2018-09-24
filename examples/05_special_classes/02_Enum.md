@@ -1,4 +1,4 @@
-# Enum Classes
+# Enum classes
 
 Enum classes are used to model types that represent a finite set of distinct values, such as directions, states, modes and so forth.
 

@@ -7,7 +7,6 @@ Lambda functions ("lambdas") are a simple way to create functions ad-hoc. Lambda
 ```kotlin
 fun main() {
 //sampleStart
-
     // All examples create a function object that performs upper-casing.
     // So it's a function from String to String
 
