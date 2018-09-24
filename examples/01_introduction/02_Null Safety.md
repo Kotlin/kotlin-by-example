@@ -5,7 +5,6 @@ In an effort to rid the world of `NullPointerException`, variable types in Kotli
 <div class="language-kotlin" theme="idea">
 
 ```kotlin
-//sampleStart
 fun main() {
     var neverNull: String = "This can't be null"            // 1
     
@@ -16,7 +15,6 @@ fun main() {
     var inferredNonNull = "The compiler assumes non-null"   // 4
 
 }
-//sampleEnd
 ```
 
 </div>

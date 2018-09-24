@@ -48,7 +48,6 @@ Object like that, is often used like anonymous class in Java.
 <div class="language-kotlin" theme="idea">
  
 ```kotlin
-//sampleStart
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
 
     val dayRates = object {                                                     //2
@@ -67,7 +66,6 @@ fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  
 fun main(){
     rentPrice(10, 2, 1)                                                         //5
 }
-//sampleEnd
 ```
 
 </div>

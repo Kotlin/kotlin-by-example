@@ -24,7 +24,6 @@ fun main() {
 <div class="language-kotlin" theme="idea">
 
 ```kotlin
-//sampleStart
 fun eatACake() = println("Eat a Cake")
 fun bakeACake() = println("Bake a Cake")
 
@@ -43,7 +42,6 @@ fun main() {
     } while (cakesBaked < cakesEaten)
 
 }
-//sampleEnd
 ```
 
 </div>

@@ -35,7 +35,6 @@ that itself takes two parameters of type integer and returns an integer.
 <div class="language-kotlin" theme="idea">
 
 ```kotlin
-//sampleStart
 fun operation(): (Int) -> Int {                                     // 1
     return ::square
 }
@@ -47,7 +46,6 @@ fun main() {
     val func = operation()                                          // 3
     println(func(2))                                                // 4
 }
-//sampleEnd
 ```
 
 </div>
