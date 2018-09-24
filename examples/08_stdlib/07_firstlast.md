@@ -1,4 +1,4 @@
-# Functions `first`,`last`, `firstOrNull`, `lastOrNull`
+# first, last
 
 ### `first`, `last`
 

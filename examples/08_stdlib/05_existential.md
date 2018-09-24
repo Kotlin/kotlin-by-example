@@ -1,4 +1,4 @@
-# Existential Predicates `any`, `all`, `none`
+# any, all, none
 
 This extension functions answer the question about existence element(s) in collection based on given predicate.
 

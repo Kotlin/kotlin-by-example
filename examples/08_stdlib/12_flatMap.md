@@ -1,4 +1,4 @@
-# Function `flatMap`
+# flatMap
 
 Returns a single list of all elements yielded from results of transform function being invoked on each element of original collection.
 

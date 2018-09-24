@@ -1,4 +1,4 @@
-# Function `filter`
+# filter
 
 *filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-paramters. 
 

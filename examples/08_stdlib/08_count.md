@@ -1,4 +1,4 @@
-# Function `count`
+# count
 
 The extension function `count` returns either the total number of elements in collection or the number of elements matching the given predicate.
 

@@ -1,4 +1,4 @@
-# Function `let` 
+# let
 
 **let** is a useful function defined in Kotlin Standard Library. It can be used for scoping and null-checks. 
 

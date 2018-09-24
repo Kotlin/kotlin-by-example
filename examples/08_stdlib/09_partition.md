@@ -1,4 +1,4 @@
-# Function *partition* `partition` partition [__partition__](http://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/partition.html)
+# partition
 
 This function splits the original collection into pair of lists, where first list contains elements for which predicate yielded `true`, while second list contains elements for which predicate yielded `false`.
 

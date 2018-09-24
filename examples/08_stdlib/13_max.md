@@ -1,4 +1,4 @@
-# Functions `min`, `max`
+# min, max
 
 Return the smallest/largest element or null if there are no elements.
 

@@ -1,4 +1,4 @@
-# Functions `sorted`, `sortedBy`
+# sorted
 
 `sorted` returns a list of all elements sorted according to their natural sort order.
 

@@ -1,4 +1,4 @@
-# Functions `find`, `findLast`
+# find
 
 Returns the first of last element matching the given predicate, or null if no such element was found.
 

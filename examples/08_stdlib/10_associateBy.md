@@ -1,4 +1,4 @@
-# Function `associateBy`, `groupBy`
+# associateBy, groupBy
 
 Both functions return a `Map` containing the elements from the given collection indexed by the key returned from `keySelector` function applied to each element.
 If `valueSelector` is also passed it is applied to each element as well.
