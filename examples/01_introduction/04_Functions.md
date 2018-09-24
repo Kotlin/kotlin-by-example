@@ -2,7 +2,8 @@
 
 ### Default parameter values and named arguments
 
-<div class="language-kotlin" theme="idea" theme="idea">
+<div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun printMessage(message: String): Unit {                           // 1
     println(message)
@@ -18,7 +19,7 @@ fun sum(x: Int, y: Int): Int {                                      // 3
 
 fun multiply(x: Int, y: Int) = x * y                                // 4
 
-fun main(args: Array<String>) {
+fun main() {
     printMessage("Hello")                                           // 5                    
     printMessageWithPrefix("Hello", "Log")                          // 6
     printMessageWithPrefix("Hello")                                 // 7
@@ -26,6 +27,7 @@ fun main(args: Array<String>) {
     sum(1, 2)
 }
 ```
+
 </div>
 
 1. Create a function that takes a parameter of type string and returns Unit (i.e. no return value).
@@ -41,7 +43,8 @@ fun main(args: Array<String>) {
 
 Member functions and extensions with a single parameter can be turned into infix functions.
 
-<div class="language-kotlin" theme="idea" theme="idea">
+<div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun main(args: Array<String>) {
 
@@ -65,6 +68,7 @@ class Person(val name: String) {
   infix fun likes(other: Person) { likedPeople.add(other) }  // 6
 }
 ```
+
 </div>
 
 1. Defines an infix extension function on `Int`
@@ -80,9 +84,10 @@ Note that the example uses _local functions_ (functions nested into another func
 
 Certain functions can be "upgraded" to operators, allowing to use them with the corresponding operator symbol.
 
-<div class="language-kotlin" theme="idea" theme="idea">
+<div class="language-kotlin" theme="idea">
+
 ```kotlin
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
 
   operator fun Int.times(str: String) = str.repeat(this)       // 1
@@ -94,6 +99,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 1. This takes the infix function from above one step further using the `operator` modifier.
@@ -105,9 +111,10 @@ fun main(args: Array<String>) {
 
 Varargs allow passing any number of arguments by comma-separating them.
 
-<div class="language-kotlin" theme="idea" theme="idea">
+<div class="language-kotlin" theme="idea">
+
 ```kotlin
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
   fun printAll(vararg messages: String) {                            // 1
     for (m in messages) println(m)
@@ -126,6 +133,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 1. The `vararg` modifier turns a parameter into a vararg.

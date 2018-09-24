@@ -1,8 +1,9 @@
 # String Templates
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
     val greeting = "Kotliner"
     

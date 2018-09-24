@@ -1,6 +1,7 @@
 # Extension Functions and Properties
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 data class Item(val name: String, val price: Float)                                   // 1  
 
@@ -12,7 +13,7 @@ fun Order.maxPricedItemName() = this.items.maxBy { it.price }?.name ?: "NO_PRODU
 val Order.commaDelimitedItemNames: String                                             // 3
     get() = items.map { it.name }.joinToString()
 
-fun main(args: Array<String>) {
+fun main() {
 
     val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
     
@@ -22,6 +23,7 @@ fun main(args: Array<String>) {
 
 }
 ```
+
 </div>
 
 1. We define simple models of `Item` and `Order`. `Order` can contain arbitrary `Collection` of `Item` s
@@ -34,13 +36,15 @@ is very much like standard function or property signature, with addition that we
 It is even possible to execute extensions on `null` references. In their implementation we can check for `null` reference and based on that we can do any arbitrary logic. Example:
    
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 //sampleStart
 fun <T> T?.nullSafeToString() = this?.toString() ?: "NULL"  // 1
 //sampleEnd
-fun main(args: Array<String>) {
+fun main() {
     println(null.nullSafeToString())
     println("Kotlin".nullSafeToString())
 }
 ```
+
 </div>

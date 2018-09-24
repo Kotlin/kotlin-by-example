@@ -6,7 +6,7 @@ In an effort to rid the world of `NullPointerException`, variable types in Kotli
 
 ```kotlin
 //sampleStart
-fun main(args: Array<String>) {
+fun main() {
     var neverNull: String = "This can't be null"            // 1
     
     var nullable: String? = "You can keep a null here"      // 2
@@ -32,6 +32,7 @@ Sometimes Kotlin programs need to work with null values, such as when interactin
 representing a truly absent state.  Kotlin provides null tracking to elegantly deal with such situations.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 //sampleStart
 fun describeString(maybeString: String?): String {              // 1
@@ -43,10 +44,11 @@ fun describeString(maybeString: String?): String {              // 1
 }
 //sampleEnd
 
-fun main(args: Array<String>) {
+fun main() {
     println(describeString(null))
 }
 ```
+
 </div>
 
 

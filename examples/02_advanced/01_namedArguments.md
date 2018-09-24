@@ -1,10 +1,11 @@
 # Named Arguments
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun format(userName: String, domain: String) = "$userName@$domain"
 
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
     println(format("mario", "example.com"))                         // 1
     println(format(userName = "foo", domain = "bar.com"))           // 2
@@ -12,6 +13,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 1. As most of programming languages(Java, C++ etc), Kotlin supports passing arguments to methods and constructors

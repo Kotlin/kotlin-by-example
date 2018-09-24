@@ -5,10 +5,11 @@ Everything that's needed to use them in collections, have a useful string
 representation, and create copies is auto-generated.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 data class User(val name: String, val id: Int)
 
-fun main(args: Array<String>) {
+fun main() {
     val user = User("Alex", 1)
     println(user)                                          // 1
 
@@ -31,6 +32,7 @@ fun main(args: Array<String>) {
     println("id = ${user.component2}")
 }
 ```
+
 </div>
 
 1. Method `toString` is auto-generated, which makes `println` output look nice.

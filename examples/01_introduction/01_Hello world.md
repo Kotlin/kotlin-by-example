@@ -1,6 +1,7 @@
 # Hello world
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
+
 ```kotlin
 package org.kotlinlang.play         // 1
 
@@ -8,6 +9,7 @@ fun main() {                        // 2
     println("Hello, World!")        // 3
 }
 ```
+
 </div>
 
 1. Kotlin code is usually defined in packages. If you don't define one, the default package will be used.
@@ -18,10 +20,12 @@ also, note that semicolons are optional.
 
 For Kotlin versions less than 1.3 `main` function must be defined with parameter:
     
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.2">
+
 ```kotlin
 fun main(args: Array<String>) {
     println("Hello, World!")
 }
 ```
+
 </div>

@@ -5,8 +5,9 @@ compiler do the work by inferring it. While Kotlin does not enforce immutability
 In essence use *val* over *var*.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
     var a: String = "initial"  // 1
     println(a)
@@ -15,6 +16,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 1. Declare a mutable variable and initialise it
@@ -22,14 +24,16 @@ fun main(args: Array<String>) {
 3. Declare an immutable variable and initialise it. The compiler infers the type.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
     var e: Int  // 1
     println(e)  // 2
 //sampleEnd
 }
 ```
+
 </div>
 
 1. Declare a variable, but don't initialise it.
@@ -38,10 +42,11 @@ fun main(args: Array<String>) {
 Variable initialization can be postponed, but it must be initialized before the first read.
  
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun someCondition() = true 
 
-fun main(args: Array<String>) {
+fun main() {
 //sampleStart
     val d: Int  // 1
     
@@ -55,6 +60,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 1. Declare a variable, but don't initialise it.

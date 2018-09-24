@@ -3,6 +3,7 @@
 *filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-paramters. 
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun main(args: Array<String>) {
 
@@ -19,6 +20,7 @@ fun main(args: Array<String>) {
     println("Negative Numbers: negatives")
 }
 ```
+
 </div>
 
 1. Define collection of numbers.

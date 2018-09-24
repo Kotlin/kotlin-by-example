@@ -4,6 +4,7 @@
 prefix each member with the instance name. 
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 class Configuration(var host: String = "", var port: Int = 0, var isSSL: Boolean = false) 
 
@@ -19,4 +20,5 @@ fun main(args: Array<String>) {
     println(configuration.host)
 }
 ```
+
 </div>

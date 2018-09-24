@@ -3,6 +3,7 @@
 **let** is a useful function defined in Kotlin Standard Library. It can be used for scoping and null-checks. 
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 import java.io.File
 
@@ -14,6 +15,7 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
+
 </div>
 
 

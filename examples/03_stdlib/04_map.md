@@ -3,6 +3,7 @@
 *map* is an extension function defined in the standard library that can be used to transform collection into another collection. It takes a transformer as an lambda-paramters.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun main(args: Array<String>) {
 
@@ -19,6 +20,7 @@ fun main(args: Array<String>) {
     println("Tripled Numbers: $tripled")
 }
 ```
+
 </div>
 
 1. Define collection of numbers.
