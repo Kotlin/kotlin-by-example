@@ -20,7 +20,7 @@ also, note that semicolons are optional.
 
 For Kotlin versions less than 1.3 `main` function must be defined with parameter:
     
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.2">
+<div class="language-kotlin" theme="idea">
 
 ```kotlin
 fun main(args: Array<String>) {

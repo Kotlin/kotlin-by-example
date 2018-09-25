@@ -9,8 +9,8 @@ prefix each member with the instance name.
 class Configuration(var host: String = "", var port: Int = 0, var isSSL: Boolean = false) 
 
 fun main() {
-
     val configuration = Configuration() 
+    // TODO rewrite: make conform to code style
     with(configuration) {
         host = "127.0.0.1"
         port = 9000            
