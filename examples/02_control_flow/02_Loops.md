@@ -5,7 +5,7 @@
 <div class="language-kotlin" theme="idea">
 
 ```kotlin
-fun main() {
+fun main(args: Array<String>) {
 //sampleStart
     val cakes = listOf("carrot", "cheese", "chocolate")
     
@@ -27,7 +27,7 @@ fun main() {
 fun eatACake() = println("Eat a Cake")
 fun bakeACake() = println("Bake a Cake")
 
-fun main() {
+fun main(args: Array<String>) {
     var cakesEaten = 0
     var cakesBaked = 0
     

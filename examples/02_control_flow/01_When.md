@@ -1,8 +1,9 @@
 # When
 
-Kotlin do not have `switch` statement, instead of it it has more smart and clear `when` contrusction. Let's take a look
+Kotlin do not have `switch` statement, instead of it it has more smart and clear `when` construction. Let's take a look
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun main() {
     cases("Hello")
@@ -24,6 +25,7 @@ fun cases(obj: Any) {
 
 class MyClass() { }
 ```
+
 </div>
 
 
