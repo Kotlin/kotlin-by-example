@@ -4,7 +4,7 @@ The following example demonstrates usage of HTML5 Canvas from Kotlin.
 
 Here strange creatures are watching the kotlin logo. You can drag'n'drop them as well as the logo. Doubleclick to add more creatures but be careful. They may be watching you!
 
-<div class="language-kotlin" theme="idea" data-target-platform="canvas">
+<div class="language-kotlin" theme="idea" data-target-platform="canvas" data-output-height="700">
 
 ```kotlin
 package creatures
@@ -13,7 +13,7 @@ import jquery.*
 import org.w3c.dom.*
 import kotlin.browser.document
 import kotlin.browser.window
-import kotlin.js.Math
+import kotlin.math.*
 
 
 fun getImage(path: String): HTMLImageElement {
@@ -27,8 +27,8 @@ val canvas = initalizeCanvas()
 fun initalizeCanvas(): HTMLCanvasElement {
     val canvas = document.createElement("canvas") as HTMLCanvasElement
     val context = canvas.getContext("2d") as CanvasRenderingContext2D
-    context.canvas.width  = window.innerWidth.toInt();
-    context.canvas.height = window.innerHeight.toInt();
+    context.canvas.width  = window.innerWidth.toInt()
+    context.canvas.height = window.innerHeight.toInt()
     document.body!!.appendChild(canvas)
     return canvas
 }
@@ -82,6 +82,7 @@ class Logo(override var pos: Vector) : Shape() {
     fun drawLogo(state: CanvasState) {
         size = imageSize * (state.size.x / imageSize.x) * relSize
         // getKotlinLogo() is a 'magic' function here defined only for purposes of demonstration but in fact it just find an element containing the logo
+        //state.context.drawImage(getImage("http://try.kotlinlang.org/static/images/canvas/Kotlin-logo.png"), 0.0, 0.0,
         state.context.drawImage(getImage("http://try.kotlinlang.org/static/images/kotlin_logo.svg"), 0.0, 0.0,
                 imageSize.x, imageSize.y,
                 position.x, position.y,
@@ -106,18 +107,12 @@ class Logo(override var pos: Vector) : Shape() {
         get() = pos + size * 0.5
 }
 
-val gradientGenerator: RadialGradientGenerator? = null
-    get() {
-        if (field == null) {
-            field = RadialGradientGenerator(context)
-        }
-        return field
-    }
+val gradientGenerator by lazy { RadialGradientGenerator(context) }
 
 class Creature(override var pos: Vector, val state: CanvasState) : Shape() {
 
     val shadowOffset = v(-5.0, 5.0)
-    val colorStops = gradientGenerator!!.getNext()
+    val colorStops = gradientGenerator.getNext()
     val relSize = 0.05
     // these properties have no backing fields and in java/javascript they could be represented as little helper functions
     val radius: Double
@@ -132,7 +127,7 @@ class Creature(override var pos: Vector, val state: CanvasState) : Shape() {
 
     // defining more nice extension functions
     fun CanvasRenderingContext2D.circlePath(position: Vector, rad: Double) {
-        arc(position.x, position.y, rad, 0.0, 2 * Math.PI, false)
+        arc(position.x, position.y, rad, 0.0, 2 * PI, false)
     }
 
     //notice we can use an extension function we just defined inside another extension function
@@ -173,7 +168,7 @@ class Creature(override var pos: Vector, val state: CanvasState) : Shape() {
         val tailDirection = -directionToLogo
         val tailPos = position + tailDirection * radius * 1.0
         val tailSize = radius * 1.6
-        val angle = Math.PI / 6.0
+        val angle = PI / 6.0
         val p1 = tailPos + tailDirection.rotatedBy(angle) * tailSize
         val p2 = tailPos + tailDirection.rotatedBy(-angle) * tailSize
         val middlePoint = position + tailDirection * radius * 1.0
@@ -276,6 +271,7 @@ class CanvasState(val canvas: HTMLCanvasElement) {
 
     fun clear() {
         context.fillStyle = "#D0D0D0"
+//        context.fillStyle = "#FFFFFF"
         context.fillRect(0.0, 0.0, width.toDouble(), height.toDouble())
         context.strokeStyle = "#000000"
         context.lineWidth = 4.0
@@ -286,7 +282,7 @@ class CanvasState(val canvas: HTMLCanvasElement) {
         if (valid) return
 
         clear()
-        for (shape in shapes.reversed()) {
+        for (shape in shapes.asReversed()) {
             shape.draw(this)
         }
         Kotlin.draw(this)
@@ -325,10 +321,10 @@ class Vector(val x: Double = 0.0, val y: Double = 0.0) {
     operator fun unaryMinus() = v(-x, -y)
     operator fun minus(v: Vector) = v(x - v.x, y - v.y)
     operator fun times(koef: Double) = v(x * koef, y * koef)
-    infix fun distanceTo(v: Vector) = Math.sqrt((this - v).sqr)
+    infix fun distanceTo(v: Vector) = sqrt((this - v).sqr)
     fun rotatedBy(theta: Double): Vector {
-        val sin = Math.sin(theta)
-        val cos = Math.cos(theta)
+        val sin = sin(theta)
+        val cos = cos(theta)
         return v(x * cos - y * sin, x * sin + y * cos)
     }
 
@@ -338,28 +334,29 @@ class Vector(val x: Double = 0.0, val y: Double = 0.0) {
     val sqr: Double
         get() = x * x + y * y
     val normalized: Vector
-        get() = this * (1.0 / Math.sqrt(sqr))
+        get() = this * (1.0 / sqrt(sqr))
 }
 
 fun main(args: Array<String>) {
 //sampleStart
-    val state = CanvasState(canvas).apply {
-        addShape(Kotlin)
-        addShape(Creature(size * 0.25, this))
-        addShape(Creature(size * 0.75, this))
-    }
-    window.setTimeout({ state.valid = false }, 1000)
-    // You can drag this objects
-//sampleEnd
-}
-
-fun <T> List<T>.reversed(): List<T> {
-    val result = mutableListOf<T>()
-    var i = size
-    while (i > 0) {
-        result.add(get(--i))
-    }
-    return result
+// TODO
+//    jq {
+//        val state = CanvasState(canvas)
+//        state.addShape(Kotlin)
+//        state.addShape(Creature(state.size * 0.25, state))
+//        state.addShape(Creature(state.size * 0.75, state))
+        
+        val state = CanvasState(canvas).apply {
+                addShape(Kotlin)
+                addShape(Creature(size * 0.25, this))
+                addShape(Creature(size * 0.75, this))
+            }
+            
+        window.setTimeout({ 
+            state.valid = false 
+        }, 1000)
+//    }
+    //sampleEnd
 }
 ```
 
