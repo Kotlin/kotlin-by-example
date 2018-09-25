@@ -67,6 +67,7 @@ fun main() {
 Function `none` return `true` iff there is no element in collection matching the given predicate.
 
 <div class="language-kotlin" theme="idea">
+
 ```kotlin
 fun main() {
 
@@ -78,11 +79,12 @@ fun main() {
     val allLess6 = numbers.none { it > 6 }               // 3
 //sampleEnd
 
-    println("Numbers: $numebrs")
+    println("Numbers: numbers")
     println("All numbers are even: $allEven")
     println("No element greater than 6: $allLess6")
 }
 ```
+
 </div>
 
 1. Define collection of numbers.

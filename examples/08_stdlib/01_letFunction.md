@@ -6,9 +6,9 @@
 
 ```kotlin
 import java.io.File
-
 fun main() {
 //sampleStart
+// TODO rewrite w/o using File
   File("input.txt").let {
       it.exists()                     // 1
   }
