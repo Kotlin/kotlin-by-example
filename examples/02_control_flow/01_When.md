@@ -23,7 +23,7 @@ fun cases(obj: Any) {
     }
 }
 
-class MyClass() { }
+class MyClass
 ```
 
 </div>

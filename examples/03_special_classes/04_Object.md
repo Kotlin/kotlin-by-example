@@ -1,5 +1,5 @@
 # Object keyword
-    
+
 First of all, let's start with some basic OOP concepts: a *class* is a blueprint, and an *object* is an instance of a class.
 You define a class, then create multiple instances of that class:
 

@@ -6,18 +6,19 @@ prefix each member with the instance name.
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
-class Configuration(var host: String = "", var port: Int = 0, var isSSL: Boolean = false) 
+class Configuration(var host: String, var port: Int) 
 
 fun main() {
-    val configuration = Configuration() 
-    // TODO rewrite: make conform to code style
+    val configuration = Configuration(host = "127.0.0.1", port = 9000) 
+
+//sampleStart
     with(configuration) {
-        host = "127.0.0.1"
-        port = 9000            
-        isSSL = true
+        println("$host:$port")
     }
 
-    println(configuration.host)
+    // instead of:
+    println("${configuration.host}:${configuration.port}")    
+//sampleEnd
 }
 ```
 

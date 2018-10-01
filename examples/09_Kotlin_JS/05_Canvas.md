@@ -67,24 +67,30 @@ abstract class Shape() {
     }
 }
 
-val Kotlin = Logo(v(250.0, 75.0))
+val logoImage by lazy { getImage("http://try.kotlinlang.org/static/images/kotlin_logo.svg") }
+
+val logoImageSize = v(120.0, 30.0)
+
+val Kotlin = Logo(v(canvas.width / 2.0 - logoImageSize.x / 2.0 - 40, canvas.height / 2.0 - logoImageSize.y / 2.0 - 20))
 
 class Logo(override var pos: Vector) : Shape() {
     val relSize: Double = 0.18
     val shadowOffset = v(-3.0, 3.0)
-    val imageSize = v(150.0, 150.0)
-    var size: Vector = imageSize * relSize
+    var size: Vector = logoImageSize * relSize
     // get-only properties like this saves you lots of typing and are very expressive
     val position: Vector
         get() = if (selected) pos - shadowOffset else pos
 
 
     fun drawLogo(state: CanvasState) {
-        size = imageSize * (state.size.x / imageSize.x) * relSize
-        // getKotlinLogo() is a 'magic' function here defined only for purposes of demonstration but in fact it just find an element containing the logo
-        //state.context.drawImage(getImage("http://try.kotlinlang.org/static/images/canvas/Kotlin-logo.png"), 0.0, 0.0,
+        if (!logoImage.complete) {
+            state.changed = true
+            return
+        }
+        
+        size = logoImageSize * (state.size.x / logoImageSize.x) * relSize
         state.context.drawImage(getImage("http://try.kotlinlang.org/static/images/kotlin_logo.svg"), 0.0, 0.0,
-                imageSize.x, imageSize.y,
+                logoImageSize.x, logoImageSize.y,
                 position.x, position.y,
                 size.x, size.y)
     }
@@ -206,7 +212,7 @@ class CanvasState(val canvas: HTMLCanvasElement) {
     val size: Vector
         get() = v(width.toDouble(), height.toDouble())
     val context = creatures.context
-    var valid = false
+    var changed = true
     var shapes = mutableListOf<Shape>()
     var selection: Shape? = null
     var dragOff = Vector()
@@ -214,7 +220,7 @@ class CanvasState(val canvas: HTMLCanvasElement) {
 
     init {
         jq(canvas).mousedown {
-            valid = false
+            changed = true
             selection = null
             val mousePos = mousePos(it)
             for (shape in shapes) {
@@ -230,7 +236,7 @@ class CanvasState(val canvas: HTMLCanvasElement) {
         jq(canvas).mousemove {
             if (selection != null) {
                 selection!!.pos = mousePos(it) - dragOff
-                valid = false
+                changed = true
             }
         }
 
@@ -239,13 +245,13 @@ class CanvasState(val canvas: HTMLCanvasElement) {
                 selection!!.selected = false
             }
             selection = null
-            valid = false
+            changed = true
         }
 
         jq(canvas).dblclick {
             val newCreature = Creature(mousePos(it), this@CanvasState)
             addShape(newCreature)
-            valid = false
+            changed = true
         }
 
         window.setInterval({
@@ -266,12 +272,11 @@ class CanvasState(val canvas: HTMLCanvasElement) {
 
     fun addShape(shape: Shape) {
         shapes.add(shape)
-        valid = false
+        changed = true
     }
 
     fun clear() {
         context.fillStyle = "#D0D0D0"
-//        context.fillStyle = "#FFFFFF"
         context.fillRect(0.0, 0.0, width.toDouble(), height.toDouble())
         context.strokeStyle = "#000000"
         context.lineWidth = 4.0
@@ -279,14 +284,15 @@ class CanvasState(val canvas: HTMLCanvasElement) {
     }
 
     fun draw() {
-        if (valid) return
-
+        if (!changed) return
+        
+        changed = false
+        
         clear()
         for (shape in shapes.asReversed()) {
             shape.draw(this)
         }
         Kotlin.draw(this)
-        valid = true
     }
 }
 
@@ -339,24 +345,12 @@ class Vector(val x: Double = 0.0, val y: Double = 0.0) {
 
 fun main(args: Array<String>) {
 //sampleStart
-// TODO
-//    jq {
-//        val state = CanvasState(canvas)
-//        state.addShape(Kotlin)
-//        state.addShape(Creature(state.size * 0.25, state))
-//        state.addShape(Creature(state.size * 0.75, state))
-        
-        val state = CanvasState(canvas).apply {
-                addShape(Kotlin)
-                addShape(Creature(size * 0.25, this))
-                addShape(Creature(size * 0.75, this))
-            }
-            
-        window.setTimeout({ 
-            state.valid = false 
-        }, 1000)
-//    }
-    //sampleEnd
+    CanvasState(canvas).apply {
+        addShape(Kotlin)
+        addShape(Creature(size * 0.25, this))
+        addShape(Creature(size * 0.75, this))
+    }
+//sampleEnd
 }
 ```
 
