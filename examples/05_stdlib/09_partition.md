@@ -2,7 +2,7 @@
 
 This function splits the original collection into pair of lists, where first list contains elements for which predicate yielded `true`, while second list contains elements for which predicate yielded `false`.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

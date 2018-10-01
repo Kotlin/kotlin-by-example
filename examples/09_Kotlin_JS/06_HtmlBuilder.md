@@ -6,7 +6,7 @@ Builders are good for declaratively describing data in your code.
 In this example we show how to describe an HTML page in Kotlin
 
 
-<div class="language-kotlin" theme="idea" data-target-platform="canvas" data-output-height="400">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="canvas" data-output-height="400">
 
 ```kotlin
 package html

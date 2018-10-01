@@ -4,7 +4,7 @@ Provides safe access to elements of collection. It takes index and a function th
 in cases when index is out of bound.
 
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -24,7 +24,7 @@ fun main() {
 
 `getOrElse` can also be applied to `Map` to get value for given key. 
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

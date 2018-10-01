@@ -2,7 +2,7 @@
 
 *filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-paramters. 
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

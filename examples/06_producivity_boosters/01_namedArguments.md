@@ -1,6 +1,6 @@
 # Named Arguments
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun format(userName: String, domain: String) = "$userName@$domain"

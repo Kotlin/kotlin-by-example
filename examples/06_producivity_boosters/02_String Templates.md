@@ -1,6 +1,6 @@
 # String Templates
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

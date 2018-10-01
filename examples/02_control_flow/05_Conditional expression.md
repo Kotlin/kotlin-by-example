@@ -3,7 +3,7 @@
 There is no ternary operator (condition ? then : else) in Kotlin instead `if` expression could be used in the same way.
 Let's take a look
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

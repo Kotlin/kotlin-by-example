@@ -4,7 +4,7 @@ _Data classes_ make it easy to declare classes that are used to store some value
 Everything that's needed to use them in collections, have a useful string
 representation, and create copies is auto-generated.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 data class User(val name: String, val id: Int)

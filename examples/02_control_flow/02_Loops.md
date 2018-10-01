@@ -2,7 +2,7 @@
 
 ### for, while, do-while
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main(args: Array<String>) {
@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
 
 1. Loops through each cake in the list
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun eatACake() = println("Eat a Cake")
@@ -53,7 +53,7 @@ While and do-while constructs work similarly to most languages.
 
 ### Iterators
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class Animal(val name: String)

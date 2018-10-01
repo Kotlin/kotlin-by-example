@@ -2,7 +2,7 @@
 
 _Destructuring declaration_ syntax can be very handy and save you few lines of code.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun findMinMax(list: List<Int>): Pair<Int, Int> { 
@@ -31,7 +31,7 @@ fun main() {
 2. It can be used to iterate through maps. _name_ and _age_ variables are mapped to key and value now
 3. You can destructure built-in Pairs and Triples, even as return values from functions
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 data class User(val username: String, val email: String)    // 1
@@ -43,7 +43,7 @@ fun main() {
     val (username, email) = user                            // 2
     println(username == user.component1())                  // 3
 
-    val (_, emailAddress) = getUser()                        // 4
+    val (_, emailAddress) = getUser()                       // 4
     
 }
 ```
@@ -55,7 +55,7 @@ fun main() {
 3. Data class automatically defines the `component1()`, `component2()` corresponding methods, which will be called during destructuring
 4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating unused variable    
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class Pair<K, V>(val first: K, val second: V) {  // 1

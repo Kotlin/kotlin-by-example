@@ -1,7 +1,6 @@
 # Inheritance
 
-
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 open class Dog {                // 1
@@ -35,7 +34,7 @@ fun main() {
 
 ### Inheriting without default constructor
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 //sampleStart
@@ -62,7 +61,7 @@ fun main() {
 
 ### Bypass constructor arguments
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 //sampleStart

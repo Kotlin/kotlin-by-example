@@ -1,6 +1,6 @@
 # Delegation Pattern
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 interface SoundBehaviour {                                                          // 1

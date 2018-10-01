@@ -7,7 +7,7 @@ The deference between `associateBy` and `groupBy` is the behaviour for values wi
 
 The returned map preserves the entry iteration order of the original collection.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

@@ -3,7 +3,7 @@
 First of all, let's start with some basic OOP concepts: a *class* is a blueprint, and an *object* is an instance of a class.
 You define a class, then create multiple instances of that class:
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 import java.util.Random
@@ -45,7 +45,7 @@ In this example, you see a typical basic usage of an **object expression**: a si
 No need of class declaration: create a single object, declare members and access it. 
 Object like that, is often used like anonymous class in Java.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
@@ -79,7 +79,7 @@ fun main(){
 
 You can have also **object declaration**: is not an expression, and cannot be used in a variable assignment, must be used directly:
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 object DoAuth {                                                 //1 
@@ -108,7 +108,7 @@ An object declaration, inside a class, defines another useful case: the **compan
 Syntactically similar to the static methods in Java, you call object's members using the *class* as qualifier.
 In Kotlin, before defining a companion object, decide whether it is better to write a simple *package-level* function.  
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class BigBen {                                  //1 

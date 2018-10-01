@@ -1,6 +1,6 @@
 # Extension Functions and Properties
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 data class Item(val name: String, val price: Float)                                   // 1  
@@ -35,7 +35,7 @@ is very much like standard function or property signature, with addition that we
 
 It is even possible to execute extensions on `null` references. In their implementation we can check for `null` reference and based on that we can do any arbitrary logic. Example:
    
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 //sampleStart

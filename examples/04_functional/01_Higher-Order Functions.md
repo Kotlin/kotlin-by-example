@@ -4,7 +4,7 @@ A higher-order function is a function that takes another function as parameter a
 
 ### Taking a function as parameter
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
@@ -32,7 +32,7 @@ that itself takes two parameters of type integer and returns an integer.
 ### Returning a function as parameter
 
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun operation(): (Int) -> Int {                                     // 1

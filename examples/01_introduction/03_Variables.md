@@ -4,7 +4,7 @@ Kotlin has powerful type inference. While you can explicitly declare the type of
 compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended.
 In essence use *val* over *var*.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -23,7 +23,7 @@ fun main() {
 2. Declare an immutable variable and initialise it
 3. Declare an immutable variable and initialise it. The compiler infers the type.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -41,7 +41,7 @@ fun main() {
 
 Variable initialization can be postponed, but it must be initialized before the first read.
  
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun someCondition() = true 

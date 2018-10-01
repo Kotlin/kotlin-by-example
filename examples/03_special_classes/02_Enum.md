@@ -4,7 +4,7 @@ Enum classes are used to model types that represent a finite set of distinct val
 
 They may contain properties and methods like other classes, separated from the enum instances by a semicolon.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 enum class State {

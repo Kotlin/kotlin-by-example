@@ -8,7 +8,7 @@ In case of empty collection or if nothing matching the predicate those function 
 
 Lets make some Kotlin!
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -41,7 +41,7 @@ fun main() {
 
 Behaviour is almost the same instead if nothing was found the null is returned.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

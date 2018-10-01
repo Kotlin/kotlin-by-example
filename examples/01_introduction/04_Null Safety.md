@@ -2,34 +2,40 @@
 
 In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
+//sampleStart
     var neverNull: String = "This can't be null"            // 1
     
-    var nullable: String? = "You can keep a null here"      // 2
+    neverNull = null                                        // 2
     
-    nullable = null                                         // 3
+    var nullable: String? = "You can keep a null here"      // 3
     
-    var inferredNonNull = "The compiler assumes non-null"   // 4
-
+    nullable = null                                         // 4
+    
+    var inferredNonNull = "The compiler assumes non-null"   // 5
+    
+    inferredNonNull = null                                  // 2
+//sampleEnd
 }
 ```
 
 </div>
 
-1. Declare a non-`null` String variable
-2. Declare a nullable String variable
-3. Set the nullable variable to `null`
-4. When infering types, the compiler assumes non-`null` for variables that are initialized with a value
+1. Declare a non-`null` String variable.
+2. Trying to assign `null` to non-nullable variable produces a compilation error. 
+3. Declare a nullable String variable.
+4. Set the nullable variable to `null`.
+5. When infering types, the compiler assumes non-`null` for variables that are initialized with a value.
 
 ## Working with nulls
 
 Sometimes Kotlin programs need to work with null values, such as when interacting with external Java code or
 representing a truly absent state.  Kotlin provides null tracking to elegantly deal with such situations.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 //sampleStart

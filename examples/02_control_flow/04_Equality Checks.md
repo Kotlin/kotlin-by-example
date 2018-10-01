@@ -4,7 +4,7 @@ Kotlin uses `==` for structural comparison and `===` for referential comparison.
 
 More precisely, `a == b` compiles down to `a == null ? b == null : a.equals(b)`.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main(args: Array<String>) {

@@ -7,7 +7,7 @@
  
 If the map was produced with withDefault, this function will return the default value instead of throwing an exception.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main(args: Array<String>) {

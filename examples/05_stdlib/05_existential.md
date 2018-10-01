@@ -6,7 +6,7 @@ This extension functions answer the question about existence element(s) in colle
 
 Function `any` returns `true` if collection contains at least one element matching the given predicate.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -36,7 +36,7 @@ fun main() {
 
 Function `all` returns `true` iff all elements in collection matching the given predicate.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {
@@ -66,7 +66,7 @@ fun main() {
 
 Function `none` return `true` iff there is no element in collection matching the given predicate.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

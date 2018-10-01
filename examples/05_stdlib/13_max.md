@@ -2,7 +2,7 @@
 
 Return the smallest/largest element or null if there are no elements.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

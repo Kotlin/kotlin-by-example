@@ -2,7 +2,7 @@
 
 Returns a single list of all elements yielded from results of transform function being invoked on each element of original collection.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

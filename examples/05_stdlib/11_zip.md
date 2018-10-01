@@ -2,7 +2,7 @@
 
 Merge a collection with other collection into new collection. The returned collection contains either a `Pair` of elements from source collection with the same indexes or result of given transformation of elements with the same indexes. Let's take a look!
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 fun main() {

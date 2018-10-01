@@ -1,6 +1,6 @@
 # Sealed Classes
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 sealed class Mammal(val name: String)                                                   // 1

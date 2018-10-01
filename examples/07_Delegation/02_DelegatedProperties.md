@@ -8,7 +8,7 @@ to provide methods named `getValue()` and `setValue()` to be called. The full do
 
 Let's try some code.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 import kotlin.reflect.KProperty
@@ -47,7 +47,7 @@ Kotlin standard library contains bunch of useful delegates, like `lazy`, `observ
 
 For example `lazy` is used in case lazy initialization.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class LazySample {
@@ -81,7 +81,7 @@ If you want thread safety, use blockingLazy() instead: it guarantees that the va
 Properties stored in a map. This comes up a lot in applications like parsing JSON
 or doing other "dynamic" stuff.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class User(val map: Map<String, Any?>) {

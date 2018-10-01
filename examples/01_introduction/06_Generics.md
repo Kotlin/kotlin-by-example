@@ -1,12 +1,12 @@
 # Generics
 
-Generics are one genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
+[Generics](https://kotlinlang.org/docs/reference/generics.html) are one genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
 
 ### Generic classes
 
 The first way to use generics in Kotlin is creating generic classes.
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 //sampleStart
@@ -55,9 +55,9 @@ Note that the implementation makes heavy use of Kotlin's shorthand syntax for fu
 
 ### Generic functions
 
-You can also generify functions if their logic is independent of the concrete type. For instance, you can create a utility function to create mutable stacks more easily:
+You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of the concrete type. For instance, you can create a utility function to create mutable stacks more easily:
 
-<div class="language-kotlin" theme="idea">
+<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class MutableStack<E>(vararg items: E) {              // 1
@@ -82,6 +82,7 @@ fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
 
 fun main() {
   val stack = mutableStackOf(0.62, 3.14, 2.7)
+  println(stack)
 }
 //sampleEnd
 ```
