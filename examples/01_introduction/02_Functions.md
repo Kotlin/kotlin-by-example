@@ -30,14 +30,14 @@ fun main() {
 
 </div>
 
-1. Create a function that takes a parameter of type string and returns Unit (i.e. no return value).
+1. Create a function that takes a parameter of type string and returns Unit (i.e., no return value).
 2. Create a function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) "Info". Also return Unit, which can be omitted.
 3. Create a function that returns an integer.
 4. Create a single-expression function that returns an integer (inferred).
 5. Call a function passing as argument `Hello`.
 6. Call a function with two parameters, passing a value for the second optional parameter.
 7. Call a function with two parameters, ignoring the second one. 
-8. Call a function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing order of arguments.
+8. Call a function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
 9. Call a function and print its result.
 
 ### Infix functions
@@ -83,7 +83,7 @@ Note that the example uses [local functions](https://kotlinlang.org/docs/referen
 
 ### Operator functions
 
-Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing to use them with the corresponding operator symbol.
+Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing use of them with the corresponding operator symbol.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -104,12 +104,12 @@ fun main() {
 
 1. This takes the infix function from above one step further using the `operator` modifier.
 2. The operator symbol for `times()` is `*` so that you can call the function using `2 * "Bye"`.
-3. An operator function allowing easy range access on strings.
+3. An operator function allows easy range access on strings.
 4. The `get()` operator enables [bracket-access syntax](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed).
 
 ### Functions with `vararg` parameters
 
-[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow passing any number of arguments by comma-separating them.
+[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow us to pass any number of arguments by comma-separating them.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
