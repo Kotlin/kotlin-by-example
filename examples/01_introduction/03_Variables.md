@@ -1,7 +1,7 @@
 # Variables
 
 Kotlin has powerful type inference. While you can explicitly declare the type of a variable, you'll usually let the
-compiler do the work by inferring it. While Kotlin does not enforce immutability, it is recommended.
+compiler do the work by inferring it. Kotlin does not enforce immutability, though it is recommended.
 In essence use *val* over *var*.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
@@ -19,9 +19,9 @@ fun main() {
 
 </div>
 
-1. Declare a mutable variable and initialise it
-2. Declare an immutable variable and initialise it
-3. Declare an immutable variable and initialise it. The compiler infers the type.
+1. Declare a mutable variable and initialize it
+2. Declare an immutable variable and initialize it
+3. Declare an immutable variable and initialize it. The compiler infers the type.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -36,7 +36,7 @@ fun main() {
 
 </div>
 
-1. Declare a variable, but don't initialise it.
+1. Declare a variable, but don't initialize it.
 2. Produces compiler error: Variable 'e' must be initialized
 
 Variable initialization can be postponed, but it must be initialized before the first read.
@@ -63,6 +63,6 @@ fun main() {
 
 </div>
 
-1. Declare a variable, but don't initialise it.
-2. Initialize variable with different values depending on some condition.
+1. Declare a variable, but don't initialize it.
+2. Initialize the variable with different values depending on some condition.
 3. The first use of the variable.
