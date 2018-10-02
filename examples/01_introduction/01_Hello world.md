@@ -18,7 +18,7 @@ since Kotlin 1.3 it can be a function without any parameters.
 3. `println` writes to standard output and is implicitly imported;
 also, note that semicolons are optional.
 
-For Kotlin versions less than 1.3 `main` function must be defined with parameter:
+For Kotlin versions earlier than 1.3 the `main` function must be defined with a parameter:
     
 <div class="language-kotlin" theme="idea">
 
