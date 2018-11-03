@@ -41,7 +41,7 @@ fun main() {
 1. Delegated property `p` of type `String`
 2. Delegation methods. For immutable property only `getValue` is required.
 
-### Stanard delegates 
+### Standard delegates 
 
 Kotlin standard library contains bunch of useful delegates, like `lazy`, `observable`, etc.
 

@@ -3,7 +3,7 @@ title: Null Safety
 ---
 
 
-In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
+In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assignment of `null`.
 
 <div class="sample" markdown="1">
 
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
 1. Declare a non-null String variable
 2. Declare a nullable String variable
 3. Set the nullable variable to null
-4. When infering types, the compiler assumes non-null for variables that are initialized with a value
+4. When inferring types, the compiler assumes non-null for variables that are initialized with a value
 
 ### Working with nulls
 

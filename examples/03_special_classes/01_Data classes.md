@@ -39,7 +39,7 @@ fun main() {
 2. Auto-generated `equals` makes data classes with equal information equals as well.
 3. Equal data classes have equal `hashCode()`.
 4. Predefined `copy` function makes it easy to obtain a new instance.
-5. Property values can be changed on copy. The order corresponds to contructor argument order.
+5. Property values can be changed on copy. The order corresponds to constructor argument order.
 6. It is possible to change only some values.
 7. Use named arguments to change the second value without altering the first one.
 8. Additionally special `componentN` functions are generated.

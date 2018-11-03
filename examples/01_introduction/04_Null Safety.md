@@ -1,6 +1,6 @@
 # Null Safety
 
-In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assigment of `null`.
+In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assignment of `null`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -28,7 +28,7 @@ fun main() {
 2. Trying to assign `null` to non-nullable variable produces a compilation error. 
 3. Declare a nullable String variable.
 4. Set the nullable variable to `null`.
-5. When infering types, the compiler assumes non-`null` for variables that are initialized with a value.
+5. When inferring types, the compiler assumes non-`null` for variables that are initialized with a value.
 
 ## Working with nulls
 

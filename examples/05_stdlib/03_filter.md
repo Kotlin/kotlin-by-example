@@ -1,6 +1,6 @@
 # filter
 
-*filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-paramters. 
+*filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-parameters. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -16,8 +16,8 @@ fun main() {
 //sampleEnd
 
     println("Numbers: $numbers")
-    println("Positive Numbers: positives")
-    println("Negative Numbers: negatives")
+    println("Positive Numbers: $positives")
+    println("Negative Numbers: $negatives")
 }
 ```
 

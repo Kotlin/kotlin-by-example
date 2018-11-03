@@ -24,4 +24,4 @@ fun main() {
 
 1. Define two collections.
 2. Zip them into pairs using infix notation.
-3. Zip them concatinating together.
+3. Zip them concatenating together.
