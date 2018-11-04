@@ -27,4 +27,4 @@ fun main() {
 1. Define collection of different words.
 2. Looking for the first word starting with "some".
 3. Looking for the last word starting with "some".
-4. Lookign for the first word containing "nothing".
+4. Looking for the first word containing "nothing".
