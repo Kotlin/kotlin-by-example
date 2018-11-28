@@ -89,4 +89,4 @@ fun main() {
 
 </div>
 
-Note how to compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
+Note how the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
