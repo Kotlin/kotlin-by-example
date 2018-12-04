@@ -1,6 +1,6 @@
 # Functions
 
-### Default parameter values and named arguments
+### Default Parameter Values and Named Arguments
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -30,17 +30,17 @@ fun main() {
 
 </div>
 
-1. Create a function that takes a parameter of type string and returns Unit (i.e., no return value).
-2. Create a function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) "Info". Also return Unit, which can be omitted.
-3. Create a function that returns an integer.
-4. Create a single-expression function that returns an integer (inferred).
-5. Call a function passing as argument `Hello`.
-6. Call a function with two parameters, passing a value for the second optional parameter.
-7. Call a function with two parameters, ignoring the second one. 
-8. Call a function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
-9. Call a function and print its result.
+1. A simple function that takes a parameter of type `String` and returns `Unit` (i.e., no return value).
+2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
+3. A function that returns an integer.
+4. A single-expression function that returns an integer (inferred).
+5. Calling the first function with the agrument `Hello`.
+6. Calling the function with two parameters, passing values for both of them.
+7. Calling the same function omitting the second one. The default value `Info` is used. 
+8. Calling the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
+9. Printing the result of a function call.
 
-### Infix functions
+### Infix Functions
 
 Member functions and extensions with a single parameter can be turned into [infix functions](https://kotlinlang.org/docs/reference/functions.html#infix-notation).
 
@@ -72,18 +72,18 @@ class Person(val name: String) {
 
 </div>
 
-1. Defines an infix extension function on `Int`
-2. Call infix function `1`
-3. The infix function `to` from the standard library lets you easily create `Pair`s
-4. Here's your own implementation of `to` creatively called `onto`
-5. Extensions also work on members functions (methods).
+1. Defining an infix extension function on `Int`.
+2. Calling the infix function.
+3. Creating a `Pair` by calling the infix function `to` from the standard library.
+4. Here's your own implementation of `to` creatively called `onto`.
+5. Infix notation also works on members functions (methods).
 6. The containing class becomes the first parameter.
 
-Note that the example uses [local functions](https://kotlinlang.org/docs/reference/functions.html#local-functions) (functions nested into another function).
+Note that the example uses [local functions](https://kotlinlang.org/docs/reference/functions.html#local-functions) (functions nested within another function).
 
-### Operator functions
+### Operator Functions
 
-Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing use of them with the corresponding operator symbol.
+Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -107,9 +107,9 @@ fun main() {
 3. An operator function allows easy range access on strings.
 4. The `get()` operator enables [bracket-access syntax](https://kotlinlang.org/docs/reference/operator-overloading.html#indexed).
 
-### Functions with `vararg` parameters
+### Functions with `vararg` Parameters
 
-[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow us to pass any number of arguments by comma-separating them.
+[Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow you to pass any number of arguments by separating them with commas.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -141,5 +141,5 @@ fun main() {
 1. The `vararg` modifier turns a parameter into a vararg.
 2. This allows calling `printAll` with any number of string arguments.
 3. Thanks to named parameters, you can even add another parameter of the same type after the vararg. This wouldn't be allowed in Java because there's no way to pass a value.
-4. Using named parameters, you can set a value to `prefix` despite the vararg.
-5. At runtime, a vararg is simply an array. To pass it along into a vararg parameter, you can use the special spread operator `*foo` to pass in `*entries` (a vararg of `String`) instead of `entries` (an `Array<String>`).
+4. Using named parameters, you can set a value to `prefix` separately from the vararg.
+5. At runtime, a vararg is just an array. To pass it along into a vararg parameter, use the special spread operator `*` that lets you pass in `*entries` (a vararg of `String`) instead of `entries` (an `Array<String>`).
