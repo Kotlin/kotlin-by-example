@@ -48,7 +48,7 @@ fun main(args: Array<String>) {
 
 While and do-while constructs work similarly to most languages.
 
-1. Performs the block while the condition is false
+1. Performs the block while the condition is true.
 2. Performs the block first, and then loops while evaluating the while condition.
 
 ### Iterators
