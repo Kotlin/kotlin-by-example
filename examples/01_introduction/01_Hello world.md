@@ -1,4 +1,4 @@
-# Hello world
+# Hello World
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -12,13 +12,11 @@ fun main() {                        // 2
 
 </div>
 
-1. Kotlin code is usually defined in packages. If you don't define one, the default package will be used.
-2. The main entry point to a Kotlin application is a function called *main* and 
-since Kotlin 1.3 it can be a function without any parameters. 
-3. `println` writes to standard output and is implicitly imported;
-also, note that semicolons are optional.
+1. Kotlin code is usually defined in packages. Package specification is optional: If you don't specify a package in a source file, its content goes to the default package.
+2. An entry point to a Kotlin application is the `main` function. In Kotlin 1.3, you can declare `main` without any parameters. The return type is not specified, which means that the function returns nothing. 
+3. `println` writes a line to the standard output. It is imported implicitly. Also, note that semicolons are optional.
 
-For Kotlin versions earlier than 1.3 the `main` function must be defined with a parameter:
+In Kotlin versions earlier than 1.3, the `main` function must have a parameter of type `Array<String>`.
     
 <div class="language-kotlin" theme="idea">
 
