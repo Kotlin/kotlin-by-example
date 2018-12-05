@@ -1,5 +1,7 @@
 # Inheritance
 
+Kotlin fully supports the traditional object-oriented inheritance mechanism. 
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
@@ -23,16 +25,12 @@ fun main() {
 
 </div>
 
-1. Kotlin classes are _final_ by default. If you want to allow overriding a
-    class, it must be marked with the `open` modifier.
-2. Kotlin methods are also _final_ by default. As with the classes, the `open`
-    modifier allows overriding them.
-3. A class is overriding by following the subclass name with
-    `: SuperclassName()`. The empty parentheses `()` indicate an invocation to
-    the default constructor of the superclass.
+1. Kotlin classes are _final_ by default. If you want to allow the class inheritance, mark the class with the `open` modifier.
+2. Kotlin methods are also _final_ by default. As with the classes, the `open` modifier allows overriding them.
+3. A class inherits a superclass when you specify the `: SuperclassName()` after its name. The empty parentheses `()` indicate an invocation of the superclass default constructor.
 4. Overriding methods or attributes requires the `override` modifier.
 
-### Inheriting without default constructor
+### Inheritance with Parameterized Constructor
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -55,11 +53,10 @@ fun main() {
 
 </div>
 
-1. When the superclass does not provide a default constructor, arguments must be
-    provided when invoking the superclass constructor from the subclass.
+1. If you want to use a parameterized constructor of the superclass when creating a subclass, provide the constructor arguments in the subclass declaration.
 
 
-### Bypass constructor arguments
+### Passing Constructor Arguments to Superclass
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -74,7 +71,7 @@ open class Lion(val name: String, val origin: String) {
 class Asiatic(name: String) : Lion(name = name, origin = "India") // 1
 
 fun main() {
-    val lion: Lion = Asiatic("Rufo")
+    val lion: Lion = Asiatic("Rufo")                              // 2
     lion.sayHello()
 }
 //sampleEnd
@@ -83,7 +80,6 @@ fun main() {
 </div>
 
 
-1. Observe that `name` is neither a `var` nor `val` because it is a
-    constructor argument for `Asiatic`, whose value is passed to the `name`
-    attribute of `Lion` (it does not override it).
+1. `name` in the `Asiatic` declaration is neither a `var` nor `val`: it's a constructor argument, whose value is passed to the `name` property of the superclass `Lion`. 
+2. Creating an `Asiatic` instance with the name `Rufo` invokes the `Lion` constructor with arguments `Rufo` and `India`.
 
