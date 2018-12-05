@@ -1,8 +1,8 @@
 # Generics
 
-[Generics](https://kotlinlang.org/docs/reference/generics.html) are one genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
+[Generics](https://kotlinlang.org/docs/reference/generics.html) are a genericity mechanism that's become standard in modern languages. Generic classes and functions increase code reusability by encapsulating common logic that is independent of a particular generic type, like the logic inside a `List<T>` is independent of what `T` is.
 
-### Generic classes
+### Generic Classes
 
 The first way to use generics in Kotlin is creating generic classes.
 
@@ -46,16 +46,16 @@ fun main() {
 
 </div>
 
-1. Defines a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a concrete type such as `Int` by declaring a `MutableStack<Int>`.
+1. Defining a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
 2. Inside the generic class, `E` can be used as a parameter like any other type.
 3. You can also use `E` as a return type.
 
 Note that the implementation makes heavy use of Kotlin's shorthand syntax for functions that can be defined in a single expression.
 
 
-### Generic functions
+### Generic Functions
 
-You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of the concrete type. For instance, you can create a utility function to create mutable stacks more easily:
+You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of the specific type. For instance, you can write a utility function to create mutable stacks easier:
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -89,4 +89,4 @@ fun main() {
 
 </div>
 
-Note how the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
+Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
