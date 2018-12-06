@@ -1,5 +1,7 @@
 # Extension Functions and Properties
 
+Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look pretty much like usual functions and properties with the only difference: you need to specify the type that you extend.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
@@ -17,23 +19,22 @@ fun main() {
 
     val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
     
-    println("Max priced item name: ${order.maxPricedItemName()}")
+    println("Max priced item name: ${order.maxPricedItemName()}")                     // 4
     println("Max priced item value: ${order.maxPricedItemValue()}")
-    println("Items: ${order.commaDelimitedItemNames}")
+    println("Items: ${order.commaDelimitedItemNames}")                                // 5
 
 }
 ```
 
 </div>
 
-1. We define simple models of `Item` and `Order`. `Order` can contain arbitrary `Collection` of `Item` s
-2. We define extension functions for `Order` type. Later we call these functions directly on the instance of that type. 
-3. We can also define extension properties.
+1. Defining simple models of `Item` and `Order`. `Order` can contain a collection of `Item` objects.
+2. Adding extension functions for the `Order` type.  
+3. Adding an extension property for the `Order` type.
+4. Calling extension functions directly on an instance of `Order`.
+5. Accessing the extension property on an instance of `Order`.
 
-Read more about signature of [extensions](https://kotlinlang.org/docs/reference/extensions.html). Signature
-is very much like standard function or property signature, with addition that we need to specify type we're attaching function or property to.
-
-It is even possible to execute extensions on `null` references. In their implementation we can check for `null` reference and based on that we can do any arbitrary logic. Example:
+It is even possible to execute extensions on `null` references. In an extension function, you can check the object for `null` and use the result in your code:
    
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
