@@ -1,21 +1,20 @@
-# Object keyword
+# Object Keyword
 
-First of all, let's start with some basic OOP concepts: a *class* is a blueprint, and an *object* is an instance of a class.
-You define a class, then create multiple instances of that class:
+Classes and objects in Kotlinwork the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 import java.util.Random
 
-class LuckDispatcher{                     //1 
+class LuckDispatcher {                    //1 
     fun getNumber() {                     //2 
         var objRandom = Random()
         println(objRandom.nextInt(90))
     }
 }
 
-fun main(){
+fun main() {
     val d1 = LuckDispatcher()             //3
     val d2 = LuckDispatcher()
     
@@ -26,24 +25,24 @@ fun main(){
 
 </div>
 
-1. blueprint definition
-2. method definition
-3. instance creation
-4. method calls 
+1. Defining a blueprint.
+2. Defining a method.
+3. Creating instances.
+4. Calling the method on instances. 
 
-Easy: we create two objects, both *instances* of LuckDispatcher class.
+In Kotlin you also have also the [**object** keyword](https://kotlinlang.org/docs/reference/object-declarations.html). It is used to obtain a *data type with a single implementation*.
 
-In Kotlin you have also an **object** keyword. What is? is a *data type with a single implementation*.
+If you are a Java user and want to understand what "*single*" means, you can think of the **Singleton** pattern:
+it ensures you that only one instance of that class is created even if 2 threads try to create it.
 
-If you are a Java user and want to understand what "*single*" means, you can think to Singleton pattern:
-it allows you to check that one (and only one) instance of that class will be created, even if 2 threads access it.
+To achieve this in Kotlin, you only need to declare an `object`: no class, no constructor, only a lazy instance.
+Why lazy? Because it will be created once when the object is accessed. Otherwise, it won't even be created.
 
-To achieve that in Kotlin, you only need to declare an **object**: no class, no constructor, only a lazy instance.
-Why lazy? because it will be created one time, if object is used, otherwise, no.
+### `object` Expression
 
-In this example, you see a typical basic usage of an **object expression**: a simple object/properties structure.
-No need of class declaration: create a single object, declare members and access it. 
-Object like that, is often used like anonymous class in Java.
+Here is a typical basic usage of an `object` **expression**: a simple object/properties structure.
+There is no need in class declaration: you create a single object, declare its members and access it within one function. 
+Objects like this are often created in Java as anonymous class instances.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -62,22 +61,22 @@ fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  
 
 }
 
-
-fun main(){
+fun main() {
     rentPrice(10, 2, 1)                                                         //5
 }
 ```
 
 </div>
 
-1. Create a rentPrice function, w/ parameters (regular days, festivity days, special days)
-2. Create rates object, where you set vars values
-3. Access object's vars
-4. Print total
-5. Access the instance (initialization), calling fun
+1. Creating a function with parameters.
+2. Creating an object to use when calculating the result value.
+3. Accessing the object's properties.
+4. Printing the result.
+5. Calling the function. This is when the object is actually created.
 
+### `object` Declaration
 
-You can have also **object declaration**: is not an expression, and cannot be used in a variable assignment, must be used directly:
+You can also use the `object` **declaration**. It isn't an expression, and can't be used in a variable assignment. You should use it to directly access its members:
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -88,7 +87,6 @@ object DoAuth {                                                 //1
     }
 }
 
-
 fun main(){
     DoAuth.takeParams("foo", "qwerty")                          //3
 }
@@ -97,39 +95,37 @@ fun main(){
 
 </div>
 
-1. create object declaration
-2. define method
-3. use the object (initialization), calling method
+1. Creating an object declaration.
+2. Defining the object method.
+3. Calling the method. This is when the object is actually created.
 
+### Companion Objects
 
-
-
-An object declaration, inside a class, defines another useful case: the **companion object**. 
-Syntactically similar to the static methods in Java, you call object's members using the *class* as qualifier.
-In Kotlin, before defining a companion object, decide whether it is better to write a simple *package-level* function.  
+An object declaration inside a class defines another useful case: the **companion object**. 
+Syntactically it's similar to the static methods in Java: you call object members using its *class name* as a qualifier.
+If you plan to use a companion object in Kotlin, consider using a *package-level* function instead.  
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
 class BigBen {                                  //1 
-    companion object Bonger{                    //2
-        fun getBongs(nTimes: Int){              //3
-            for (i in 1 .. nTimes){
+    companion object Bonger {                   //2
+        fun getBongs(nTimes: Int) {             //3
+            for (i in 1 .. nTimes) {
                 print("BONG ")
             }
         }
     }
 }
 
-
-fun main(){
+fun main() {
     BigBen.getBongs(12)                         //4
 }
 ```
 
 </div>
 
-1. class definition, companion initialization
-2. companion definition - name can be omitted
-3. method definition
-4. accessing companion object
+1. Defininfg a class.
+2. Defining a companion. Its name can be omitted.
+3. Defining a companion object method.
+4. Calling the companion object method via the class name.
