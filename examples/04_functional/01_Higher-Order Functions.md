@@ -1,8 +1,8 @@
 # Higher-Order Functions
 
-A higher-order function is a function that takes another function as parameter and/or returns a function.
+A [*higher-order function*](https://kotlinlang.org/docs/reference/lambdas.html) is a function that takes another function as parameter and/or returns a function.
 
-### Taking a function as parameter
+### Taking Functions as Parameters
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -22,15 +22,13 @@ fun main() {
 
 </div>
 
-1. Declare a higher-order function that takes as parameter two integers, x and y. In addition it takes another function as parameter, named `operation`
-that itself takes two parameters of type integer and returns an integer.
-2. Invoke the function passing in the arguments supplied.
-3. Declare a function that matches the same signature.
-4. Invoke the higher-order function passing in as the function argument, `::sum` which is how we reference a function by name in Kotlin.
-5. Invoke the higher-order function passing in as function argument a lambda function. Looks more clear, doesn't it?
+1. Declaring a higher-order function. It takes two integer parameters, `x` and `y`. Additionally, it takes another function `operation` as a parameter. The `operation` parameters and return type are also defined in the declaration.
+2. The higher order functions returns the result of `operation` invocation with the supplied agruments.
+3. Declaring a function that matches the `operation`signature.
+4. Invoking the higher-order function passing in two integer values and the function argument `::sum`. `::` is the notation that  references a function by name in Kotlin.
+5. Invoking the higher-order function passing in a lambda as a function argument. Looks more clear, doesn't it?
 
-### Returning a function as parameter
-
+### Returning Functions
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -49,8 +47,8 @@ fun main() {
 
 </div>
 
-1. Declare a higher-order function that returns a function.
-2. Return a function matching the signature.
-3. Invoke `operation` to get the result assigned to a variable.
-4. Invoke the function.
+1. Declaring a higher-order function that returns a function.
+2. Declaring a function matching the signature.
+3. Invoking `operation` to get the result assigned to a variable. Here `func` becomes `square` which is returned by `operation`.
+4. Invoking `func`. The `square` function is actually executed.
 
