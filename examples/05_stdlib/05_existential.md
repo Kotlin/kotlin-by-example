@@ -1,10 +1,10 @@
 # any, all, none
 
-This extension functions answer the question about existence element(s) in collection based on given predicate.
+These functions check the existence of collection elements that match a given predicate.
 
 ### Function `any`
 
-Function `any` returns `true` if collection contains at least one element matching the given predicate.
+Function `any` returns `true` if the collection contains **at least one** element that matches the given predicate.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -27,14 +27,14 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Whether there is an element less than `0`.
-3. Whether there is an element greater than `6`. 
+1. Defining a collection of numbers.
+2. Checking if there are negative elements.
+3. Checking if there are elements greater than `6`. 
 
 
 ### Function `all`
 
-Function `all` returns `true` iff all elements in collection matching the given predicate.
+Function `all` returns `true` if **all** elements in collection match the given predicate.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -57,14 +57,14 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Whether all elements are even.
-3. Whether all elements less than `6`.
+1. Defining a collection of numbers.
+2. Checking whether all elements are even.
+3. Checking whether all elements are less than `6`.
 
 
 ### Function `none`
 
-Function `none` return `true` iff there is no element in collection matching the given predicate.
+Function `none` returns `true` if there are **no** elements that match the given predicate in the collection.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -87,7 +87,7 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Whether there is no odd element which means all elements are even.
-3. If there is no element grater than 6.
+1. Defining a collection of numbers.
+2. Checking if there are no odd elements (all elements are even).
+3. Checking if there are no elements greater than 6.
  
