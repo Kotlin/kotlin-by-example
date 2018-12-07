@@ -1,6 +1,6 @@
 # min, max
 
-Return the smallest/largest element or null if there are no elements.
+`min` and `max` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -17,5 +17,5 @@ fun main() {
 
 </div>
 
-1. For non-empty collection functions return smallest and largest element.
-2. For empty collection both functions return `null`.
+1. For non-empty collection functions return the smallest and the largest element.
+2. For empty collections both functions return `null`.
