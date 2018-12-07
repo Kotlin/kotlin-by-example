@@ -2,11 +2,9 @@
 
 ### `first`, `last`
 
-Those functions return either the first or last element of the collection or the first/last matching the given predicate.
+These functions return the first and the last element of the collection correspondingly. You can also use them with a predicate; in this case, they return the first or the last element that matches the given predicate.
 
-In case of empty collection or if nothing matching the predicate those function throw an `NoSuchElementException`.
-
-Lets make some Kotlin!
+If a collection is empty or doesn't contain elements matching the predicate, the functions throw `NoSuchElementException`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -30,17 +28,15 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Pick first element.
-3. Pick last element.
-4. Pick first even element.
-5. Pick last odd element.
-
+1. Defining a collection of numbers.
+2. Picking the first element.
+3. Picking the last element.
+4. Picking the first even element.
+5. Picking the last odd element.
 
 ### `firstOrNull`, `lastOrNull`
 
-Behaviour is almost the same instead if nothing was found the null is returned.
-
+These functions work almost the same way with one difference: they return `null` if there are no matching elements.
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
@@ -67,11 +63,11 @@ fun main() {
 
 </div>
 
-1. Define collection of different words.
+1. Defining a collection of words.
 2. Define an empty collection.
-3. Pick the first element from empty collection. It supposed to be `null`
-4. Pick the last element from empty collection. It supposed to be `null` as well.
-5. Pick the first word starting with 'f'
-6. Pick the first word starting with 'z'
-7. Pick the last word ending with 'f'
-8. Pick the last word ending with 'z'
+3. Picking the first element from empty collection. It supposed to be `null`.
+4. Picking the last element from empty collection. It supposed to be `null` as well.
+5. Picking the first word starting with 'f'.
+6. Picking the first word starting with 'z'.
+7. Picking the last word ending with 'f'.
+8. Picking the last word ending with 'z'.
