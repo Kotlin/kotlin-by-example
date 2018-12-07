@@ -1,6 +1,8 @@
 # partition
 
-This function splits the original collection into pair of lists, where first list contains elements for which predicate yielded `true`, while second list contains elements for which predicate yielded `false`.
+`partition` function splits the original collection into pair of lists using a given predicate:
+ * Elements for which the predicate is `true`.
+ * Elements for which the predicate is `false`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -10,16 +12,21 @@ fun main() {
 //sampleStart
     val numbers = listOf(1, -2, 3, -4, 5, -6)                // 1
     
-    val (postives, negatives) = numbers.partition { it > 0 } // 2
+    val evenOdd = numbers.partition { it % 2 == 0 }           // 2
+    val (positives, negatives) = numbers.partition { it > 0 } // 3
 //sampleEnd
 
     println("Numbers: $numbers")
-    println("Positive numbers: $postives")
+    println("Odd numbers: ${evenOdd.first}")
+    println("Odd numbers: ${evenOdd.second}")
+    println("Positive numbers: $positives")
     println("Negative numbers: $negatives")
 }
+
 ```
 
 </div>
 
-1. Define collection of numbers.
-2. Use `partition` to split `numbers` into two lists with positive and negative numbers. Also apply destructuring to get members of returning `Pair`
+1. Defining a collection of numbers.
+2. Splitting `numbers` into a `Pair` of lists with even and odd numbers.
+3. Splitting `numbers` into two lists with positive and negative numbers. Pair destructuring is applied here to get the `Pair` members.
