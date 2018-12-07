@@ -1,6 +1,6 @@
 # flatMap
 
-Returns a single list of all elements yielded from results of transform function being invoked on each element of original collection.
+`flatMap` transforms each element of a collection into an iterable object and builds a single list of the transformation results. The transformation is user-defined. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -20,5 +20,5 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Transform the collection repeating each element three times.
+1. Defining a collection of numbers.
+2. Building a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 
