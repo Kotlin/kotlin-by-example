@@ -1,7 +1,6 @@
 # filter
 
-*filter* is a function defined in the standard library that can be used to filter collection. It takes a predicate as an lambda-parameters. 
-
+*filter* function enables you to filter collections. It takes a filter predicate as a lambda-parameter. The predicate is applied to each element. Elements that make the predicate `true` are returned in the result collection.
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
@@ -23,6 +22,6 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Filter negative numbers.
-3. Or using even shorter way to filter positive numbers. 
+1. Defining collection of numbers.
+2. Getting positive numbers.
+3. Or using the shorter `it` notation to get negative numbers. 
