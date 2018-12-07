@@ -1,11 +1,9 @@
-# Map element access
+# Map Element Access
 
-`[]` operator returns value corresponding to the given key, or `null` if such a key is not present in the map  
+When applied to a map, `[]` operator returns the value corresponding to the given key, or `null` if there is no such key in the map.  
 
-`getValue` function returns an existing value corresponding to the given key or throws an exception,
- mentioning which key was not found.
- 
-If the map was produced with withDefault, this function will return the default value instead of throwing an exception.
+`getValue` function returns an existing value corresponding to the given key or throws an exception if the key wasn't found. 
+For maps created with `withDefault`, `getValue` returns the default value instead of throwing an exception.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -41,7 +39,7 @@ fun main(args: Array<String>) {
 
 </div>
 
-1. Produces 42 because `"key"` is present in map
-2. Produces `null` because `"key2"` is absent.
-3. Produces default value of 4 because `"key2"` is absent.
-4. Throws NoSuchElementException because `"anotherKey"` is not in the map
+1. Returns 42 because it's the value corresponding to the key `"key"`.
+2. Returns `null` because `"key2"` is not in the map.
+3. Returns the default value because `"key2"` is absent. For this key it's 4.
+4. Throws `NoSuchElementException` because `"anotherKey"` is not in the map.
