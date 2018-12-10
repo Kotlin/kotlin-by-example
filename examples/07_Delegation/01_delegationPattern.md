@@ -1,25 +1,27 @@
 # Delegation Pattern
 
+Kotlin supports easy implementation of the [delegation pattern](https://kotlinlang.org/docs/reference/delegation.html) on the native level without any boilerplate code.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
-interface SoundBehaviour {                                                          // 1
+interface SoundBehavior {                                                          // 1
     fun makeSound()
 }
 
-class ScreamBehavior(val n:String): SoundBehaviour {                                // 2
+class ScreamBehavior(val n:String): SoundBehavior {                                // 2
     override fun makeSound() = println("${n.toUpperCase()} !!!")
 }
 
-class RockAndRollBehavior(val n:String): SoundBehaviour {                           // 2
+class RockAndRollBehavior(val n:String): SoundBehavior {                           // 2
     override fun makeSound() = println("I'm The King of Rock 'N' Roll: $n")
 }
 
 // Tom Araya is the "singer" of Slayer
-class TomAraya(n:String): SoundBehaviour by ScreamBehavior(n)                       // 3
+class TomAraya(n:String): SoundBehavior by ScreamBehavior(n)                       // 3
 
 // You should know ;)
-class ElvisPresley(n:String): SoundBehaviour by RockAndRollBehavior(n)              // 3
+class ElvisPresley(n:String): SoundBehavior by RockAndRollBehavior(n)              // 3
 
 fun main() {
     val tomAraya = TomAraya("Trash Metal")
@@ -31,12 +33,10 @@ fun main() {
 
 </div>
 
-In Kotlin it's easy to delegate method calls without any boilerplate.
 
-1.  The interface SoundBehaviour is defined. Later there will be one class that implements the method and another will 
-    also have the interface, but just delegates the method call.
-2.  The class ScreamBehavior and RockAndRollBehavior actually implement the method.
-3.  The class TomAraya and ElvisPresley just delegate the methods defined by the interface SoundBehaviour to the 
-    responsible implementation. But does not need any boilerplate to delegate the method call at all.
-4.  Call makeSound() on tomAraya of type TomAraya or elvisPresley of type ElvisPresley and it is delegated to the
-    associated class
+1.  The interface `SoundBehavior` with one method is defined. 
+2.  The classes `ScreamBehavior` and `RockAndRollBehavior` implement the interface and contain own implementations on the method.
+3.  The classes `TomAraya` and `ElvisPresley` also implement the interface, but not the method. Instead, they delegate the method calls to the 
+    responsible implementation. The delegate object is defined after the `by` keyword. As you see, no boilerplate code is required.
+4.  When `makeSound()` is called on `tomAraya` of type `TomAraya` or `elvisPresley` of type `ElvisPresley`, the call is delegated to the
+    corresponding delegate object.
