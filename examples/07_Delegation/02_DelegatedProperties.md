@@ -1,12 +1,7 @@
 # Delegated Properties
 
-There's some new syntax: you can say `val 'property name': 'Type' by 'expression'`.
-The expression after `by` is the delegate, because `get()` and `set()` methods
-corresponding to the property will be delegated to it.
-Property delegates don't have to implement any interface, but they have
-to provide methods named `getValue()` and `setValue()` to be called. The full documentation is [here](http://kotlinlang.org/docs/reference/delegated-properties.html). 
-
-Let's try some code.
+Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allow delegating the calls of the property `set` and `get` methods to a certain object.
+The delegate object in this case should have the method `getValue`. For mutable properties, you'll also need `setValue`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -38,12 +33,12 @@ fun main() {
 
 </div>
 
-1. Delegated property `p` of type `String`
-2. Delegation methods. For immutable property only `getValue` is required.
+1. Delegating property `p` of type `String` to the instance of class `Delegate`. The delegate object is defined after the `by` keyword.
+2. Delegation methods. The signatures of these methods are always as shown in the example. Implementations may contain any steps you need. For immutable properties only `getValue` is required.
 
-### Standard delegates 
+### Standard Delegates 
 
-Kotlin standard library contains bunch of useful delegates, like `lazy`, `observable`, etc.
+Kotlin standard library contains bunch of useful delegates, like `lazy`, `observable`, etc. You may use them as is.
 
 For example `lazy` is used in case lazy initialization.
 
@@ -52,10 +47,10 @@ For example `lazy` is used in case lazy initialization.
 ```kotlin
 class LazySample {
     init {
-      println("created!");            // 1
+      println("created!")            // 1
     }
     
-    val lazy: String by lazy {
+    val lazyStr: String by lazy {
         println("computed!")          // 2
         "my lazy"
     }
@@ -63,22 +58,22 @@ class LazySample {
 
 fun main() {
     val sample = LazySample()         // 1
-    println("lazy = ${sample.lazy}")  // 2
-    println("lazy = ${sample.lazy}")  // 3
+    println("lazyStr = ${sample.lazyStr}")  // 2
+    println(" = ${sample.lazyStr}")  // 3
 }
 ```
 
 </div>
 
  1. Property `lazy` is not initialized on object creation.
- 2. The first call to `get()` executes the lambda expression passed to lazy() as an argument and remembers the result
- 3. Subsequent calls to `get()` simply return the remembered result.
+ 2. The first call to `get()` executes the lambda expression passed to `lazy()` as an argument and saves the result.
+ 3. Further calls to `get()` return the saved result.
 
-If you want thread safety, use blockingLazy() instead: it guarantees that the values will be computed only in one thread, and that all threads will see the same value.
+If you want thread safety, use `blockingLazy()` instead: it guarantees that the values will be computed only in one thread and that all threads will see the same value.
 
-### Properties in map
+### Storing Properties in a Map
 
-Properties stored in a map. This comes up a lot in applications like parsing JSON
+Property delegation can be used for storing properties in a map. This is handy for tasks like parsing JSON
 or doing other "dynamic" stuff.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
@@ -101,6 +96,6 @@ fun main() {
 
 </div>
 
-1. Delegates take values from the `map` (by the string keys - names of properties).
+1. Delegates take values from the `map` by the string keys - names of properties.
 
-Of course, you can have mutable property as well, that will modify the map upon assignment (note that you'd need `MutableMap` instead of read-only `Map`).
+You can delegate mutable properties to a map as well. In this case, the map will be modified upon property assignments. Note that you will need `MutableMap` instead of read-only `Map`.
