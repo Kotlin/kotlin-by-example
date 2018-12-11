@@ -14,8 +14,8 @@ fun main() {
 
 </div>
 
-1. Declare an existing JavaScript function `alert` which takes a single `String` argument
-2. Use it as if it was regular Kotlin.
+1. Declaring an existing JavaScript function `alert` which takes a single `String` argument.
+2. Using `alert` as if it was regular Kotlin.
 
 Note that Kotlin checks during compilation that exactly a single argument of type `String` is passed.
 That prevents a number of bugs even when using pure JavaScript API - same as with regular Kotlin.
