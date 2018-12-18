@@ -2,7 +2,7 @@
 title: this class member
 ---
     
-**this** keyword, inside a class, refers to the instance. By default, used without identifiers, is referred to the current, innermost scope, the class where is declared. 
+**this** keyword, inside a class, refers to the instance. By default when used without identifiers, this refers to the current innermost scope where the class is declared.
 
 If you want to access an outer scope, use the **this@qualifiedLabel** identifier, where *qualifiedLabel* points to the outer class.
 
