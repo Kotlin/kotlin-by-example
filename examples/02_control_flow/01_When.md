@@ -34,7 +34,7 @@ class MyClass
 2. Checking whether `obj` equals to one.
 3. Checking whether `obj` equals to `Hello`.
 4. Type checking.
-5. Negative type checking.
+5. Inverse type checking.
 6. Default statement (might be omitted).
 
 Note that all branch conditions are checked sequentially until one of them is satisfied. So, only the first suitable branch will be executed.   
