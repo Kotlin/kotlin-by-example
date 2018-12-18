@@ -1,11 +1,12 @@
 ---
 title: this in extension functions
 ---
-    
+
 <div class="sample" markdown="1">
 
-Normally, when you create a class, by default it inherits from *Any*, the Kotlin default supertype which declares toString(), hashCode() and equals().
-In other languages like Java, if you want to extend a class behaviour, you create a *derived* class like this:
+Normally, when you create a class, it inherits from **Any** (the Kotlin default supertype). **Any** declares toString(), hashCode(), and equals().
+
+In other languages like Java, if you want to extend a class behavior, you would need to create a *derived* class like this:
 
 ```kotlin
 open class Human {                     //1
@@ -22,14 +23,14 @@ fun main(args: Array<String>){
 
 ```
 
-1. Class that allows to be inheritable. Note: Any is inherted by default
+1. A class that allows inheritance. Note: **Any** is inherited from by default
 2. Initializer block, with some code
 3. Derived class definition
-4. Instance creation, with inherited behaviour  
-  
-But in Kotlin, with **extension functions** you have another way to extend class functionalities: just declare a new *fun* on the base class, no need to define another (derived) class and generate its instance.
+4. Instance creation, with inherited behavior  
 
-In this example, you can see how it's easy to declare an extension and, with keyword **this**, access the object, called *receiver*:
+But in Kotlin, with **extension functions** you have another way to extend class functionalities: simply declare a new fun on the base class, there is no need to define another (derived) class and generate its instance.
+
+In this example, you can see how easy it is to declare an extension and, with keyword **this**, access the object, called receiver:
 
 ```kotlin
 fun MutableMap<String, Int>.filterGoldenBallWon(rate: Int){    //1 
@@ -51,7 +52,6 @@ fun main(args: Array<String>){
 
 
 ```
-
 
 </div>
 
