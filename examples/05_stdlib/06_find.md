@@ -1,6 +1,6 @@
 # find
 
-Returns the first of last element matching the given predicate, or null if no such element was found.
+Returns the first or last element matching the given predicate, or `null` if no such element was found.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
