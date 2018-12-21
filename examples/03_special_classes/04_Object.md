@@ -1,6 +1,6 @@
 # Object Keyword
 
-Classes and objects in Kotlinwork the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
+Classes and objects in Kotlin work the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -25,12 +25,12 @@ fun main() {
 
 </div>
 
-1. Defining a blueprint.
-2. Defining a method.
-3. Creating instances.
-4. Calling the method on instances. 
+1. Defines a blueprint.
+2. Defines a method.
+3. Creates instances.
+4. Calls the method on instances. 
 
-In Kotlin you also have also the [**object** keyword](https://kotlinlang.org/docs/reference/object-declarations.html). It is used to obtain a *data type with a single implementation*.
+In Kotlin you also have the [**object** keyword](https://kotlinlang.org/docs/reference/object-declarations.html). It is used to obtain a *data type with a single implementation*.
 
 If you are a Java user and want to understand what "*single*" means, you can think of the **Singleton** pattern:
 it ensures you that only one instance of that class is created even if 2 threads try to create it.
@@ -40,8 +40,8 @@ Why lazy? Because it will be created once when the object is accessed. Otherwise
 
 ### `object` Expression
 
-Here is a typical basic usage of an `object` **expression**: a simple object/properties structure.
-There is no need in class declaration: you create a single object, declare its members and access it within one function. 
+Here is a basic typical usage of an `object` **expression**: a simple object/properties structure.
+There is no need to do so in class declaration: you create a single object, declare its members and access it within one function. 
 Objects like this are often created in Java as anonymous class instances.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
@@ -68,11 +68,11 @@ fun main() {
 
 </div>
 
-1. Creating a function with parameters.
-2. Creating an object to use when calculating the result value.
-3. Accessing the object's properties.
-4. Printing the result.
-5. Calling the function. This is when the object is actually created.
+1. Creates a function with parameters.
+2. Creates an object to use when calculating the result value.
+3. Accesses the object's properties.
+4. Prints the result.
+5. Calls the function. This is when the object is actually created.
 
 ### `object` Declaration
 
@@ -95,9 +95,9 @@ fun main(){
 
 </div>
 
-1. Creating an object declaration.
-2. Defining the object method.
-3. Calling the method. This is when the object is actually created.
+1. Creates an object declaration.
+2. Defines the object method.
+3. Calls the method. This is when the object is actually created.
 
 ### Companion Objects
 
@@ -125,7 +125,7 @@ fun main() {
 
 </div>
 
-1. Defininfg a class.
-2. Defining a companion. Its name can be omitted.
-3. Defining a companion object method.
-4. Calling the companion object method via the class name.
+1. Defines a class.
+2. Defines a companion. Its name can be omitted.
+3. Defines a companion object method.
+4. Calls the companion object method via the class name.

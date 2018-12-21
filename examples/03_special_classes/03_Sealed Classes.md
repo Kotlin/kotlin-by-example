@@ -25,9 +25,9 @@ fun main() {
 </div>
 
 
-1. Defining a sealed class. 
-2. Defining subclasses. Note that all subclasses must be in the same file.
-3. Using an instance of the sealed class as an argument in a `when` expression. 
+1. Defines a sealed class. 
+2. Defines subclasses. Note that all subclasses must be in the same file.
+3. Uses an instance of the sealed class as an argument in a `when` expression. 
 4. A smartcast is performed, casting `Mammal` to `Human`.
 5. A smartcast is performed, casting `Mammal` to `Cat`.
 6. The `else`-case is not necessary here since all possible subclasses of the sealed class are covered. With a non-sealed superclass `else` would be required.
