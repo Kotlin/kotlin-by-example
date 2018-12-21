@@ -34,8 +34,8 @@ fun main() {
 </div>
 
 
-1.  The interface `SoundBehavior` with one method is defined. 
-2.  The classes `ScreamBehavior` and `RockAndRollBehavior` implement the interface and contain own implementations on the method.
+1.  Defines the interface `SoundBehavior` with one method. 
+2.  The classes `ScreamBehavior` and `RockAndRollBehavior` implement the interface and contain their own implementations of the method.
 3.  The classes `TomAraya` and `ElvisPresley` also implement the interface, but not the method. Instead, they delegate the method calls to the 
     responsible implementation. The delegate object is defined after the `by` keyword. As you see, no boilerplate code is required.
 4.  When `makeSound()` is called on `tomAraya` of type `TomAraya` or `elvisPresley` of type `ElvisPresley`, the call is delegated to the

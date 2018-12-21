@@ -1,6 +1,6 @@
 # Delegated Properties
 
-Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allow delegating the calls of the property `set` and `get` methods to a certain object.
+Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allows delegating the calls of the property `set` and `get` methods to a certain object.
 The delegate object in this case should have the method `getValue`. For mutable properties, you'll also need `setValue`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
@@ -33,14 +33,13 @@ fun main() {
 
 </div>
 
-1. Delegating property `p` of type `String` to the instance of class `Delegate`. The delegate object is defined after the `by` keyword.
+1. Delegates property `p` of type `String` to the instance of class `Delegate`. The delegate object is defined after the `by` keyword.
 2. Delegation methods. The signatures of these methods are always as shown in the example. Implementations may contain any steps you need. For immutable properties only `getValue` is required.
 
 ### Standard Delegates 
 
-Kotlin standard library contains bunch of useful delegates, like `lazy`, `observable`, etc. You may use them as is.
-
-For example `lazy` is used in case lazy initialization.
+The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and other. You may use them as is.
+For example `lazy`is used for lazy initialization.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
