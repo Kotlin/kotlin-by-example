@@ -16,4 +16,4 @@ fun main() {
 
 </div>
 
-1. `if` is an expression here, i.e. it returns a value.
+1. `if` is an expression here: it returns a value.

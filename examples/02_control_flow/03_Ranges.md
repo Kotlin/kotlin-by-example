@@ -28,9 +28,9 @@ fun main() {
 
 </div>
 
-1. Iterating over a range starting from 0 up to 3 (inclusive).
-2. Iterating over a range with a custom increment step for consecutive elements.
-5. Iterating over a range in _reverse_ order.
+1. Iterates over a range starting from 0 up to 3 (inclusive).
+2. Iterates over a range with a custom increment step for consecutive elements.
+5. Iterates over a range in _reverse_ order.
 
 Char ranges are also supported: 
 
@@ -55,7 +55,7 @@ fun main() {
 
 </div>
 
-1. Iterating over a char range in alphabetical order.
+1. Iterates over a char range in alphabetical order.
 2. Char ranges support `step` and `downTo` as well.
 
 Ranges are also useful in `if` statements:
@@ -80,5 +80,5 @@ fun main() {
 
 </div>
 
-1. Checking if a value is in the range.
+1. Checks if a value is in the range.
 2. `!in` is the opposite of `in`.

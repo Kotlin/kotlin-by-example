@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
 
 </div>
 
-1. Looping through each cake in the list.
+1. Loops through each cake in the list.
 
 ### `while` and `do-while`
 
@@ -54,12 +54,12 @@ fun main(args: Array<String>) {
 
 </div>
 
-1. Executing the block while the condition is true.
-2. Executing the block first and then checking the condition.
+1. Executes the block while the condition is true.
+2. Executes the block first and then checking the condition.
 
 ### Iterators
 
-You can define own iterators in your classes by implementing the `iterator` operator in them.
+You can define your own iterators in your classes by implementing the `iterator` operator in them.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -86,10 +86,10 @@ fun main() {
 
 </div>
 
-1. Defining an iterator in a class. It must be named `iterator` and have the `operator` modifier.
-2. Returning the iterator that meets the following method requirements:
+1. Defines an iterator in a class. It must be named `iterator` and have the `operator` modifier.
+2. Returns the iterator that meets the following method requirements:
   * `next()`: `Animal`
   * `hasNext()`: `Boolean`
-3. Looping through animals in the zoo with the user-defined iterator.
+3. Loops through animals in the zoo with the user-defined iterator.
 
 The iterator can be declared in the type or as an extension function.
