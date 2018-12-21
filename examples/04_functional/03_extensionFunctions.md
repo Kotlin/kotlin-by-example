@@ -1,6 +1,6 @@
 # Extension Functions and Properties
 
-Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look pretty much like usual functions and properties with the only difference: you need to specify the type that you extend.
+Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look a lot like normal functions and properties but with one important difference: you need to specify the type that you extend.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -28,11 +28,11 @@ fun main() {
 
 </div>
 
-1. Defining simple models of `Item` and `Order`. `Order` can contain a collection of `Item` objects.
-2. Adding extension functions for the `Order` type.  
-3. Adding an extension property for the `Order` type.
-4. Calling extension functions directly on an instance of `Order`.
-5. Accessing the extension property on an instance of `Order`.
+1. Defines simple models of `Item` and `Order`. `Order` can contain a collection of `Item` objects.
+2. Adds extension functions for the `Order` type.  
+3. Adds an extension property for the `Order` type.
+4. Calls extension functions directly on an instance of `Order`.
+5. Accesses the extension property on an instance of `Order`.
 
 It is even possible to execute extensions on `null` references. In an extension function, you can check the object for `null` and use the result in your code:
    
