@@ -34,11 +34,11 @@ fun main() {
 2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
 3. A function that returns an integer.
 4. A single-expression function that returns an integer (inferred).
-5. Calling the first function with the agrument `Hello`.
-6. Calling the function with two parameters, passing values for both of them.
-7. Calling the same function omitting the second one. The default value `Info` is used. 
-8. Calling the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
-9. Printing the result of a function call.
+5. Calls the first function with the agrument `Hello`.
+6. Calls the function with two parameters, passing values for both of them.
+7. Calls the same function omitting the second one. The default value `Info` is used. 
+8. Calls the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
+9. Prints the result of a function call.
 
 ### Infix Functions
 
@@ -72,9 +72,9 @@ class Person(val name: String) {
 
 </div>
 
-1. Defining an infix extension function on `Int`.
-2. Calling the infix function.
-3. Creating a `Pair` by calling the infix function `to` from the standard library.
+1. Defines an infix extension function on `Int`.
+2. Calls the infix function.
+3. Creates a `Pair` by calling the infix function `to` from the standard library.
 4. Here's your own implementation of `to` creatively called `onto`.
 5. Infix notation also works on members functions (methods).
 6. The containing class becomes the first parameter.

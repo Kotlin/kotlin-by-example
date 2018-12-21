@@ -46,7 +46,7 @@ fun main() {
 
 </div>
 
-1. Defining a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
+1. Defines a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
 2. Inside the generic class, `E` can be used as a parameter like any other type.
 3. You can also use `E` as a return type.
 
@@ -55,7 +55,7 @@ Note that the implementation makes heavy use of Kotlin's shorthand syntax for fu
 
 ### Generic Functions
 
-You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of the specific type. For instance, you can write a utility function to create mutable stacks easier:
+You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of a specific type. For instance, you can write a utility function to create mutable stacks:
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 

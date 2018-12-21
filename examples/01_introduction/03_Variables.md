@@ -19,9 +19,9 @@ fun main() {
 
 </div>
 
-1. Declaring a mutable variable and initializing it.
-2. Declaring an immutable variable and initializing it.
-3. Declaring an immutable variable and initializing it without specifying the type. The compiler infers the type `Int`.
+1. Declares a mutable variable and initializing it.
+2. Declares an immutable variable and initializing it.
+3. Declares an immutable variable and initializing it without specifying the type. The compiler infers the type `Int`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -36,7 +36,7 @@ fun main() {
 
 </div>
 
-1. Declaring a variable without initialization.
+1. Declares a variable without initialization.
 2. An attempt to use the variable causes a compiler error: `Variable 'e' must be initialized`.
 
 You're free to choose when you initialize a variable, however, it must be initialized before the first read.
@@ -63,6 +63,6 @@ fun main() {
 
 </div>
 
-1. Declaring a variable without initialization.
-2. Initializing the variable with different values depending on some condition.
+1. Declares a variable without initialization.
+2. Initializes the variable with different values depending on some condition.
 3. Reading the variable is possible because it's already been initialized.

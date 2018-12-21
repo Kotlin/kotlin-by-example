@@ -31,15 +31,15 @@ fun main() {
 
 </div>
 
-1. Declaring a non-`null` String variable.
-2. Trying to assign `null` to non-nullable variable produces a compilation error. 
-3. Declaring a nullable String variable.
-4. Setting the `null` value to the nullable variable is OK.
+1. Declares a non-`null` String variable.
+2. When trying to assign `null` to non-nullable variable, a compilation error is produced. 
+3. Declares a nullable String variable.
+4. Sets the `null` value to the nullable variable. This is OK.
 5. When inferring types, the compiler assumes non-`null` for variables that are initialized with a value.
-6. Trying to assign `null` to a variable with inferred type produces a compilation error.
-7. Declaring a function with a non-`null` string parameter.
-8. Calling the function with a `String` (non-nullable) argument is OK.
-9. Calling the function with a `String?` (nullable) argument produces a compilation error.
+6. When trying to assign `null` to a variable with inferred type, a compilation error is produced.
+7. Declares a function with a non-`null` string parameter.
+8. Calls the function with a `String` (non-nullable) argument. This is OK.
+9. When calling the function with a `String?` (nullable) argument, a compilation error is produced.
 
 ## Working with Nulls
 
