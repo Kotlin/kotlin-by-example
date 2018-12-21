@@ -30,7 +30,7 @@ fun main(){
 
 </div>
 
-1. Any value can be assigned to variable of the `dynamic` type.
+1. Any value can be assigned to a `dynamic` variable type.
 2. A dynamic value can be assigned to anything.
 3. A dynamic variable can be passed as an argument to any function.
 4. Any property or function with any arguments can be called on a `dynamic` variable. 

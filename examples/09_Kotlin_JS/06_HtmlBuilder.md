@@ -1,8 +1,8 @@
 # Html Builder
 
-Kotlin provides you with a option to describe structured data in a declarative style with _builders_.
+Kotlin provides you with an option to describe structured data in a declarative style with _builders_.
 
-Below is an example of a type-safe Groovy-style builder. In this example we show how to describe an HTML page in Kotlin.
+Below is an example of a type-safe Groovy-style builder. In this example, we will describe an HTML page in Kotlin.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="canvas" data-output-height="400">
 
@@ -127,6 +127,6 @@ fun html(init: HTML.() -> Unit): HTML {
 
 2. `head` and `body` are member functions of the`HTML` class.
 
-3. The text is added to tags by calling the `unaryPlus()` operation, like `+"HTML encoding with Kotlin"`.
+3. Adds the text to tags by calling the `unaryPlus()` operation, like `+"HTML encoding with Kotlin"`.
 
 For details see: [Type Safe Builders](http://kotlinlang.org/docs/reference/type-safe-builders.html)
