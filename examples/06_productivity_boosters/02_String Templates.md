@@ -16,6 +16,6 @@ fun main() {
 
 </div>
 
-1. Printing a string with a variable reference. References in strings start with `$`.
-2. Printing a string with an expression. Expressions start with `$` and are enclosed in curly braces.
+1. Prints a string with a variable reference. References in strings start with `$`.
+2. Prints a string with an expression. Expressions start with `$` and are enclosed in curly braces.
 

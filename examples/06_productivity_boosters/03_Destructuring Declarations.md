@@ -1,6 +1,6 @@
 # Destructuring Declarations
 
-[Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) syntax can be very handy when you need an instance only for accessing its members. It lets you define the instance without a specific name therefore saving a few lines of code.
+[Destructuring declaration](https://kotlinlang.org/docs/reference/multi-declarations.html#destructuring-declarations) syntax can be very handy, especially when you need an instance only for accessing its members. It lets you define the instance without a specific name therefore saving a few lines of code.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -27,7 +27,7 @@ fun main() {
 
 </div>
 
-1. Destructuring an `Array`. The number of variables on the left side matches the number of arguments on the right side.
+1. Destructures an `Array`. The number of variables on the left side matches the number of arguments on the right side.
 2. Maps can be destructured as well. `name` and `age` variables are mapped to the map key and value.
 3. Built-in `Pair` and `Triple` types support destructuring too, even as return values from functions.
 
@@ -50,8 +50,8 @@ fun main() {
 
 </div>
 
-1. Defining a data class.
-2. Destructuring an instance. Declared values are mapped to the instance fields.
+1. Defines a data class.
+2. Destructures an instance. Declared values are mapped to the instance fields.
 3. Data class automatically defines the `component1()` and `component2()` methods that will be called during destructuring.
 4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable.
 
@@ -77,5 +77,5 @@ fun main() {
 
 </div>
 
-1. Defining a custom `Pair` class with `component1()` and `component2()` methods.
-2. Destructuring an instance of this class is same as for built-in `Pair`.
+1. Defines a custom `Pair` class with `component1()` and `component2()` methods.
+2. Destructures an instance of this class the same way as for built-in `Pair`.
