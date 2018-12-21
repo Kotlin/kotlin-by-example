@@ -27,6 +27,6 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Splitting `numbers` into a `Pair` of lists with even and odd numbers.
-3. Splitting `numbers` into two lists with positive and negative numbers. Pair destructuring is applied here to get the `Pair` members.
+1. Defines a collection of numbers.
+2. Splits `numbers` into a `Pair` of lists with even and odd numbers.
+3. Splits `numbers` into two lists with positive and negative numbers. Pair destructuring is applied here to get the `Pair` members.

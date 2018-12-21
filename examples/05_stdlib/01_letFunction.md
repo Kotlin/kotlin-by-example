@@ -36,9 +36,9 @@ fun main() {
 
 </div>
 
-1. Defining a code block to execute on `ns`.
+1. Defines a code block to execute on `ns`.
 2. Inside the curly braces `ns` is accessible by the name `it`.
-3. Using a null-safe call, so `let` and its code block are executed only on non-null values.   
+3. Uses a null-safe call, so `let` and its code block are executed only on non-null values.   
 
 `let` can also be called on a result of another function execution:
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">

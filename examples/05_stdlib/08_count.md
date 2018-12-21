@@ -21,6 +21,6 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Counting the total number of elements.
-3. Counting the number of even elements.
+1. Defines a collection of numbers.
+2. Counts the total number of elements.
+3. Counts the number of even elements.

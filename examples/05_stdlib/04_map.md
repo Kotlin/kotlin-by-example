@@ -23,6 +23,6 @@ fun main() {
 
 </div>
 
-1. Defining a  collection of numbers.
-2. Doubling numbers.
-3. Or using the shorter `it` notation to triple the numbers. 
+1. Defines a  collection of numbers.
+2. Doubles numbers.
+3. Uses the shorter `it` notation to triple the numbers. 

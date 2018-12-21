@@ -28,11 +28,11 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Picking the first element.
-3. Picking the last element.
-4. Picking the first even element.
-5. Picking the last odd element.
+1. Defines a collection of numbers.
+2. Picks the first element.
+3. Picks the last element.
+4. Picks the first even element.
+5. Picks the last odd element.
 
 ### `firstOrNull`, `lastOrNull`
 
@@ -63,11 +63,11 @@ fun main() {
 
 </div>
 
-1. Defining a collection of words.
-2. Define an empty collection.
-3. Picking the first element from empty collection. It supposed to be `null`.
-4. Picking the last element from empty collection. It supposed to be `null` as well.
-5. Picking the first word starting with 'f'.
-6. Picking the first word starting with 'z'.
-7. Picking the last word ending with 'f'.
-8. Picking the last word ending with 'z'.
+1. Defines a collection of words.
+2. Defines an empty collection.
+3. Picks the first element from empty collection. It supposed to be `null`.
+4. Picks the last element from empty collection. It supposed to be `null` as well.
+5. Picks the first word starting with 'f'.
+6. Picks the first word starting with 'z'.
+7. Picks the last word ending with 'f'.
+8. Picks the last word ending with 'z'.

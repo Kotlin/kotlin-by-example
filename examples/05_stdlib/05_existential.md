@@ -27,9 +27,9 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Checking if there are negative elements.
-3. Checking if there are elements greater than `6`. 
+1. Defines a collection of numbers.
+2. Checks if there are negative elements.
+3. Checks if there are elements greater than `6`. 
 
 
 ### Function `all`
@@ -57,9 +57,9 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Checking whether all elements are even.
-3. Checking whether all elements are less than `6`.
+1. Defines a collection of numbers.
+2. Checks whether all elements are even.
+3. Checks whether all elements are less than `6`.
 
 
 ### Function `none`
@@ -87,7 +87,7 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Checking if there are no odd elements (all elements are even).
-3. Checking if there are no elements greater than 6.
+1. Defines a collection of numbers.
+2. Checks if there are no odd elements (all elements are even).
+3. Checks if there are no elements greater than 6.
  

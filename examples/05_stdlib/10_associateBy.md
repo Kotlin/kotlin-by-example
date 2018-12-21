@@ -39,8 +39,8 @@ fun main() {
 
 </div>
 
-1. Defining a data class that descirbes a person.
-2. Defining a collection of people.
-3. Building a map from phone numbers to their owners' information. `it.phone` is the `keySelector` here. The `valueSelector` is not provided, so the values of the map are `Person` objects themselves.
-4. Building a map from phone numbers to the cities where owners live. `Person::city` is the `valueSelector` here, so the values of the map contain only cities. 
-5. Building a map that contains cities and people living there. The values of the map are lists of person names.
+1. Defines a data class that descirbes a person.
+2. Defines a collection of people.
+3. Builds a map from phone numbers to their owners' information. `it.phone` is the `keySelector` here. The `valueSelector` is not provided, so the values of the map are `Person` objects themselves.
+4. Builds a map from phone numbers to the cities where owners live. `Person::city` is the `valueSelector` here, so the values of the map contain only cities. 
+5. Builds a map that contains cities and people living there. The values of the map are lists of person names.

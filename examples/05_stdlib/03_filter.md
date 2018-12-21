@@ -22,6 +22,6 @@ fun main() {
 
 </div>
 
-1. Defining collection of numbers.
-2. Getting positive numbers.
-3. Or using the shorter `it` notation to get negative numbers. 
+1. Defines collection of numbers.
+2. Gets positive numbers.
+3. Uses the shorter `it` notation to get negative numbers. 

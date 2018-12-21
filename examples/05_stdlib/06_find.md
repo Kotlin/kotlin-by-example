@@ -24,7 +24,7 @@ fun main() {
 
 </div>
 
-1. Defining a collection of words.
-2. Looking for the first word starting with "some".
-3. Looking for the last word starting with "some".
-4. Looking for the first word containing "nothing".
+1. Defines a collection of words.
+2. Looks for the first word starting with "some".
+3. Looks for the last word starting with "some".
+4. Looks for the first word containing "nothing".

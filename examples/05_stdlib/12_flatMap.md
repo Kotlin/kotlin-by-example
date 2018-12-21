@@ -20,5 +20,5 @@ fun main() {
 
 </div>
 
-1. Defining a collection of numbers.
-2. Building a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 
+1. Defines a collection of numbers.
+2. Builds a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 

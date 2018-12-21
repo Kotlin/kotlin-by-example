@@ -23,6 +23,6 @@ fun main() {
 
 </div>
 
-1. Define a collection of shuffled numbers.
-2. Sorting it in the natural order.
-2. Sorting it in the inverted natural order by using `-it` as a selector function.
+1. Defines a collection of shuffled numbers.
+2. Sorts it in the natural order.
+2. Sorts it in the inverted natural order by using `-it` as a selector function.

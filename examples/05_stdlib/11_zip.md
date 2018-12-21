@@ -24,6 +24,6 @@ fun main() {
 
 </div>
 
-1. Defining two collections.
-2. Merging them into a list of pairs. The infix notation is used here.
-3. Merging them into a list of String values by the given transformation.
+1. Defines two collections.
+2. Merges them into a list of pairs. The infix notation is used here.
+3. Merges them into a list of String values by the given transformation.
