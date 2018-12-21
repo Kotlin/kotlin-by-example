@@ -81,5 +81,5 @@ fun main() {
 
 
 1. `name` in the `Asiatic` declaration is neither a `var` nor `val`: it's a constructor argument, whose value is passed to the `name` property of the superclass `Lion`. 
-2. Creating an `Asiatic` instance with the name `Rufo` invokes the `Lion` constructor with arguments `Rufo` and `India`.
+2. Creates an `Asiatic` instance with the name `Rufo`. The call invokes the `Lion` constructor with arguments `Rufo` and `India`.
 
