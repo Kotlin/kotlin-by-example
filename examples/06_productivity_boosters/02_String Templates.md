@@ -1,5 +1,6 @@
 # String Templates
 
+[String templates](https://kotlinlang.org/docs/reference/basic-types.html#string-templates) allow you to include variable references and expressions into strings. When the value of a string is requested (for example, by `println`), all references and expressions are substituted with actual values.
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
@@ -15,6 +16,6 @@ fun main() {
 
 </div>
 
-1. *Strings* in Kotlin can include references to variables that are interpolated
-2. In addition to simple variable references, they can also include any expression enclosed in curly braces.
+1. Prints a string with a variable reference. References in strings start with `$`.
+2. Prints a string with an expression. Expressions start with `$` and are enclosed in curly braces.
 
