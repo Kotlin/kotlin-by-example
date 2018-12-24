@@ -1,6 +1,6 @@
 # Lambda Functions
 
-Lambda functions ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
+[*Lambda functions*](https://kotlinlang.org/docs/reference/lambdas.html) ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -34,8 +34,8 @@ fun main() {
 </div>
 
 1. A lambda in all its glory, with explicit types everywhere. The lambda is the part in curly braces, which is assigned to a variable of type `(String) -> String` (a function type).
-2. Type inference inside lambda: infers type of lambda parameter from type of the variable it's assigned to.
-3. Type inference outside lambda: infers type of the variable based on the type of the lambda parameter and return value.
+2. Type inference inside lambda: the type of the lambda parameter is inferred from the type of the variable it's assigned to.
+3. Type inference outside lambda: the type of the variable is inferred from the type of the lambda parameter and return value.
 4. You cannot do both together, the compiler has no chance to infer the type that way.
-5. For lambdas with a single parameter, you don't have to explicitly name it. Instead, you can use the implicit `it` variable. This is especially useful whenever the type of `it` can be inferred (which is often the case).
-6. If your lambda just consists of a single function call, you may prefer function pointers.
+5. For lambdas with a single parameter, you don't have to explicitly name it. Instead, you can use the implicit `it` variable. This is especially useful when the type of `it` can be inferred (which is often the case).
+6. If your lambda consists of a single function call, you may use function pointers (`::`) .
