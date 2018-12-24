@@ -1,6 +1,6 @@
 # count
 
-The extension function `count` returns either the total number of elements in collection or the number of elements matching the given predicate.
+`count` functions returns either the total number of elements in a collection or the number of elements matching the given predicate.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -21,6 +21,6 @@ fun main() {
 
 </div>
 
-1. Define collection of numbers.
-2. Count total number of elements.
-3. Count number of even elements.
+1. Defines a collection of numbers.
+2. Counts the total number of elements.
+3. Counts the number of even elements.

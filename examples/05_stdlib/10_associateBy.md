@@ -1,9 +1,11 @@
 # associateBy, groupBy
 
-Both functions return a `Map` containing the elements from the given collection indexed by the key returned from `keySelector` function applied to each element.
-If `valueSelector` is also passed it is applied to each element as well.
+Functions `associateBy` and `groupBy` build maps from the elements of a collection indexed by the specified key. The key is defined in the `keySelector` parameter.
+You can also specify an optional `valueSelector` to define what will be stored in the `value` of the map element.
 
-The difference between `associateBy` and `groupBy` is the behaviour for values with the same key. `associateBy` takes only last element when `groupBy` takes all elements into collection. 
+The difference between `associateBy` and `groupBy` is how they process objects with the same key:
+* `associateBy` uses the last suitable element as the value.
+* `groupBy` builds a list of all suitable elements and puts it in the value. 
 
 The returned map preserves the entry iteration order of the original collection.
 
@@ -37,8 +39,8 @@ fun main() {
 
 </div>
 
-1. Define data class descirbes a Person.
-2. Define collection of known people.
-3. Build a map from person's phone number to person information.
-4. Build another map from phone number to city where owner lives.
-5. Build the third map which contains cities and people living there.
+1. Defines a data class that descirbes a person.
+2. Defines a collection of people.
+3. Builds a map from phone numbers to their owners' information. `it.phone` is the `keySelector` here. The `valueSelector` is not provided, so the values of the map are `Person` objects themselves.
+4. Builds a map from phone numbers to the cities where owners live. `Person::city` is the `valueSelector` here, so the values of the map contain only cities. 
+5. Builds a map that contains cities and people living there. The values of the map are lists of person names.

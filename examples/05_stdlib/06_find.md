@@ -1,6 +1,7 @@
-# find
+# find, findLast
 
-Returns the first or last element matching the given predicate, or `null` if no such element was found.
+`find` and `findLast` functions return the first or the last collection element that matches the given predicate. If there are no such elements, functions return `null`.
+
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -24,7 +25,7 @@ fun main() {
 
 </div>
 
-1. Define collection of different words.
-2. Looking for the first word starting with "some".
-3. Looking for the last word starting with "some".
-4. Looking for the first word containing "nothing".
+1. Defines a collection of words.
+2. Looks for the first word starting with "some".
+3. Looks for the last word starting with "some".
+4. Looks for the first word containing "nothing".

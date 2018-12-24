@@ -1,7 +1,6 @@
 # with
 
-*with* is a function defined in the standard library that can be used to access members of an object in a more concise way, avoiding having to
-prefix each member with the instance name. 
+*with* function lets you access members of an object in a short and concise way. Inside the `with` block you can refer to object members without specifying its name as a prefix. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 

@@ -1,8 +1,8 @@
 # sorted
 
-`sorted` returns a list of all elements sorted according to their natural sort order.
+`sorted` returns a list of collection elements sorted according to their natural sort order (ascending).
 
-`sortedBy` returns a list of all elements sorted according to natural sort order of the value returned by specified selector function.
+`sortedBy` sorts elements according to natural sort order of the values returned by specified selector function.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -23,6 +23,6 @@ fun main() {
 
 </div>
 
-1. Define collection of shuffled numbers.
-2. Sort it in natural order.
-2. Sort it in inverted natural order.
+1. Defines a collection of shuffled numbers.
+2. Sorts it in the natural order.
+2. Sorts it in the inverted natural order by using `-it` as a selector function.
