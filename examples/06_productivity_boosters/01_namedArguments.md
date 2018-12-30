@@ -2,6 +2,7 @@
 
 As with most other programming languages (Java, C++, etc.), Kotlin supports passing arguments to methods and constructors according to the order they are defined.
 Kotlin also supports [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) to allow clearer invocations and avoid mistakes with the order of arguments. Such mistakes are hard to find because they are not detected by the compiler, for example, when two sequential arguments have the same type.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin

@@ -1,6 +1,7 @@
 # String Templates
 
 [String templates](https://kotlinlang.org/docs/reference/basic-types.html#string-templates) allow you to include variable references and expressions into strings. When the value of a string is requested (for example, by `println`), all references and expressions are substituted with actual values.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
