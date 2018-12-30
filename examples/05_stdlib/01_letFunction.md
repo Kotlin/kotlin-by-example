@@ -41,6 +41,7 @@ fun main() {
 3. Uses a null-safe call, so `let` and its code block are executed only on non-null values.   
 
 `let` can also be called on a result of another function execution:
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin

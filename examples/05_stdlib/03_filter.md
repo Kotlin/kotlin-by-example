@@ -1,6 +1,7 @@
 # filter
 
 *filter* function enables you to filter collections. It takes a filter predicate as a lambda-parameter. The predicate is applied to each element. Elements that make the predicate `true` are returned in the result collection.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
