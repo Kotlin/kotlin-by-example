@@ -23,7 +23,7 @@ fun main() {
         return notNull.length
     }
     
-    strLength(notNull)                                      // 8
+    strLength(neverNull)                                    // 8
     strLength(nullable)                                     // 9
 //sampleEnd
 }
