@@ -32,13 +32,17 @@
   url: withFunction
 - title: Inheritance
   url: inheritance
+- title: Generics
+  url: generics
 - title: Destructuring
   url: destructuring
+- title: Enum Classes
+  url: enums
 - title: Sealed Classes
   url: sealedClasses
 - title: Delegation Pattern
   url: delegationPattern
 - title: this in extension functions
   url: ThisExtensionFunc
-
-
+- title: object keyword
+  url: ObjectKeyword
