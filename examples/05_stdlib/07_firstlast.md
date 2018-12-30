@@ -37,6 +37,7 @@ fun main() {
 ### `firstOrNull`, `lastOrNull`
 
 These functions work almost the same way with one difference: they return `null` if there are no matching elements.
+
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
 ```kotlin
