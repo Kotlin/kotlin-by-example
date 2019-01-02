@@ -9,7 +9,7 @@ fun printMessage(message: String): Unit {                               // 1
     println(message)
 }
 
-fun printMessageWithPrefix(message: String, prefix : String = "Info") { // 2
+fun printMessageWithPrefix(message: String, prefix: String = "Info") { // 2
     println("[$prefix] $message")
 }
 
