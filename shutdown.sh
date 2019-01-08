@@ -10,7 +10,7 @@ TO_STOP="jekyll"
 # ps aux | grep ${TO_STOP} | awk '{print $2}' | xargs kill -9 2>/dev/null
 # END SOLUTION  1
 
-# METHOD 2: search for the container ID and kill it. 
+# SOLUTION 2: search for the container ID and kill it. 
 CONTAINER=$( docker container ls  | grep $TO_STOP | cut -d" " -f1 )
 CLENGTH=${#CONTAINER}
 STATUS="successfully"
