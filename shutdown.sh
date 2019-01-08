@@ -4,7 +4,6 @@
 # 2. search for docker container ID and kill it. 
 # Latter is default/uncommented.  
 
-feel free to use/comment pref
 TO_STOP="jekyll"
 
 # SOLUTION 1: search for jekyll process and kill. 
