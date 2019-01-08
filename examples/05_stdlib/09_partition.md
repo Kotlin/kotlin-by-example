@@ -17,7 +17,7 @@ fun main() {
 //sampleEnd
 
     println("Numbers: $numbers")
-    println("Odd numbers: ${evenOdd.first}")
+    println("Even numbers: ${evenOdd.first}")
     println("Odd numbers: ${evenOdd.second}")
     println("Positive numbers: $positives")
     println("Negative numbers: $negatives")
