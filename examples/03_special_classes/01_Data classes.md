@@ -37,6 +37,6 @@ fun main() {
 3. Auto-generated `equals` considers two instances equal if all their properties are equal.
 4. Equal data class instances have equal `hashCode()`.
 5. Auto-generated `copy` function makes it easy to create a new instance.
-6. When copying, you can change values of certain properties. `copy` accepts areguments in the same order as the class constructor.
+6. When copying, you can change values of certain properties. `copy` accepts arguments in the same order as the class constructor.
 7. Use `copy` with named arguments to change the value despite of the properties order.
 8. Auto-generated `componentN` functions let you get the values of properties in the order of declaration.
