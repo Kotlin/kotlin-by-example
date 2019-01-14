@@ -34,7 +34,7 @@ fun main() {
 2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
 3. A function that returns an integer.
 4. A single-expression function that returns an integer (inferred).
-5. Calls the first function with the agrument `Hello`.
+5. Calls the first function with the argument `Hello`.
 6. Calls the function with two parameters, passing values for both of them.
 7. Calls the same function omitting the second one. The default value `Info` is used. 
 8. Calls the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
