@@ -1,7 +1,0 @@
-{
-    "name": "KotlinByExample",
-    "description": "Kotlin By Example",
-    "version": "0.0.1",
-    "local": ["boot"],
-    "paths": ["lib"]
-}
