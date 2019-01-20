@@ -36,4 +36,4 @@ fun main() {
 5. MutableList update: related *readonly* view is edited too, because is [covariant](https://kotlinlang.org/docs/reference/generics.html#variance)
 6. Consuming the size property on the *immutable* List is allowed
 7. A dummy iteration, showing a typical __.forEach()__ call on a List
-8. Failed attempt to *write* on an *readonly* view. __add()__ is unavailable!
+8. Failed attempt to *write* on a *readonly* view. __add()__ is unavailable!
