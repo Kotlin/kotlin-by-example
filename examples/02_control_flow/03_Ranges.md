@@ -72,7 +72,7 @@ fun main() {
     print(" ")
 
     if (x !in 1..4) {            // 2
-        print(y)
+        print(x)
     }
 //sampleEnd
 }
