@@ -60,6 +60,8 @@ fun whenAssign(obj: Any): Any {
     }
     return result
 }
+
+class MyClass
 ```
 
 </div>
