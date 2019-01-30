@@ -1,6 +1,6 @@
 # Set
 
-A [Set](https://kotlinlang.org/docs/reference/collections.html) is an unordered collection that does not support duplicates. Like Lists and Maps, you can create a mutable set with `mutableSetOf()`, an immutable set with `setOf()` and a readonly view of a mutable set with the [Set&lt;T&gt;](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html) interface.  
+A [set](https://kotlinlang.org/docs/reference/collections.html) is an unordered collection that does not support duplicates. For creating sets, there are functions `setOf()` and `mutableSetOf()`. A read-only view of a mutable set can be obtained by casting it to `Set`.  
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -26,9 +26,9 @@ fun main() {
 
 </div>
 
-1. Creates a Set. 
-2. Returns boolean, based on function element existence.  
+1. Adds an element to the `Set`. 
+2. Returns a boolean value showing if the element was actually added.   
 3. Returns a string, based on function input parameter.
-4. Prints a success message: it adds a new element to the Set.
-4. Prints a failure message: it cannot add an element already in the Set.
+4. Prints a success message: the new element is added to the `Set`.
+4. Prints a failure message: the element can't be added because it duplicates an existing element.
 

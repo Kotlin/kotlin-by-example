@@ -1,6 +1,6 @@
 # List
 
-A [List](https://kotlinlang.org/docs/reference/collections.html) is an ordered collection of items, and can be mutable or immutable. Standard library allows list creation with `listOf()`, an array list, and `mutableListOf()`, that can be rendered in a *read-only* view with the [List<T>](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) interface. 
+A [list](https://kotlinlang.org/docs/reference/collections.html) is an ordered collection of items. In Kotlin, lists can be either mutable (`MutableList`) or read-only (`List`). For list creation, use the standard library functions `listOf()` for read-only lists and `mutableListOf()` for mutable lists. To prevent unwanted modifications, obtain read-only views of mutable lists by casting them to `List`.
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -29,11 +29,11 @@ fun main() {
 </div>
 
 
-1. Creates a MutableList.
+1. Creates a `MutableList`.
 2. Creates a read-only view of the list.
-3. Adds a new item to the MutableList.
-4. A function that returns an immutable List.
-5. Updates the MutableList. All related read-only views are updated as well since they point to the same object.
+3. Adds a new item to the `MutableList`.
+4. A function that returns an immutable `List`.
+5. Updates the `MutableList`. All related read-only views are updated as well since they point to the same object.
 6. Retrieves the size of the read-only list.
 7. Iterates the list and prints its elements.
 8. Attempting to write to the read-only view causes a compilation error.

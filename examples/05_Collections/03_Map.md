@@ -1,6 +1,6 @@
 # Map
 
-A [Map](https://kotlinlang.org/docs/reference/collections.html) is collection of key/value pairs, where each key is unique and is used to retrieve the corresponding value. Like Lists and Sets, you can create a mutable map with `mutableMapOf()`, an immutable map with `mapOf()` and a readonly view of a mutable map with the [Map&lt;K, V&gt;](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html) interface. 
+A [map](https://kotlinlang.org/docs/reference/collections.html) is a collection of key/value pairs, where each key is unique and is used to retrieve the corresponding value. For creating maps, there are functions `mapOf()` and `mutableMapOf()`. A read-only view of a mutable map can be obtained by casting it to `Map`. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
@@ -36,12 +36,12 @@ fun main() {
 
 </div>
 
-1. Creates a mutable Map.
-2. Creates a *readonly* view of the Map.
-3. Checks if the Map's key exists.
+1. Creates a mutable `Map`.
+2. Creates a read-only view of the `Map`.
+3. Checks if the `Map`'s key exists.
 4. Reads the corresponding value and increments it with a constant value.
-5. Iterates immutable Map and prints key/value pairs.
+5. Iterates immutable `Map` and prints key/value pairs.
 6. Reads the account points balance, before updates.
-7. Updates an existing account, two times.
+7. Updates an existing account two times.
 8. Tries to update a non-existing account: prints an error message. 
 9. Reads the account points balance, after updates.
