@@ -1,6 +1,6 @@
 # let
 
-`let` is a Kotlin standard library function that can be used for scoping and null-checks. When called on an object, `let` executes the given functional block and returns the result of its last expression.
+The Kotlin standard library function `let` can be used for scoping and null-checks. When called on an object, `let` executes the given block of code and returns the result of its last expression.
 The object is accessible inside the block by the reference `it`. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
@@ -38,5 +38,5 @@ fun main() {
 
 1. Calls the given block on the result on the string "_test_".
 2. Calls the function on "_test_" by the `it` reference.
-3. `let` returns value of this expression.
+3. `let` returns the value of this expression.
 4. Uses safe call, so `let` and its code block will be executed only on non-null values.   
