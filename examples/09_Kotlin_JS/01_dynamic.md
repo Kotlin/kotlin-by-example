@@ -30,9 +30,9 @@ fun main(){
 
 </div>
 
-1. Any value can be assigned to variable to `dynamic` type
-2. Dynamic value can be assigned to anything.
-3. Dynamic value can be passed as argument to any function
-4. Any property or function with any arguments can be called on `dynamic` value 
-5. Dynamic call always returns dynamic value, so it is possible to chain them.
-6. Operators, assignments and indexed access (`[..]`) are translated "as is". Beware!
+1. Any value can be assigned to a `dynamic` variable type.
+2. A dynamic value can be assigned to anything.
+3. A dynamic variable can be passed as an argument to any function.
+4. Any property or function with any arguments can be called on a `dynamic` variable. 
+5. A function call on a `dynamic` variable always returns a dynamic value, so it is possible to chain the calls.
+6. Operators, assignments, and indexed access (`[..]`) are translated "as is". Beware!

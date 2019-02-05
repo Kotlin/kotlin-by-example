@@ -1,6 +1,6 @@
 # Kotlin by Example
 
-This is sources of Kotlin Examples.
+This is sources of [Kotlin Examples](https://play.kotlinlang.org/byExample/overview).
 
 ### How to make example
 
