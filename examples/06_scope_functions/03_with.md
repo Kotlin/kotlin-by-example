@@ -1,6 +1,8 @@
+
+
 # with
 
-*with* function lets you access members of an object in a short and concise way. Inside the `with` block you can refer to object members without specifying its name as a prefix. 
+`with` is a non-extension function that can access members of its argument concisely: you can omit the instance name when referring to its members. 
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
