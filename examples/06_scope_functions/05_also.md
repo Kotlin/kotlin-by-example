@@ -1,6 +1,6 @@
 # also
 
-`also` works like [`apply`](04_apply.md): it executes a given block and returns the object called.
+`also` works like [`apply`](04_apply): it executes a given block and returns the object called.
 Inside the block, the object is referenced by `it`, so it's easier to pass it as an argument.
 This function is handy for embedding additional actions, such as logging in call chains. 
 
