@@ -12,7 +12,7 @@ fun customPrint(s: String) {
 
 fun main() {
 //sampleStart
-    val empty = "test".let {         // 1
+    val empty = "test".let {               // 1
         customPrint(it)                    // 2
         it.isEmpty()                       // 3
     }
