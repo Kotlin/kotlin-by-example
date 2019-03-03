@@ -44,6 +44,6 @@ fun main() {
 
 </div>
 
-1. Prints the default value because the key `"x"` is not is the map.
+1. Prints the default value because the key `"x"` is not in the map.
 2. Prints `3`, the value for the key `"x"`.
 3. Prints the default value because the value for the key `"x"` is not defined.
