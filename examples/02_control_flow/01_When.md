@@ -39,7 +39,7 @@ class MyClass
 
 Note that all branch conditions are checked sequentially until one of them is satisfied. So, only the first suitable branch will be executed.   
 
-## When Expresion
+## When Expression
 
 <div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
