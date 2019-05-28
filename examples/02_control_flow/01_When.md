@@ -15,8 +15,8 @@ fun main() {
     cases("hello")
 }
 
-fun cases(obj: Any) {                                // 1
-    when (obj) {
+fun cases(obj: Any) {                                
+    when (obj) {                                     // 1   
         1 -> println("One")                          // 2
         "Hello" -> println("Greeting")               // 3
         is Long -> println("Long")                   // 4
