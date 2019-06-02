@@ -23,8 +23,7 @@ fun main(args: Array<String>) {
     
     try {
         map.getValue("anotherKey")                              // 4
-    }
-    catch (e: NoSuchElementException) {
+    } catch (e: NoSuchElementException) {
         println("Message: $e")
     }
 
