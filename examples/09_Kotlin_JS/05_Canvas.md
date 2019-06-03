@@ -4,9 +4,7 @@ The following example demonstrates usage of HTML5 Canvas from Kotlin.
 
 Here strange creatures are watching the kotlin logo. You can drag'n'drop them as well as the logo. Doubleclick to add more creatures but be careful. They may be watching you!
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="canvas" data-output-height="700">
-
-```kotlin
+```run-kotlin-js
 package creatures
 
 import jquery.*
@@ -353,6 +351,4 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
-
-</div>
 

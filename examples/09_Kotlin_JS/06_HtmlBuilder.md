@@ -4,9 +4,7 @@ Kotlin provides you with an option to describe structured data in a declarative 
 
 Below is an example of a type-safe Groovy-style builder. In this example, we will describe an HTML page in Kotlin.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="canvas" data-output-height="400">
-
-```kotlin
+```run-kotlin-js
 package html
 
 import org.w3c.dom.*
@@ -116,8 +114,6 @@ fun html(init: HTML.() -> Unit): HTML {
 }
 
 ```
-
-</div>
 
 1. `html` is actually a function call that takes a [lambda expression](http://kotlinlang.org/docs/reference/lambdas.html) as an argument.
    `html` function takes one parameter which is itself a function.

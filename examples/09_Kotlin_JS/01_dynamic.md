@@ -4,9 +4,7 @@
 That is needed in order  to interoperate with untyped or loosely typed environments, such 
 as the JavaScript ecosystem.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="js">
-
-```kotlin
+```run-kotlin-js
 fun main(){
 //sampleStart
   val a: dynamic = "abc"                                               // 1
@@ -27,8 +25,6 @@ fun main(){
 //sampleEnd
 }
 ```
-
-</div>
 
 1. Any value can be assigned to a `dynamic` variable type.
 2. A dynamic value can be assigned to anything.

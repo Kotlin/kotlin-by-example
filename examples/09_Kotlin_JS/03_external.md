@@ -2,17 +2,13 @@
 
 *external* keyword allows to declare existing JavaScript API in a type-safe way.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3" data-target-platform="js">
-
-```kotlin
+```run-kotlin-js
 external fun alert(msg: String)   // 1
 
 fun main() {
   alert("Hi!")                    // 2
 }
 ```
-
-</div>
 
 1. Declares an existing JavaScript function `alert` which takes a single `String` argument.
 2. Uses `alert` as if it were regular Kotlin.
