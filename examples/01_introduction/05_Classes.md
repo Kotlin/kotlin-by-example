@@ -3,10 +3,8 @@
 The [class declaration](https://kotlinlang.org/docs/reference/classes.html#classes) consists of the class name, the class header (specifying its type parameters, 
 the primary constructor etc.) and the class body, surrounded by curly braces. 
 Both the header and the body are optional; if the class has no body, curly braces can be omitted.
-    
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
-```kotlin
+```run-kotlin
 class Customer                                  // 1
 
 class Contact(val id: Int, var email: String)   // 2
@@ -21,8 +19,6 @@ fun main() {
     contact.email = "jane@gmail.com"            // 6
 }
 ```
-
-</div>  
 
 1. Declares a class named `Customer` without any properties or user-defined constructors. A non-parameterized default constructor is created by Kotlin automatically.
 2. Declares a class with two properties: immutable `id` and mutable `email`, and a constructor with two parameters `id` and `email`.
