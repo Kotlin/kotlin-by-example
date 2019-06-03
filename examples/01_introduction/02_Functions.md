@@ -2,9 +2,7 @@
 
 ### Default Parameter Values and Named Arguments
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun printMessage(message: String): Unit {                               // 1
     println(message)
 }
@@ -27,8 +25,6 @@ fun main() {
     println(sum(1, 2))                                                  // 9
 }
 ```
-
-</div>
 
 1. A simple function that takes a parameter of type `String` and returns `Unit` (i.e., no return value).
 2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
