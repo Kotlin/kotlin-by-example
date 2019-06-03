@@ -5,9 +5,7 @@ The Kotlin compiler is smart enough to perform type casts automatically in most 
 1. Casts from nullable types to their non-nullable counterparts.
 2. Casts from a supertype to a subtype.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 import java.time.LocalDate
 import java.time.chrono.ChronoLocalDate
 
@@ -35,8 +33,6 @@ fun main() {
 }
 
 ```
-
-</div>
 
 1. Declares a nullable variable.
 2. Smart-cast to non-nullable (thus allowing direct access to `isLeapYear`).
