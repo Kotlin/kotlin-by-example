@@ -2,9 +2,7 @@
 
 A [map](https://kotlinlang.org/docs/reference/collections.html) is a collection of key/value pairs, where each key is unique and is used to retrieve the corresponding value. For creating maps, there are functions `mapOf()` and `mutableMapOf()`. A read-only view of a mutable map can be obtained by casting it to `Map`. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 const val POINTS_X_PASS: Int = 15
 val EZPassAccounts: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)   // 1
 val EZPassReport: Map<Int, Int> = EZPassAccounts                                        // 2
@@ -33,8 +31,6 @@ fun main() {
     accountsReport()                                                                    // 9
 }
 ```
-
-</div>
 
 1. Creates a mutable `Map`.
 2. Creates a read-only view of the `Map`.

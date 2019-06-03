@@ -40,9 +40,7 @@ fun main() {
 
 Member functions and extensions with a single parameter can be turned into [infix functions](https://kotlinlang.org/docs/reference/functions.html#infix-notation).
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
   infix fun Int.times(str: String) = str.repeat(this)        // 1
@@ -66,8 +64,6 @@ class Person(val name: String) {
 }
 ```
 
-</div>
-
 1. Defines an infix extension function on `Int`.
 2. Calls the infix function.
 3. Creates a `Pair` by calling the infix function `to` from the standard library.
@@ -81,9 +77,7 @@ Note that the example uses [local functions](https://kotlinlang.org/docs/referen
 
 Certain functions can be "upgraded" to [operators](https://kotlinlang.org/docs/reference/operator-overloading.html), allowing their calls with the corresponding operator symbol.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
   operator fun Int.times(str: String) = str.repeat(this)       // 1
@@ -96,8 +90,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. This takes the infix function from above one step further using the `operator` modifier.
 2. The operator symbol for `times()` is `*` so that you can call the function using `2 * "Bye"`.
 3. An operator function allows easy range access on strings.
@@ -107,9 +99,7 @@ fun main() {
 
 [Varargs](https://kotlinlang.org/docs/reference/functions.html#variable-number-of-arguments-varargs) allow you to pass any number of arguments by separating them with commas.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
     fun printAll(vararg messages: String) {                            // 1
@@ -131,8 +121,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. The `vararg` modifier turns a parameter into a vararg.
 2. This allows calling `printAll` with any number of string arguments.

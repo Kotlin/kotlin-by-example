@@ -6,9 +6,7 @@ These functions check the existence of collection elements that match a given pr
 
 Function `any` returns `true` if the collection contains **at least one** element that matches the given predicate.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -25,8 +23,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Defines a collection of numbers.
 2. Checks if there are negative elements.
 3. Checks if there are elements greater than `6`. 
@@ -36,9 +32,7 @@ fun main() {
 
 Function `all` returns `true` if **all** elements in collection match the given predicate.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -55,8 +49,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Defines a collection of numbers.
 2. Checks whether all elements are even.
 3. Checks whether all elements are less than `6`.
@@ -66,9 +58,7 @@ fun main() {
 
 Function `none` returns `true` if there are **no** elements that match the given predicate in the collection.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -84,8 +74,6 @@ fun main() {
     println("No element greater than 6: $allLess6")
 }
 ```
-
-</div>
 
 1. Defines a collection of numbers.
 2. Checks if there are no odd elements (all elements are even).

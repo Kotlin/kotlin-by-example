@@ -3,9 +3,7 @@
 `find` and `findLast` functions return the first or the last collection element that matches the given predicate. If there are no such elements, functions return `null`.
 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -22,8 +20,6 @@ fun main() {
     println("The first word containing \"nothing\" is ${nothing?.let { "\"$it\"" } ?: "null"}")
 }
 ```
-
-</div>
 
 1. Defines a collection of words.
 2. Looks for the first word starting with "some".

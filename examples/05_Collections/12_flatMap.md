@@ -2,9 +2,7 @@
 
 `flatMap` transforms each element of a collection into an iterable object and builds a single list of the transformation results. The transformation is user-defined. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -17,8 +15,6 @@ fun main() {
     println("Transformed: $tripled")
 }
 ```
-
-</div>
 
 1. Defines a collection of numbers.
 2. Builds a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 

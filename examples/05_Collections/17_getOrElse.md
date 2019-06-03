@@ -3,10 +3,7 @@
 `getOrElse` provides safe access to elements of a collection. It takes an index and a function that provides the  default value 
 in cases when the index is out of bound.
 
-
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -17,16 +14,12 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Prints the element at the index `1`.
 2. Prints `42` because the index `10` is out of bounds. 
 
 `getOrElse` can also be applied to `Map` to get the value for the given key. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -41,8 +34,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. Prints the default value because the key `"x"` is not in the map.
 2. Prints `3`, the value for the key `"x"`.

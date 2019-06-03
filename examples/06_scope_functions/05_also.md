@@ -4,9 +4,7 @@
 Inside the block, the object is referenced by `it`, so it's easier to pass it as an argument.
 This function is handy for embedding additional actions, such as logging in call chains. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 data class Person(var name: String, var age: Int, var about: String) {
              constructor() : this("", 0, "")
 }
@@ -24,8 +22,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. Creates a `Person()` object with the given property values.
 2. Applies the given code block to the object. The return value is the object itself. 

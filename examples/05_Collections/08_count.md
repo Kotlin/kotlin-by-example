@@ -2,9 +2,7 @@
 
 `count` functions returns either the total number of elements in a collection or the number of elements matching the given predicate.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -18,8 +16,6 @@ fun main() {
     println("Number of even elements: $evenCount")
 }
 ```
-
-</div>
 
 1. Defines a collection of numbers.
 2. Counts the total number of elements.

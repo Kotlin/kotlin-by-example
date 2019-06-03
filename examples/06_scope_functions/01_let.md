@@ -3,9 +3,7 @@
 The Kotlin standard library function `let` can be used for scoping and null-checks. When called on an object, `let` executes the given block of code and returns the result of its last expression.
 The object is accessible inside the block by the reference `it`. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun customPrint(s: String) {
     print(s.toUpperCase())
 }
@@ -33,8 +31,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. Calls the given block on the result on the string "_test_".
 2. Calls the function on "_test_" by the `it` reference.

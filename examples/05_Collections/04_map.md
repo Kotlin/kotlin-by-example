@@ -2,9 +2,7 @@
 
 *map* extension function enables you to apply a transformation to all elements in a collection. It takes a transformer function as a lambda-parameter.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -20,8 +18,6 @@ fun main() {
     println("Tripled Numbers: $tripled")
 }
 ```
-
-</div>
 
 1. Defines a  collection of numbers.
 2. Doubles numbers.

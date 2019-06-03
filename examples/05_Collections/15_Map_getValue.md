@@ -5,9 +5,7 @@ When applied to a map, `[]` operator returns the value corresponding to the give
 `getValue` function returns an existing value corresponding to the given key or throws an exception if the key wasn't found. 
 For maps created with `withDefault`, `getValue` returns the default value instead of throwing an exception.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main(args: Array<String>) {
 
 //sampleStart
@@ -35,8 +33,6 @@ fun main(args: Array<String>) {
     println("value4 is $value4")
 }
 ```
-
-</div>
 
 1. Returns 42 because it's the value corresponding to the key `"key"`.
 2. Returns `null` because `"key2"` is not in the map.

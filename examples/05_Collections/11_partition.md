@@ -4,9 +4,7 @@
  * Elements for which the predicate is `true`.
  * Elements for which the predicate is `false`.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -24,8 +22,6 @@ fun main() {
 }
 
 ```
-
-</div>
 
 1. Defines a collection of numbers.
 2. Splits `numbers` into a `Pair` of lists with even and odd numbers.

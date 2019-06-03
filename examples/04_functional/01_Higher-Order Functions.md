@@ -4,9 +4,7 @@ A [*higher-order function*](https://kotlinlang.org/docs/reference/lambdas.html) 
 
 ### Taking Functions as Parameters
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {  // 1
     return operation(x, y)                                          // 2
 }
@@ -20,8 +18,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Declares a higher-order function. It takes two integer parameters, `x` and `y`. Additionally, it takes another function `operation` as a parameter. The `operation` parameters and return type are also defined in the declaration.
 2. The higher order function returns the result of `operation` invocation with the supplied agruments.
 3. Declares a function that matches the `operation`signature.
@@ -30,9 +26,7 @@ fun main() {
 
 ### Returning Functions
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun operation(): (Int) -> Int {                                     // 1
     return ::square
 }
@@ -44,8 +38,6 @@ fun main() {
     println(func(2))                                                // 4
 }
 ```
-
-</div>
 
 1. Declares a higher-order function that returns a function.
 2. Declares a function matching the signature.

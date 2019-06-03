@@ -4,9 +4,7 @@
 
 `sortedBy` sorts elements according to natural sort order of the values returned by specified selector function.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -20,8 +18,6 @@ fun main() {
     println("Inverted natural order: $inverted")
 }
 ```
-
-</div>
 
 1. Defines a collection of shuffled numbers.
 2. Sorts it in the natural order.
