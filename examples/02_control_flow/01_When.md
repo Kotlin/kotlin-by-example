@@ -4,9 +4,7 @@ Instead of the widely used `switch` statement, Kotlin provides the more flexible
 
 ## When Statement
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
     cases("Hello")
     cases(1)
@@ -28,8 +26,6 @@ fun cases(obj: Any) {                                // 1
 class MyClass
 ```
 
-</div>
-
 1. This is a `when` statement. 
 2. Checks whether `obj` equals to one.
 3. Checks whether `obj` equals to `Hello`.
@@ -41,9 +37,7 @@ Note that all branch conditions are checked sequentially until one of them is sa
 
 ## When Expression
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
     println(whenAssign("Hello"))
     println(whenAssign(3.4))
@@ -64,7 +58,6 @@ fun whenAssign(obj: Any): Any {
 class MyClass
 ```
 
-</div>
 
 1. This is a `when` expression. 
 2. Sets the value to `"one"` if `obj` equals to one.
