@@ -2,9 +2,7 @@
 
 [*Lambda functions*](https://kotlinlang.org/docs/reference/lambdas.html) ("lambdas") are a simple way to create functions ad-hoc. Lambdas can be denoted very concisely in many cases thanks to type inference and the implicit `it` variable.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
     // All examples create a function object that performs upper-casing.
@@ -30,8 +28,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. A lambda in all its glory, with explicit types everywhere. The lambda is the part in curly braces, which is assigned to a variable of type `(String) -> String` (a function type).
 2. Type inference inside lambda: the type of the lambda parameter is inferred from the type of the variable it's assigned to.

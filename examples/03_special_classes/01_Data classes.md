@@ -2,9 +2,7 @@
 
 [Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 data class User(val name: String, val id: Int)            // 1
 
 fun main() {
@@ -29,8 +27,6 @@ fun main() {
     println("id = ${user.component2()}")
 }
 ```
-
-</div>
 
 1. Defines a data class with the `data` modifier. 
 2. Method `toString` is auto-generated, which makes `println` output look nice.

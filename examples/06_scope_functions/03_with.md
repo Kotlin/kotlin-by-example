@@ -4,9 +4,7 @@
 
 `with` is a non-extension function that can access members of its argument concisely: you can omit the instance name when referring to its members. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 class Configuration(var host: String, var port: Int) 
 
 fun main() {
@@ -22,5 +20,3 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>

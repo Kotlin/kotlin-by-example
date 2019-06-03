@@ -3,9 +3,7 @@
 Kotlin provides a mechanism of [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html) that allows delegating the calls of the property `set` and `get` methods to a certain object.
 The delegate object in this case should have the method `getValue`. For mutable properties, you'll also need `setValue`.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 import kotlin.reflect.KProperty
 
 class Example {
@@ -31,8 +29,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Delegates property `p` of type `String` to the instance of class `Delegate`. The delegate object is defined after the `by` keyword.
 2. Delegation methods. The signatures of these methods are always as shown in the example. Implementations may contain any steps you need. For immutable properties only `getValue` is required.
 
@@ -41,9 +37,7 @@ fun main() {
 The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and other. You may use them as is.
 For example `lazy`is used for lazy initialization.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 class LazySample {
     init {
       println("created!")            // 1
@@ -62,8 +56,6 @@ fun main() {
 }
 ```
 
-</div>
-
  1. Property `lazy` is not initialized on object creation.
  2. The first call to `get()` executes the lambda expression passed to `lazy()` as an argument and saves the result.
  3. Further calls to `get()` return the saved result.
@@ -75,9 +67,7 @@ If you want thread safety, use `blockingLazy()` instead: it guarantees that the 
 Property delegation can be used for storing properties in a map. This is handy for tasks like parsing JSON
 or doing other "dynamic" stuff.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 class User(val map: Map<String, Any?>) {
     val name: String by map                // 1
     val age: Int     by map                // 1
@@ -92,8 +82,6 @@ fun main() {
     println("name = ${user.name}, age = ${user.age}")
 }
 ```
-
-</div>
 
 1. Delegates take values from the `map` by the string keys - names of properties.
 

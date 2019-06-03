@@ -9,9 +9,7 @@ The difference between `associateBy` and `groupBy` is how they process objects w
 
 The returned map preserves the entry iteration order of the original collection.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -36,8 +34,6 @@ fun main() {
     println("People living in each city: $peopleCities")
 }
 ```
-
-</div>
 
 1. Defines a data class that describes a person.
 2. Defines a collection of people.

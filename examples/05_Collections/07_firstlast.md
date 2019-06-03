@@ -6,9 +6,7 @@ These functions return the first and the last element of the collection correspo
 
 If a collection is empty or doesn't contain elements matching the predicate, the functions throw `NoSuchElementException`.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -26,8 +24,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Defines a collection of numbers.
 2. Picks the first element.
 3. Picks the last element.
@@ -38,9 +34,7 @@ fun main() {
 
 These functions work almost the same way with one difference: they return `null` if there are no matching elements.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -61,8 +55,6 @@ fun main() {
    println("First ends with 'f' is $lastF, last ends with 'z' is $lastZ")
 }
 ```
-
-</div>
 
 1. Defines a collection of words.
 2. Defines an empty collection.

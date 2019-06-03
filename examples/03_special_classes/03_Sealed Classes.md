@@ -2,9 +2,7 @@
 
 [Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, nobody else can create its subclasses.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 sealed class Mammal(val name: String)                                                   // 1
 
 class Cat(val catName: String) : Mammal(catName)                                        // 2
@@ -21,9 +19,6 @@ fun main() {
     println(greetMammal(Cat("Snowy")))
 }
 ```
-
-</div>
-
 
 1. Defines a sealed class. 
 2. Defines subclasses. Note that all subclasses must be in the same file.

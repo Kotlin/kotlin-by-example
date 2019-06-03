@@ -11,13 +11,11 @@ Create markdown file in `examples` folder.
 
 Lorem ipsum dolor sit `amet`, consectetur adipisicing elit. Aspernatur, molestias, velit?
 
-<div class="kotlin-language" theme="idea">
-`​`​`kotlin
+`​`​`run-kotlin
 fun main(args: Array<String>) {
     println("Hello from template")
 }
 `​`​`
-</div>
 
 1. Epsum `factorial` non deposit quid pro quo hic escorol.
 2. Souvlaki ignitus carborundum e pluribus unum.

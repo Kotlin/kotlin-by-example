@@ -2,9 +2,7 @@
 
 Classes and objects in Kotlin work the same way as in most object-oriented languages: a *class* is a blueprint, and an *object* is an instance of a class. Usually, you define a class and then create multiple instances of that class:
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 import java.util.Random
 
 class LuckDispatcher {                    //1 
@@ -22,8 +20,6 @@ fun main() {
     d2.getNumber()
 }
 ```
-
-</div>
 
 1. Defines a blueprint.
 2. Defines a method.
@@ -44,9 +40,7 @@ Here is a basic typical usage of an `object` **expression**: a simple object/pro
 There is no need to do so in class declaration: you create a single object, declare its members and access it within one function. 
 Objects like this are often created in Java as anonymous class instances.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun rentPrice(standardDays: Int, festivityDays: Int, specialDays: Int): Unit {  //1
 
     val dayRates = object {                                                     //2
@@ -66,8 +60,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Creates a function with parameters.
 2. Creates an object to use when calculating the result value.
 3. Accesses the object's properties.
@@ -78,9 +70,7 @@ fun main() {
 
 You can also use the `object` **declaration**. It isn't an expression, and can't be used in a variable assignment. You should use it to directly access its members:
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 object DoAuth {                                                 //1 
     fun takeParams(username: String, password: String){         //2 
         println("input Auth parameters = $username:$password")
@@ -93,8 +83,6 @@ fun main(){
 
 ```
 
-</div>
-
 1. Creates an object declaration.
 2. Defines the object method.
 3. Calls the method. This is when the object is actually created.
@@ -105,9 +93,7 @@ An object declaration inside a class defines another useful case: the **companio
 Syntactically it's similar to the static methods in Java: you call object members using its *class name* as a qualifier.
 If you plan to use a companion object in Kotlin, consider using a *package-level* function instead.  
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 class BigBen {                                  //1 
     companion object Bonger {                   //2
         fun getBongs(nTimes: Int) {             //3
@@ -122,8 +108,6 @@ fun main() {
     BigBen.getBongs(12)                         //4
 }
 ```
-
-</div>
 
 1. Defines a class.
 2. Defines a companion. Its name can be omitted.

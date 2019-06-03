@@ -2,9 +2,7 @@
 
 Kotlin supports easy implementation of the [delegation pattern](https://kotlinlang.org/docs/reference/delegation.html) on the native level without any boilerplate code.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 interface SoundBehavior {                                                          // 1
     fun makeSound()
 }
@@ -30,8 +28,6 @@ fun main() {
     elvisPresley.makeSound()
 }
 ```
-
-</div>
 
 
 1.  Defines the interface `SoundBehavior` with one method. 

@@ -4,9 +4,7 @@
 
 The size of the result collection equals to the minumum size of a source collection. 
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 
 //sampleStart
@@ -21,8 +19,6 @@ fun main() {
     println("\$A\$B: $resultReduce")
 }
 ```
-
-</div>
 
 1. Defines two collections.
 2. Merges them into a list of pairs. The infix notation is used here.
