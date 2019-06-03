@@ -2,9 +2,7 @@
 
 [String templates](https://kotlinlang.org/docs/reference/basic-types.html#string-templates) allow you to include variable references and expressions into strings. When the value of a string is requested (for example, by `println`), all references and expressions are substituted with actual values.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
     val greeting = "Kotliner"
@@ -14,8 +12,6 @@ fun main() {
 //sampleEnd
 }
 ```
-
-</div>
 
 1. Prints a string with a variable reference. References in strings start with `$`.
 2. Prints a string with an expression. Expressions start with `$` and are enclosed in curly braces.
