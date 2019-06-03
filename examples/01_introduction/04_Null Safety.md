@@ -2,9 +2,7 @@
 
 In an effort to rid the world of `NullPointerException`, variable types in Kotlin don't allow the assignment of `null`. If you need a variable that can be null, declare it nullable by adding `?` at the end of its type.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
     var neverNull: String = "This can't be null"            // 1
@@ -29,8 +27,6 @@ fun main() {
 }
 ```
 
-</div>
-
 1. Declares a non-`null` String variable.
 2. When trying to assign `null` to non-nullable variable, a compilation error is produced. 
 3. Declares a nullable String variable.
@@ -46,9 +42,7 @@ fun main() {
 Sometimes Kotlin programs need to work with null values, such as when interacting with external Java code or
 representing a truly absent state. Kotlin provides null tracking to elegantly deal with such situations.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 //sampleStart
 fun describeString(maybeString: String?): String {              // 1
     if (maybeString != null && maybeString.length > 0) {        // 2
@@ -63,8 +57,6 @@ fun main() {
     println(describeString(null))
 }
 ```
-
-</div>
 
 1. A function that takes in a nullable string and returns its description.
 2. If the given string is not `null` and not empty, return information about its length.
