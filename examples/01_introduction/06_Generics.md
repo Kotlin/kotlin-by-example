@@ -6,9 +6,7 @@
 
 The first way to use generics in Kotlin is creating generic classes.
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
-
-```kotlin
+```run-kotlin
 //sampleStart
 class MutableStack<E>(vararg items: E) {              // 1
 
@@ -44,7 +42,6 @@ fun main() {
 
 ```
 
-</div>
 
 1. Defines a generic class `MutableStack<E>` where `E` is called the _generic type parameter_. At use-site, it is assigned to a specific type such as `Int` by declaring a `MutableStack<Int>`.
 2. Inside the generic class, `E` can be used as a parameter like any other type.
@@ -57,9 +54,8 @@ Note that the implementation makes heavy use of Kotlin's shorthand syntax for fu
 
 You can also [generify functions](https://kotlinlang.org/docs/reference/generics.html#generic-functions) if their logic is independent of a specific type. For instance, you can write a utility function to create mutable stacks:
 
-<div class="language-kotlin" theme="idea" data-min-compiler-version="1.3">
 
-```kotlin
+```run-kotlin
 class MutableStack<E>(vararg items: E) {              // 1
 
   private val elements = items.toMutableList()
@@ -86,7 +82,5 @@ fun main() {
 }
 //sampleEnd
 ```
-
-</div>
 
 Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
