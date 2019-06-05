@@ -28,7 +28,7 @@ fun main() {
 
 ### Inheritance with Parameterized Constructor
 
-```run-otlin
+```run-kotlin
 //sampleStart
 open class Tiger(val origin: String) {
     fun sayHello() {
