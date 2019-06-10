@@ -4,7 +4,7 @@ Kotlin provides you with an option to describe structured data in a declarative 
 
 Below is an example of a type-safe Groovy-style builder. In this example, we will describe an HTML page in Kotlin.
 
-```run-kotlin-js
+```run-kotlin-canvas
 package html
 
 import org.w3c.dom.*
