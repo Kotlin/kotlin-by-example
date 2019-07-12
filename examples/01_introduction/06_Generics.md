@@ -83,4 +83,4 @@ fun main() {
 //sampleEnd
 ```
 
-Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Int>(...)`.
+Note that the compiler can infer the generic type from the parameters of `mutableStackOf` so that you don't have to write `mutableStackOf<Double>(...)`.
