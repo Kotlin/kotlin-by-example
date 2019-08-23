@@ -57,12 +57,12 @@ fun main() {
 //sampleStart
     val x = 2
     if (x in 1..10) {            // 1
-        print(x)
+        println("if x is in 1 - 10 range " + "X is "+x)
     }
-    print(" ")
-
-    if (x !in 1..4) {            // 2
-        print(x)
+   
+     val y = 5
+    if (y !in 1..4) {            // 2
+        println("if y is not in 1- 4 range " + "Y is "+y)
     }
 //sampleEnd
 }
