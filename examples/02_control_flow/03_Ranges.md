@@ -62,7 +62,7 @@ fun main() {
    
      val y = 5
     if (y !in 1..4) {            // 2
-        println("if y is not in 1- 4 range " + "Y is "+y)
+        println("$x is not in range from 5 to 10")
     }
 //sampleEnd
 }
