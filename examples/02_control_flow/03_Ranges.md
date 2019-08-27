@@ -57,7 +57,7 @@ fun main() {
 //sampleStart
     val x = 2
     if (x in 1..10) {            // 1
-        println("if x is in 1 - 10 range " + "X is "+x)
+        println("$x is in range from 1 to 10")
     }
    
      val y = 5
