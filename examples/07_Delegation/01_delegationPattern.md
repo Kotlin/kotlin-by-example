@@ -22,7 +22,7 @@ class TomAraya(n:String): SoundBehavior by ScreamBehavior(n)                    
 class ElvisPresley(n:String): SoundBehavior by RockAndRollBehavior(n)              // 3
 
 fun main() {
-    val tomAraya = TomAraya("Trash Metal")
+    val tomAraya = TomAraya("Thrash Metal")
     tomAraya.makeSound()                                                            // 4
     val elvisPresley = ElvisPresley("Dancin' to the Jailhouse Rock.")
     elvisPresley.makeSound()
