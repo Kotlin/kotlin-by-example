@@ -23,7 +23,7 @@ class ElvisPresley(n:String): SoundBehavior by RockAndRollBehavior(n)           
 
 fun main() {
     val tomAraya = TomAraya("Thrash Metal")
-    tomAraya.makeSound()                                                            // 4
+    tomAraya.makeSound()                                                           // 4
     val elvisPresley = ElvisPresley("Dancin' to the Jailhouse Rock.")
     elvisPresley.makeSound()
 }
