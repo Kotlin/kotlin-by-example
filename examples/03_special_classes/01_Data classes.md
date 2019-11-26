@@ -3,7 +3,7 @@
 [Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections.
 
 ```run-kotlin
-data class User(val name: String, val id: Int)            // 1
+data class User(val name: String, val id: Int)             // 1
 
 fun main() {
     val user = User("Alex", 1)
