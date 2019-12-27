@@ -60,7 +60,7 @@ fun main() {
  2. The first call to `get()` executes the lambda expression passed to `lazy()` as an argument and saves the result.
  3. Further calls to `get()` return the saved result.
 
-If you want thread safety, use `blockingLazy()` instead: it guarantees that the values will be computed only in one thread and that all threads will see the same value.
+ If you want thread safety, use `blockingLazy()` instead: it guarantees that the values will be computed only in one thread and that all threads will see the same value.
 
 ### Storing Properties in a Map
 
