@@ -2,7 +2,7 @@
 
 There is no ternary operator `condition ? then : else` in Kotlin. Instead, `if` may be used as an expression:
 
-```kotlin
+```run-kotlin
 fun main() {
 //sampleStart
     fun max(a: Int, b: Int) = if (a > b) a else b         // 1
