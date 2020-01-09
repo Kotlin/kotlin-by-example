@@ -1,6 +1,6 @@
 # Sealed Classes
 
-[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, nobody else can create its subclasses.
+[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, it can only be subclassed from inside the same file where the sealed class is declared. It cannot be subclassed outside of the file where the sealed class is declared. 
 
 ```run-kotlin
 sealed class Mammal(val name: String)                                                   // 1
