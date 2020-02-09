@@ -19,7 +19,7 @@ fun main() {
 ```
 
 1. Declares a higher-order function. It takes two integer parameters, `x` and `y`. Additionally, it takes another function `operation` as a parameter. The `operation` parameters and return type are also defined in the declaration.
-2. The higher order function returns the result of `operation` invocation with the supplied agruments.
+2. The higher order function returns the result of `operation` invocation with the supplied arguments.
 3. Declares a function that matches the `operation`signature.
 4. Invokes the higher-order function passing in two integer values and the function argument `::sum`. `::` is the notation that references a function by name in Kotlin.
 5. Invokes the higher-order function passing in a lambda as a function argument. Looks clearer, doesn't it?
