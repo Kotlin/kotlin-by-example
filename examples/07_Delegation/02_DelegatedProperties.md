@@ -34,7 +34,7 @@ fun main() {
 
 ### Standard Delegates 
 
-The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and other. You may use them as is.
+The Kotlin standard library contains a bunch of useful delegates, like `lazy`, `observable`, and others. You may use them as is.
 For example `lazy`is used for lazy initialization.
 
 ```run-kotlin
