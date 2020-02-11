@@ -6,9 +6,9 @@ This should be used with extreme care.
 
 ```run-kotlin-js
 fun main() {
-// sampleStart
+//sampleStart
     js("alert(\"alert from Kotlin!\")") // 1
-// sampleEnd    
+//sampleEnd    
 }
 ```
 
