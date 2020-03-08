@@ -20,8 +20,8 @@ fun main() {
 
     val upperCase6: (String) -> String = String::toUpperCase                  // 6
 
-    println(upperCase2("hello"))
     println(upperCase1("hello"))
+    println(upperCase2("hello"))
     println(upperCase3("hello"))
     println(upperCase5("hello"))
     println(upperCase6("hello"))
