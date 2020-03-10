@@ -2,7 +2,7 @@
 
 `partition` function splits the original collection into pair of lists using a given predicate:
  * Elements for which the predicate is `true`.
- * Elements for which the predicate is `false`.
+ * Elements for which isn't the predicate is `false`.
 
 ```run-kotlin
 fun main() {
