@@ -1,8 +1,9 @@
 # partition
 
-`partition` function splits the original collection into pair of lists using a given predicate:
- * Elements for which the predicate is `true`.
- * Elements for which the predicate is `false`.
+The `partition` function splits the original collection into a pair of lists using a given predicate:
+
+ 1. Elements for which the predicate is `true`.
+ 1. Elements for which the predicate is `false`.
 
 ```run-kotlin
 fun main() {
