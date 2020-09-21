@@ -15,9 +15,9 @@ fun main() {
 }
 ```
 
-1. Declares a mutable variable and initializing it.
-2. Declares an immutable variable and initializing it.
-3. Declares an immutable variable and initializing it without specifying the type. The compiler infers the type `Int`.
+1. Declares a mutable variable and initializes it.
+2. Declares an immutable variable and initializes it.
+3. Declares an immutable variable and initializes it without specifying the type. The compiler infers the type `Int`.
 
 ```run-kotlin
 fun main() {
