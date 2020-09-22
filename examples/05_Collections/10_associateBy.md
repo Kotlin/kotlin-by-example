@@ -4,6 +4,7 @@ Functions `associateBy` and `groupBy` build maps from the elements of a collecti
 You can also specify an optional `valueSelector` to define what will be stored in the `value` of the map element.
 
 The difference between `associateBy` and `groupBy` is how they process objects with the same key:
+
 * `associateBy` uses the last suitable element as the value.
 * `groupBy` builds a list of all suitable elements and puts it in the value. 
 
