@@ -72,7 +72,7 @@ You can also use the `object` **declaration**. It isn't an expression, and can't
 
 ```run-kotlin
 object DoAuth {                                                 //1 
-    fun takeParams(username: String, password: String){         //2 
+    fun takeParams(username: String, password: String) {        //2 
         println("input Auth parameters = $username:$password")
     }
 }
