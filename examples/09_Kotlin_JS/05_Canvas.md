@@ -65,7 +65,7 @@ abstract class Shape() {
     }
 }
 
-val logoImage by lazy { getImage("http://try.kotlinlang.org/static/images/kotlin_logo.svg") }
+val logoImage by lazy { getImage("https://try.kotlinlang.org/static/images/kotlin_logo.svg") }
 
 val logoImageSize = v(120.0, 30.0)
 
@@ -87,7 +87,7 @@ class Logo(override var pos: Vector) : Shape() {
         }
         
         size = logoImageSize * (state.size.x / logoImageSize.x) * relSize
-        state.context.drawImage(getImage("http://try.kotlinlang.org/static/images/kotlin_logo.svg"), 0.0, 0.0,
+        state.context.drawImage(getImage("https://try.kotlinlang.org/static/images/kotlin_logo.svg"), 0.0, 0.0,
                 logoImageSize.x, logoImageSize.y,
                 position.x, position.y,
                 size.x, size.y)
