@@ -7,10 +7,10 @@ Here strange creatures are watching the kotlin logo. You can drag'n'drop them as
 ```run-kotlin-canvas
 package creatures
 
-import jquery.*
 import org.w3c.dom.*
-import kotlin.browser.document
-import kotlin.browser.window
+import org.w3c.dom.events.MouseEvent
+import kotlinx.browser.document
+import kotlinx.browser.window
 import kotlin.math.*
 
 
@@ -217,10 +217,10 @@ class CanvasState(val canvas: HTMLCanvasElement) {
     val interval = 1000 / 30
 
     init {
-        jq(canvas).mousedown {
+        canvas.onmousedown = { e: MouseEvent ->
             changed = true
             selection = null
-            val mousePos = mousePos(it)
+            val mousePos = mousePos(e)
             for (shape in shapes) {
                 if (mousePos in shape) {
                     dragOff = mousePos - shape.pos
@@ -231,25 +231,27 @@ class CanvasState(val canvas: HTMLCanvasElement) {
             }
         }
 
-        jq(canvas).mousemove {
+        canvas.onmousemove = { e: MouseEvent ->
             if (selection != null) {
-                selection!!.pos = mousePos(it) - dragOff
+                selection!!.pos = mousePos(e) - dragOff
                 changed = true
             }
         }
 
-        jq(canvas).mouseup {
+        canvas.onmouseup = { e: MouseEvent ->
             if (selection != null) {
                 selection!!.selected = false
             }
             selection = null
             changed = true
+            this
         }
 
-        jq(canvas).dblclick {
-            val newCreature = Creature(mousePos(it), this@CanvasState)
+        canvas.ondblclick = { e: MouseEvent ->
+            val newCreature = Creature(mousePos(e), this@CanvasState)
             addShape(newCreature)
             changed = true
+            this
         }
 
         window.setInterval({
