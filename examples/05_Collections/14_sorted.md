@@ -29,4 +29,4 @@ fun main() {
 2. Sorts it in the natural order.
 3. Sorts it in the inverted natural order by using `-it` as a selector function.
 4. Sorts it in the inverted natural order by using `sortedDescending`.
-5. Sorts it in the inverted natural order of item's absolute values by using `abs(it)` as a selector function.
+5. Sorts it in the inverted natural order of items' absolute values by using `abs(it)` as a selector function.
