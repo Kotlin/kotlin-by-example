@@ -25,14 +25,14 @@ fun main(args: Array<String>) {
             }
 
             // an element with attributes and text content
-            a(href = "http://jetbrains.com/kotlin") { +"Kotlin" }
+            a(href = "http://kotlinlang.org") { +"Kotlin" }
 
             // mixed content
             p {
                 +"This is some"
                 b { +"mixed" }
                 +"text. For more see the"
-                a(href = "http://jetbrains.com/kotlin") {
+                a(href = "http://kotlinlang.org") {
                     +"Kotlin"
                 }
                 +"project"
