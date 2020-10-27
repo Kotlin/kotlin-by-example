@@ -7,10 +7,6 @@ Below is an example of a type-safe Groovy-style builder. In this example, we wil
 ```run-kotlin-canvas
 package html
 
-import org.w3c.dom.*
-import kotlin.browser.document
-import kotlin.browser.window
-
 fun main(args: Array<String>) {
     //sampleStart
     val result = html {                                            // 1
