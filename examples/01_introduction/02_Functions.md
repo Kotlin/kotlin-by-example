@@ -35,8 +35,8 @@ fun main() {
 6. Calls the function with two parameters, passing values for both of them.
 7. Calls the same function omitting the second one. The default value `Info` is used. 
 8. Calls the same function using [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments) and changing the order of the arguments.
-9. Prints the result of a function call (of function `sum`).
-10. Prints the result of a function call (of function `multiply`).
+9. Prints the result of the `sum` function call.
+10. Prints the result of the `multiply` function call.
 
 ### Infix Functions
 
