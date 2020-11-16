@@ -7,7 +7,7 @@ Below is an example of a type-safe Groovy-style builder. In this example, we wil
 ```run-kotlin-canvas
 package html
 
-fun main(args: Array<String>) {
+fun main() {
     //sampleStart
     val result = html {                                            // 1
         head {                                                     // 2
