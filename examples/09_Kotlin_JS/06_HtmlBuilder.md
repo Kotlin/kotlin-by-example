@@ -131,6 +131,12 @@ class B() : BodyTag("b")
 class LI() : BodyTag("li")
 class P() : BodyTag("p")
 class H1() : BodyTag("h1")
+class LI() : BodyTag("li")
+
+class UL : BodyTag("ul") {
+    fun li(init: LI.() -> Unit) = initTag(LI(), init)
+}
+
 
 class A : BodyTag("a") {
     var href: String
