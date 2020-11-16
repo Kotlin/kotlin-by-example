@@ -99,6 +99,7 @@ abstract class TagWithText(name: String) : Tag(name) {
     }
 }
 class HTML() : TagWithText("html") {
+    fun ul(init: UL.() -> Unit) = initTag(UL(), init)
     fun head(init: Head.() -> Unit) = initTag(Head(), init)
     fun body(init: Body.() -> Unit) = initTag(Body(), init)
 }
