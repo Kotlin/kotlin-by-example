@@ -7,11 +7,7 @@ Below is an example of a type-safe Groovy-style builder. In this example, we wil
 ```run-kotlin-canvas
 package html
 
-import org.w3c.dom.*
-import kotlin.browser.document
-import kotlin.browser.window
-
-fun main(args: Array<String>) {
+fun main() {
     //sampleStart
     val result = html {                                            // 1
         head {                                                     // 2
@@ -25,14 +21,14 @@ fun main(args: Array<String>) {
             }
 
             // an element with attributes and text content
-            a(href = "http://jetbrains.com/kotlin") { +"Kotlin" }
+            a(href = "http://kotlinlang.org") { +"Kotlin" }
 
             // mixed content
             p {
                 +"This is some"
                 b { +"mixed" }
                 +"text. For more see the"
-                a(href = "http://jetbrains.com/kotlin") {
+                a(href = "http://kotlinlang.org") {
                     +"Kotlin"
                 }
                 +"project"
@@ -47,25 +43,61 @@ fun main(args: Array<String>) {
         }
     }
     //sampleEnd
-
-    document.body!!.appendChild(result.element)
+    println(result)
 }
 
-abstract class Tag(val name: String) {
-    val element = document.createElement(name)
-    protected fun <T : Tag> initTag(tag: T, init: T.() -> Unit): T {
+interface Element {
+    fun render(builder: StringBuilder, indent: String)
+}
+
+class TextElement(val text: String) : Element {
+    override fun render(builder: StringBuilder, indent: String) {
+        builder.append("$indent$text\n")
+    }
+}
+
+@DslMarker
+annotation class HtmlTagMarker
+
+@HtmlTagMarker
+abstract class Tag(val name: String) : Element {
+    val children = arrayListOf<Element>()
+    val attributes = hashMapOf<String, String>()
+
+    protected fun <T : Element> initTag(tag: T, init: T.() -> Unit): T {
         tag.init()
-        element.appendChild(tag.element)
+        children.add(tag)
         return tag
+    }
+
+    override fun render(builder: StringBuilder, indent: String) {
+        builder.append("$indent<$name${renderAttributes()}>\n")
+        for (c in children) {
+            c.render(builder, indent + "  ")
+        }
+        builder.append("$indent</$name>\n")
+    }
+
+    private fun renderAttributes(): String {
+        val builder = StringBuilder()
+        for ((attr, value) in attributes) {
+            builder.append(" $attr=\"$value\"")
+        }
+        return builder.toString()
+    }
+
+    override fun toString(): String {
+        val builder = StringBuilder()
+        render(builder, "")
+        return builder.toString()
     }
 }
 
 abstract class TagWithText(name: String) : Tag(name) {
     operator fun String.unaryPlus() {
-        element.appendChild(document.createTextNode(this + " "))
+        children.add(TextElement(this))
     }
 }
-
 class HTML() : TagWithText("html") {
     fun head(init: Head.() -> Unit) = initTag(Head(), init)
     fun body(init: Body.() -> Unit) = initTag(Body(), init)
@@ -99,11 +131,11 @@ class LI() : BodyTag("li")
 class P() : BodyTag("p")
 class H1() : BodyTag("h1")
 
-class A() : BodyTag("a") {
-    public var href: String
-        get() = element.getAttribute("href")!!
+class A : BodyTag("a") {
+    var href: String
+        get() = attributes["href"]!!
         set(value) {
-            element.setAttribute("href", value)
+            attributes["href"] = value
         }
 }
 
