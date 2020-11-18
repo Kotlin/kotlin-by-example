@@ -10,12 +10,17 @@ fun main() {
     }
     print(" ")
 
-    for(i in 2..8 step 2) {      // 2
+    for(i in 0 until 3) {        // 2
         print(i)
     }
     print(" ")
 
-    for (i in 3 downTo 0) {      // 3
+    for(i in 2..8 step 2) {      // 3
+        print(i)
+    }
+    print(" ")
+
+    for (i in 3 downTo 0) {      // 4
         print(i)
     }
     print(" ")
@@ -24,9 +29,10 @@ fun main() {
 }
 ```
 
-1. Iterates over a range starting from 0 up to 3 (inclusive).
-2. Iterates over a range with a custom increment step for consecutive elements.
-5. Iterates over a range in _reverse_ order.
+1. Iterates over a range starting from 0 up to 3 (inclusive). Like 'for(i=0; i<=3; ++i)' in other programming languages (C/C++/Java).
+2. Iterates over a range starting from 0 up to 3 (exclusive). Like for loop in Python or like 'for(i=0; i<3; ++i)' in other programming languages (C/C++/Java).
+3. Iterates over a range with a custom increment step for consecutive elements.
+4. Iterates over a range in _reverse_ order.
 
 Char ranges are also supported: 
 
