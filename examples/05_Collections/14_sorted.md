@@ -20,7 +20,7 @@ fun main() {
     println("Shuffled: $shuffled")
     println("Natural order: $natural")
     println("Inverted natural order: $inverted")
-    println("Inverted natural order by absolute value: $descending")
+    println("Inverted natural order value: $descending")
     println("Inverted natural order of absolute values: $descendingBy")
 }
 ```
