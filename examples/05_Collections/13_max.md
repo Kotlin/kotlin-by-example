@@ -1,6 +1,6 @@
-# min, max
+# minOrNull, maxOrNull
 
-`min` and `max` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
+`minOrNull` and `maxOrNull` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
 
 ```run-kotlin
 fun main() {
