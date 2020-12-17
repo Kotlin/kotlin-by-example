@@ -10,8 +10,6 @@ import kotlin.math.abs
 fun main() {
 
 //sampleStart
-    import java.lang.Math.abs
-
     val shuffled = listOf(5, 4, 2, 1, 3, -10)                   // 1
     val natural = shuffled.sorted()                             // 2
     val inverted = shuffled.sortedBy { -it }                    // 3
