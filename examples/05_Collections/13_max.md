@@ -1,6 +1,6 @@
-# min, max
+# minOrNull, maxOrNull
 
-`min` and `max` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
+`minOrNull` and `maxOrNull` functions return the smallest and the largest element of a collection. If the collection is empty, they return `null`.
 
 ```run-kotlin
 fun main() {
@@ -9,8 +9,8 @@ fun main() {
     val numbers = listOf(1, 2, 3)
     val empty = emptyList<Int>()
 
-    println("Numbers: $numbers, min = ${numbers.min()} max = ${numbers.max()}") // 1
-    println("Empty: $empty, min = ${empty.min()}, max = ${empty.max()}")        // 2
+    println("Numbers: $numbers, min = ${numbers.minOrNull()} max = ${numbers.maxOrNull()}") // 1
+    println("Empty: $empty, min = ${empty.minOrNull()}, max = ${empty.maxOrNull()}")        // 2
 //sampleEnd
 }
 ```
