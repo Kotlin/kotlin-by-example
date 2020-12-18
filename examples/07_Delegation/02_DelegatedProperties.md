@@ -6,12 +6,6 @@ The delegate object in this case should have the method `getValue`. For mutable 
 ```run-kotlin
 import kotlin.reflect.KProperty
 
-class Example {
-    var p: String by Delegate()                                               // 1
-
-    override fun toString() = "Example Class"
-}
-
 class Delegate() {
     operator fun getValue(thisRef: Any?, prop: KProperty<*>): String {        // 2     
         return "$thisRef, thank you for delegating '${prop.name}' to me!"
@@ -20,6 +14,12 @@ class Delegate() {
     operator fun setValue(thisRef: Any?, prop: KProperty<*>, value: String) { // 2
         println("$value has been assigned to ${prop.name} in $thisRef")
     }
+}
+
+class Example {
+    var p: String by Delegate()                                               // 1
+
+    override fun toString() = "Example Class"
 }
 
 fun main() {
