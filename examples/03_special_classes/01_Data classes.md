@@ -16,7 +16,7 @@ fun main() {
     println("user == thirdUser: ${user == thirdUser}")
 
     println(user.hashCode())                               // 4
-    println(thirdUser.hashCode())
+    println(secondUser.hashCode())
 
     // copy() function
     println(user.copy())                                   // 5
