@@ -26,6 +26,7 @@ fun main() {
     val phoneBook = people.associateBy { it.phone }                          // 3
     val cityBook = people.associateBy(Person::phone, Person::city)           // 4
     val peopleCities = people.groupBy(Person::city, Person::name)            // 5
+    val lastPersonCity = people.associateBy(Person::city, Person::name)      // 6
 
 //sampleEnd
 
@@ -33,6 +34,7 @@ fun main() {
     println("Phone book: $phoneBook")
     println("City book: $cityBook")
     println("People living in each city: $peopleCities")
+    println("Last person living in each city: $lastPersonCity")
 }
 ```
 
@@ -41,3 +43,4 @@ fun main() {
 3. Builds a map from phone numbers to their owners' information. `it.phone` is the `keySelector` here. The `valueSelector` is not provided, so the values of the map are `Person` objects themselves.
 4. Builds a map from phone numbers to the cities where owners live. `Person::city` is the `valueSelector` here, so the values of the map contain only cities. 
 5. Builds a map that contains cities and people living there. The values of the map are lists of person names.
+6. Builds a map that contains cities and the last person living there. The values of the map are names of the last person living in each city.
