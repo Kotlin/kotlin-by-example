@@ -6,21 +6,20 @@
 fun main() {
 
 //sampleStart
-    val FruitsBag = listOf("apple","orange","banana","grapes")// 1
-    val ClothesBag = listOf("shirts","pants","jeans")// 2
-    val Cart = listOf(FruitsBag,ClothesBag)// 3
-    val Bag=Cart.map{it}// 4
-    val ShoppingBag=Cart.flatMap{it}// 5
+    val fruitsBag = listOf("apple","orange","banana","grapes")  // 1
+    val clothesBag = listOf("shirts","pants","jeans")           // 2
+    val cart = listOf(fruitsBag, clothesBag)                    // 3
+    val mapBag = cart.map { it }                                // 4
+    val flatMapBag = cart.flatMap { it }                        // 5
 //sampleEnd
 
-    println(ShoppingBag)
-    println(Bag)
+    println("Your bags are: $mapBag")
+    println("The things you bought are: $flatMapBag")
 }
 ```
 
 1. Defines a collection of Strings with fruit names.
 2. Defines a collection of Strings with clothes names.
-3. Adds 'FruitsBag & ClothesBag' to Cart list.
-4. Builds map of Cart elements, which is list of list
-5. Builds faltMap of Cart elements, which is not list of list but infact is single list consisting elements from both lists.
-
+3. Adds `fruitsBag` and `clothesBag` to the `cart` list.
+4. Builds a `map` of `cart` elements, which is a list of two lists.
+5. Builds a `flatMap` of `cart` elements, which is a single list consisting of elements from both lists.
