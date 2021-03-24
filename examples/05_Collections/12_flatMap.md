@@ -6,15 +6,20 @@
 fun main() {
 
 //sampleStart
-    val numbers = listOf(1, 2, 3)                        // 1
-
-    val tripled = numbers.flatMap { listOf(it, it, it) } // 2
+    val fruitsBag = listOf("apple","orange","banana","grapes")  // 1
+    val clothesBag = listOf("shirts","pants","jeans")           // 2
+    val cart = listOf(fruitsBag, clothesBag)                    // 3
+    val mapBag = cart.map { it }                                // 4
+    val flatMapBag = cart.flatMap { it }                        // 5
 //sampleEnd
 
-    println("Numbers: $numbers")
-    println("Transformed: $tripled")
+    println("Your bags are: $mapBag")
+    println("The things you bought are: $flatMapBag")
 }
 ```
 
-1. Defines a collection of numbers.
-2. Builds a list in which every collection element is repeated three times. Important thing is that it's **not** a list of lists; it's a list of integers with nine elements. 
+1. Defines a collection of Strings with fruit names.
+2. Defines a collection of Strings with clothes names.
+3. Adds `fruitsBag` and `clothesBag` to the `cart` list.
+4. Builds a `map` of `cart` elements, which is a list of two lists.
+5. Builds a `flatMap` of `cart` elements, which is a single list consisting of elements from both lists.
