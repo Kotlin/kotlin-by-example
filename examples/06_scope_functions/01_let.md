@@ -26,13 +26,25 @@ fun main() {
             println()
         }
     }
+   fun printIfBothNonNull(strOne: String?,strTwo: String?) {  // 5
+        strOne?.let {firstString->                     
+        strTwo?.let{secondString->
+        print("\t")
+            customPrint("$firstString : $secondString")
+            println()
+          }
+        }
+    }
     printNonNull(null)
     printNonNull("my string") 
+    printIfBothNonNull("First","Second") 
 //sampleEnd
 }
+
 ```
 
 1. Calls the given block on the result on the string "_test_".
 2. Calls the function on "_test_" by the `it` reference.
 3. `let` returns the value of this expression.
-4. Uses safe call, so `let` and its code block will be executed only on non-null values.   
+4. Uses safe call, so `let` and its code block will be executed only on non-null values.  
+5. Used name instead of `it`, so nested `let` can access outer object value and its code block can be executed only if both values are non-null.
