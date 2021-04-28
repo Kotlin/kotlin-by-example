@@ -41,6 +41,7 @@ fun main() {
     println(red)                                      // 4
     println(red.containsRed())                        // 5
     println(Color.BLUE.containsRed())                 // 6
+    println(Color.YELLOW.containsRed())               // 7
 }
 
 ```
@@ -51,3 +52,4 @@ fun main() {
 4. The default `toString` returns the name of the instance, here `"RED"`.
 5. Calls a method on an enum instance.
 6. Calls a method via enum class name.
+7. True as the rgb for `YELLOW` and the rgb value of `RED` share some bits
