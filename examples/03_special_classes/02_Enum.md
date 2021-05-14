@@ -52,4 +52,4 @@ fun main() {
 4. The default `toString` returns the name of the instance, here `"RED"`.
 5. Calls a method on an enum instance.
 6. Calls a method via enum class name.
-7. True as the rgb for `YELLOW` and the rgb value of `RED` share some bits
+7. The RGB values of `RED` and `YELLOW` share first bits (`FF`) so this prints 'true'.
