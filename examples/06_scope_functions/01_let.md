@@ -1,11 +1,11 @@
 # let
 
 The Kotlin standard library function `let` can be used for scoping and null-checks. When called on an object, `let` executes the given block of code and returns the result of its last expression.
-The object is accessible inside the block by the reference `it`. 
+The object is accessible inside the block by the reference `it` (by default) or a custom name. 
 
 ```run-kotlin
 fun customPrint(s: String) {
-    print(s.toUpperCase())
+    print(s.uppercase())
 }
 
 fun main() {
@@ -26,15 +26,16 @@ fun main() {
             println()
         }
     }
-   fun printIfBothNonNull(strOne: String?,strTwo: String?) {  // 5
-        strOne?.let {firstString->                     
-        strTwo?.let{secondString->
-        print("\t")
-            customPrint("$firstString : $secondString")
-            println()
-          }
+    
+    fun printIfBothNonNull(strOne: String?, strTwo: String?) {
+        strOne?.let { firstString ->       // 5 
+            strTwo?.let { secondString ->
+                customPrint("$firstString : $secondString")
+                println()
+            }
         }
     }
+    
     printNonNull(null)
     printNonNull("my string") 
     printIfBothNonNull("First","Second") 
@@ -47,4 +48,4 @@ fun main() {
 2. Calls the function on "_test_" by the `it` reference.
 3. `let` returns the value of this expression.
 4. Uses safe call, so `let` and its code block will be executed only on non-null values.  
-5. Used name instead of `it`, so nested `let` can access outer object value and its code block can be executed only if both values are non-null.
+5. Uses the custom name instead of `it`, so that the nested `let` can access the context object of the outer `let`.
