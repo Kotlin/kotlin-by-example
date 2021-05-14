@@ -1,6 +1,6 @@
 # Data Classes
 
-[Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections.
+[Data classes](https://kotlinlang.org/docs/reference/data-classes.html) make it easy to create classes that are used to store values. Such classes are automatically provided with methods for copying, getting a string representation, and using instances in collections. You can override these methods with your own implementations in the class declaration.
 
 ```run-kotlin
 data class User(val name: String, val id: Int) {           // 1
@@ -39,7 +39,7 @@ fun main() {
 4. Our custom `equals` considers two instances equal if their `id`s are equal.
 5. Data class instances with exactly matching attributes have the same `hashCode`.
 6. Auto-generated `copy` function makes it easy to create a new instance.
-7. False since the copy method creates a new instance of the object with distinct references.
+7. `copy` creates a new instance, so the object and its copy have distinct references.
 8. When copying, you can change values of certain properties. `copy` accepts arguments in the same order as the class constructor.
 9. Use `copy` with named arguments to change the value despite of the properties order.
 10. Auto-generated `componentN` functions let you get the values of properties in the order of declaration.
