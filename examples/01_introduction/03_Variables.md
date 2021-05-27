@@ -27,6 +27,7 @@ fun main() {
 //sampleEnd
 }
 ```
+{validate="false"}
 
 1. Declares a variable without initialization.
 2. An attempt to use the variable causes a compiler error: `Variable 'e' must be initialized`.
