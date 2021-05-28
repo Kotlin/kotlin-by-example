@@ -26,7 +26,6 @@ fun main() {
 //sampleEnd
 }
 ```
-{validate="false"}
 
 1. Declares a non-`null` String variable.
 2. When trying to assign `null` to non-nullable variable, a compilation error is produced. 
