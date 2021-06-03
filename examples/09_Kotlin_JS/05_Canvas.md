@@ -65,11 +65,11 @@ abstract class Shape() {
     }
 }
 
-val logoImage by lazy { getImage("https://try.kotlinlang.org/static/images/kotlin_logo.svg") }
+val logoImage by lazy { getImage("https://play.kotlinlang.org/assets/kotlin-logo.svg") }
 
-val logoImageSize = v(120.0, 30.0)
+val logoImageSize = v(64.0, 64.0)
 
-val Kotlin = Logo(v(canvas.width / 2.0 - logoImageSize.x / 2.0 - 40, canvas.height / 2.0 - logoImageSize.y / 2.0 - 20))
+val Kotlin = Logo(v(canvas.width / 2.0 - logoImageSize.x / 2.0 - 64, canvas.height / 2.0 - logoImageSize.y / 2.0 - 64))
 
 class Logo(override var pos: Vector) : Shape() {
     val relSize: Double = 0.18
@@ -87,7 +87,7 @@ class Logo(override var pos: Vector) : Shape() {
         }
         
         size = logoImageSize * (state.size.x / logoImageSize.x) * relSize
-        state.context.drawImage(getImage("https://try.kotlinlang.org/static/images/kotlin_logo.svg"), 0.0, 0.0,
+        state.context.drawImage(getImage("https://play.kotlinlang.org/assets/kotlin-logo.svg"), 0.0, 0.0,
                 logoImageSize.x, logoImageSize.y,
                 position.x, position.y,
                 size.x, size.y)
@@ -353,4 +353,3 @@ fun main(args: Array<String>) {
 //sampleEnd
 }
 ```
-
