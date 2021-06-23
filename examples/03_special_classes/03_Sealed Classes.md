@@ -1,6 +1,6 @@
 # Sealed Classes
 
-[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, it can only be subclassed from inside the same file where the sealed class is declared. It cannot be subclassed outside of the file where the sealed class is declared. 
+[Sealed classes](https://kotlinlang.org/docs/reference/sealed-classes.html) let you restrict the use of inheritance. Once you declare a class sealed, it can only be subclassed from inside the same package where the sealed class is declared. It cannot be subclassed outside of the package where the sealed class is declared. 
 
 ```run-kotlin
 sealed class Mammal(val name: String)                                                   // 1
@@ -21,7 +21,7 @@ fun main() {
 ```
 
 1. Defines a sealed class. 
-2. Defines subclasses. Note that all subclasses must be in the same file.
+2. Defines subclasses. Note that all subclasses must be in the same package.
 3. Uses an instance of the sealed class as an argument in a `when` expression. 
 4. A smartcast is performed, casting `Mammal` to `Human`.
 5. A smartcast is performed, casting `Mammal` to `Cat`.
