@@ -48,7 +48,7 @@ fun main() {
 
 1. Defines an enum class with a property and a method.
 2. Each instance must pass an argument for the constructor parameter.
-3. Enum class members are separated from the instance definitions by a semicolon.
+3. Enum class members are separated from the instance definitions by a comma.
 4. The default `toString` returns the name of the instance, here `"RED"`.
 5. Calls a method on an enum instance.
 6. Calls a method via enum class name.
