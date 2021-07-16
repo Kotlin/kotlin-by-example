@@ -50,6 +50,6 @@ fun main() {
 2. Each instance must pass an argument for the constructor parameter.
 3. Enum class members are separated from the instance definitions by a semicolon.
 4. The default `toString` returns the name of the instance, here `"RED"`.
-5. Calls a method on an enum instance.
+5. Calls a method on an enum member referenced by a function local read-only variable.
 6. Calls a method via enum class name.
 7. The RGB values of `RED` and `YELLOW` share first bits (`FF`) so this prints 'true'.
