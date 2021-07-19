@@ -19,11 +19,11 @@ fun main() {
 
 ```
 
-1. Defines a simple enum class with three enum instances. The number of instances is always finite and they are all distinct.
-2. Accesses an enum instance via the class name.
+1. Defines a simple enum class with three enum constants. The number of constants is always finite and they are all distinct.
+2. Accesses an enum constant via the class name.
 3. With enums, the compiler can infer if a `when`-expression is exhaustive so that you don't need the `else`-case.
 
-Enums may contain properties and methods like other classes, separated from the list of instances by a semicolon.
+Enums may contain properties and methods like other classes, separated from the list of enum constants by a semicolon.
 
 ```run-kotlin
 
@@ -47,9 +47,9 @@ fun main() {
 ```
 
 1. Defines an enum class with a property and a method.
-2. Each instance must pass an argument for the constructor parameter.
-3. Enum class members are separated from the instance definitions by a semicolon.
-4. The default `toString` returns the name of the instance, here `"RED"`.
-5. Calls a method on an enum member referenced by a function local read-only variable.
+2. Each enum constant must pass an argument for the constructor parameter.
+3. Enum class members are separated from the constant definitions by a semicolon.
+4. The default `toString` returns the name of the constant, here `"RED"`.
+5. Calls a method on an enum constant.
 6. Calls a method via enum class name.
 7. The RGB values of `RED` and `YELLOW` share first bits (`FF`) so this prints 'true'.
