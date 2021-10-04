@@ -3,20 +3,26 @@
 Kotlin lets you add new members to any class with the [extensions](https://kotlinlang.org/docs/reference/extensions.html) mechanism. Namely, there are two types of extensions: extension functions and extension properties. They look a lot like normal functions and properties but with one important difference: you need to specify the type that you extend.
 
 ```run-kotlin
-data class Item(val name: String, val price: Float)                                         // 1  
+data class Item(val name: String, val price: Float)                                         // 1
 
-data class Order(val items: Collection<Item>)  
+data class Order(val items: Collection<Item>)
 
-fun Order.maxPricedItemValue(): Float = this.items.maxByOrNull { it.price }?.price ?: 0F    // 2  
-fun Order.maxPricedItemName() = this.items.maxByOrNull { it.price }?.name ?: "NO_PRODUCTS"
+fun Order.maxPricedItemValue(): Float = items.maxByOrNull { it.price }?.price ?: 0F         // 2
+fun Order.maxPricedItemName() = items.maxByOrNull { it.price }?.name ?: "NO_PRODUCTS"
 
 val Order.commaDelimitedItemNames: String                                                   // 3
-    get() = items.map { it.name }.joinToString()
+    get() = items.joinToString { it.name }
 
 fun main() {
 
-    val order = Order(listOf(Item("Bread", 25.0F), Item("Wine", 29.0F), Item("Water", 12.0F)))
-    
+    val order = Order(
+        listOf(
+            Item("Bread", 25.0F),
+            Item("Wine", 29.0F),
+            Item("Water", 12.0F)
+        )
+    )
+
     println("Max priced item name: ${order.maxPricedItemName()}")                           // 4
     println("Max priced item value: ${order.maxPricedItemValue()}")
     println("Items: ${order.commaDelimitedItemNames}")                                      // 5
