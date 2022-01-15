@@ -51,8 +51,8 @@ fun main() {
 //sampleEnd
 
    println("First $first, last $last")
-   println("First starts with 'f' is $firstF, last starts with 'z' is $firstZ")
-   println("First ends with 'f' is $lastF, last ends with 'z' is $lastZ")
+   println("First starts with 'f' is $firstF, first starts with 'z' is $firstZ")
+   println("Last ends with 'f' is $lastF, last ends with 'z' is $lastZ")
 }
 ```
 
