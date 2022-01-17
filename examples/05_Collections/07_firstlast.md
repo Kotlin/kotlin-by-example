@@ -50,9 +50,9 @@ fun main() {
    val lastZ = words.lastOrNull { it.endsWith('z') }      // 8
 //sampleEnd
 
-   println("First $first, last $last")
-   println("First starts with 'f' is $firstF, last starts with 'z' is $firstZ")
-   println("First ends with 'f' is $lastF, last ends with 'z' is $lastZ")
+   println("Empty list: first is $first, last is $last")
+   println("Word list: first item starting with 'f' is $firstF, first item starting with 'z' is $firstZ")
+   println("Word list: last item ending with 'f' is $lastF, last item ending with 'z' is $lastZ")
 }
 ```
 
