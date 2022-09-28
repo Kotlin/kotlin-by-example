@@ -8,7 +8,7 @@ fun main() {
     val greeting = "Kotliner"
     
     println("Hello $greeting")                  // 1 
-    println("Hello ${greeting.toUpperCase()}")  // 2
+    println("Hello ${greeting.uppercase()}")  // 2
 //sampleEnd
 }
 ```
