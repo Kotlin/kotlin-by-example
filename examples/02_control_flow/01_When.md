@@ -27,7 +27,7 @@ class MyClass
 ```
 
 1. This is a `when` statement. 
-2. Checks whether `obj` equals to one.
+2. Checks whether `obj` equals to "1".
 3. Checks whether `obj` equals to `Hello`.
 4. Performs type checking.
 5. Performs inverse type checking.
@@ -60,7 +60,7 @@ class MyClass
 
 
 1. This is a `when` expression. 
-2. Sets the value to `"one"` if `obj` equals to one.
+2. Sets the value to `"one"` if `obj` equals to "1".
 3. Sets the value to one if `obj` equals to `Hello`.
 4. Sets the value to `false` if `obj` is an instance of `Long`.
 5. Sets the value "42" if none of the previous conditions are satisfied. Unlike in `when` _statement_, the default branch is usually required in `when` _expression_, except the case when the compiler can check that other branches cover all possible cases.
