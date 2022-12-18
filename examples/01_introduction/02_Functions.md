@@ -120,6 +120,8 @@ fun main() {
     fun log(vararg entries: String) {
         printAll(*entries)                                             // 5
     }
+    
+    log("Hello", "Hallo", "Salut", "Hola", "你好")
 //sampleEnd
 }
 ```
