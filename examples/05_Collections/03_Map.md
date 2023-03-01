@@ -19,7 +19,7 @@ fun updatePointsCredit(accountId: Int) {
 fun accountsReport() {
     println("EZ-Pass report:")
     EZPassReport.forEach {                                                              // 5
-        k, v -> println("ID $k: credit $v")
+        (k, v) -> println("ID $k: credit $v")
     }
 }
 
