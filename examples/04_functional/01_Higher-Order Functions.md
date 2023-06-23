@@ -13,7 +13,7 @@ fun sum(x: Int, y: Int) = x + y                                     // 3
 
 fun main() {
     val sumResult = calculate(4, 5, ::sum)                          // 4
-    val mulResult = calculate(4, 5) { a, b -> a * b }               // 5
+    val mulResult = calculate(4, 5 , { a, b -> a * b })               // 5
     println("sumResult $sumResult, mulResult $mulResult")
 }
 ```
