@@ -14,7 +14,7 @@ fun main() {
     val natural = shuffled.sorted()                             // 2
     val inverted = shuffled.sortedBy { -it }                    // 3
     val descending = shuffled.sortedDescending()                // 4
-    val descendingBy = shuffled.sortedByDescending { abs(it)  } // 5
+    val descendingBy = shuffled.sortedByDescending { -it  }     // 5
 //sampleEnd
 
     println("Shuffled: $shuffled")
