@@ -1,4 +1,5 @@
 # Kotlin by Example
+[![official JetBrains project](https://jb.gg/badges/official-plastic.svg)](https://github.com/JetBrains#jetbrains-on-github)
 
 This is sources of [Kotlin Examples](https://play.kotlinlang.org/byExample/overview).
 
