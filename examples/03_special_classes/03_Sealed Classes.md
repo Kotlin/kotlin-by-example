@@ -5,8 +5,8 @@
 ```run-kotlin
 sealed class Mammal(val name: String)                                                   // 1
 
-class Cat(val catName: String) : Mammal(catName)                                        // 2
-class Human(val humanName: String, val job: String) : Mammal(humanName)
+class Cat(catName: String) : Mammal(catName)                                            // 2
+class Human(humanName: String, val job: String) : Mammal(humanName)
 
 fun greetMammal(mammal: Mammal): String {
     when (mammal) {                                                                     // 3
@@ -21,7 +21,7 @@ fun main() {
 ```
 
 1. Defines a sealed class. 
-2. Defines subclasses. Note that all subclasses must be in the same package.
+2. Defines subclasses. Note that all subclasses must be in the same package. catName, humanName are arguments and do not exist as member variables.
 3. Uses an instance of the sealed class as an argument in a `when` expression. 
 4. A smartcast is performed, casting `Mammal` to `Human`.
 5. A smartcast is performed, casting `Mammal` to `Cat`.
