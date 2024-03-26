@@ -45,7 +45,7 @@ fun main() {
 1. Defines a data class.
 2. Destructures an instance. Declared values are mapped to the instance fields.
 3. Data class automatically defines the `component1()` and `component2()` methods that will be called during destructuring.
-4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable.
+4. Use _underscore_ if you don't need one of the values, avoiding the compiler hint indicating an unused variable. The second property `email` is renamed to `emailAddress` without having to use additional syntax.
 
 ```run-kotlin
 class Pair<K, V>(val first: K, val second: V) {  // 1
