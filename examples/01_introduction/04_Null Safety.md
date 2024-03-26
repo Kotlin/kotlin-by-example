@@ -20,9 +20,9 @@ fun main() {
     fun strLength(notNull: String): Int {                   // 7
         return notNull.length
     }
-    
-    strLength(neverNull)                                    // 8
-    strLength(nullable)                                     // 9
+    println(strLength(neverNull));                           // 8
+println(strLength(nullable));                                // 9
+                                      
 //sampleEnd
 }
 ```
