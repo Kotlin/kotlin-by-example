@@ -5,17 +5,15 @@
 `sortedBy` sorts elements according to natural sort order of the values returned by specified selector function.
 
 ```run-kotlin
+//sampleStart
 import kotlin.math.abs
 
 fun main() {
-
-//sampleStart
     val shuffled = listOf(5, 4, 2, 1, 3, -10)                   // 1
     val natural = shuffled.sorted()                             // 2
     val inverted = shuffled.sortedBy { -it }                    // 3
     val descending = shuffled.sortedDescending()                // 4
     val descendingBy = shuffled.sortedByDescending { abs(it)  } // 5
-//sampleEnd
 
     println("Shuffled: $shuffled")
     println("Natural order: $natural")
@@ -23,6 +21,7 @@ fun main() {
     println("Inverted natural order value: $descending")
     println("Inverted natural order of absolute values: $descendingBy")
 }
+//sampleEnd
 ```
 
 1. Defines a collection of shuffled numbers.
