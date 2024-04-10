@@ -1,6 +1,6 @@
 # Hello World
 
-```run-kotlin
+```change code
 package org.kotlinlang.play         // 1
 
 fun main() {                        // 2
