@@ -44,7 +44,7 @@ class LazySample {
     }
     
     val lazyStr: String by lazy {
-        println("computed!")          // 2
+        print("computed! ")          // 2
         "my lazy"
     }
 }
@@ -52,7 +52,7 @@ class LazySample {
 fun main() {
     val sample = LazySample()         // 1
     println("lazyStr = ${sample.lazyStr}")  // 2
-    println(" = ${sample.lazyStr}")  // 3
+    println("lazyStr = ${sample.lazyStr}")  // 3
 }
 ```
 
