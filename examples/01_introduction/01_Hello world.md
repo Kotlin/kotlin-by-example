@@ -1,4 +1,4 @@
-# Hello World
+fun # Hello World
 
 ```run-kotlin
 package org.kotlinlang.play         // 1
