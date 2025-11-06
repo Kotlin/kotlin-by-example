@@ -28,7 +28,7 @@ fun main() {
 ```
 
 1. A simple function that takes a parameter of type `String` and returns `Unit` (i.e., no return value).
-2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default-arguments) `Info`. The return type is omitted, meaning that it's actually `Unit`.
+2. A function that takes a second [optional parameter with default value](https://kotlinlang.org/docs/reference/functions.html#default) `Info`. The return type is omitted, meaning that it's actually `Unit`.
 3. A function that returns an integer.
 4. A single-expression function that returns an integer (inferred).
 5. Calls the first function with the argument `Hello`.
