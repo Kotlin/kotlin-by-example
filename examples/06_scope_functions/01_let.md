@@ -44,7 +44,7 @@ fun main() {
 
 ```
 
-1. Calls the given block on the result on the string "_test_".
+1. Calls the given block on the result of the string "_test_".
 2. Calls the function on "_test_" by the `it` reference.
 3. `let` returns the value of this expression.
 4. Uses safe call, so `let` and its code block will be executed only on non-null values.  
