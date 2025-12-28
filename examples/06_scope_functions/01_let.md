@@ -4,12 +4,13 @@ The Kotlin standard library function `let` can be used for scoping and null-chec
 The object is accessible inside the block by the reference `it` (by default) or a custom name. 
 
 ```run-kotlin
+//sampleStart
 fun customPrint(s: String) {
     print(s.uppercase())
 }
 
 fun main() {
-//sampleStart
+
     val empty = "test".let {               // 1
         customPrint(it)                    // 2
         it.isEmpty()                       // 3
@@ -39,9 +40,8 @@ fun main() {
     printNonNull(null)
     printNonNull("my string") 
     printIfBothNonNull("First","Second") 
-//sampleEnd
 }
-
+//sampleEnd
 ```
 
 1. Calls the given block on the result on the string "_test_".
