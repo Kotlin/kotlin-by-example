@@ -7,9 +7,9 @@ The difference is that inside `run` the object is accessed by `this`. This is us
 
 fun main() {
 //sampleStart
-    fun getNullableLength(ns: String?) {
+    fun getNullableLength(ns: String?): Int? {
         println("for \"$ns\":")
-        ns?.run {                                                  // 1
+        return ns?.run {                                                  // 1
             println("\tis empty? " + isEmpty())                    // 2
             println("\tlength = $length")                           
             length                                                 // 3
@@ -17,7 +17,9 @@ fun main() {
     }
     getNullableLength(null)
     getNullableLength("")
-    getNullableLength("some string with Kotlin")
+    val length = getNullableLength("some string with Kotlin")
+    println("// 3 length: $length")
+
 //sampleEnd
 }
 ```
